@@ -1,0 +1,24 @@
+{
+  "name": "etalab-assets",
+  "description": "ETALAB common assets",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/etalab/etalab-assets.git"
+  },
+  "keywords": [
+    "open data",
+    "etalab"
+  ],
+  "author": "Axel Haustant",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/etalab/etalab-assets/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-webfont": "~0.1.8"
+  }
+}
