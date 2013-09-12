@@ -5,6 +5,10 @@
 @import "variables.less";
 @import "icons.less";
 
+// Web fonts
+@import url(http://fonts.googleapis.com/css?family=Sansita+One);
+@title-font: 'Sansita One', cursive;
+
 .full-container {
     padding-left: 15px;
     padding-right: 15px;
@@ -28,6 +32,13 @@
     transition: @value;
 }
 
+.no-decoration {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
 
 // Custom buttons
 .btn-dark {
@@ -91,7 +102,7 @@ a.thumbnail-link {
     .panel-heading {
         background-color: transparent;
         border-bottom: none;
-        // padding: 0;
+        padding: 0;
         a {
             padding: 10px 15px;
             display: block;
@@ -215,31 +226,5 @@ a.thumbnail-link {
         &:last-child {
             border-bottom: none;
         }
-    }
-}
-
-#toc, .toc {
-    .well();
-    // .well-lg();
-    td {
-        padding: 10px
-    }
-
-    #toctitle {
-        padding: 10px;
-
-        h2 {
-            margin: 0;
-        }
-    }
-
-    ul {
-        margin: 0 20px;
-    }
-}
-
-.nav-tabs {
-    > li > a {
-      line-height: 0.9;
     }
 }
