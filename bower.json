@@ -4,8 +4,6 @@
     "Axel Haustant <axel.haustant@etalab2.fr>"
   ],
   "description": "ETALAB common assets",
-  "license": "MIT",
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
