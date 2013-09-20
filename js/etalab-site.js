@@ -1,7 +1,7 @@
 /**
  * Site-wide features, helpers and fixes
  */
-(function($){
+(function($, swig) {
 
     "use strict";
 
@@ -14,14 +14,75 @@
             'OverseasCollectivityOfFrance',
             'RegionOfFrance'
         ],
-        API_URL = TERRYTORIES_END_POINT + '?' + $.param({ kind: TERRITORIES_KIND, term: '_QUERY'}, true),
-        COOKIE_NAME = 'territory-infos';
+        TERRITORY_API_URL = TERRYTORIES_END_POINT + '?' + $.param({ kind: TERRITORIES_KIND, term: '_QUERY'}, true),
+        COOKIE_NAME = 'territory-infos',
+
+        HOME_URL = $('link[rel="home"]').attr('href'),
+        WIKI_URL = $('link[rel="wiki"]').attr('href'),
+        QUESTIONS_URL = $('link[rel="questions"]').attr('href'),
+
+        WIKI_API_URL = WIKI_URL + '/api.php?format=json&action=query&list=search&srsearch=%QUERY&srprop=timestamp',
+        CKAN_API_URL = HOME_URL + '/api/3/action/package_search?rows=10&q=%QUERY',
+        ASKBOT_API_URL = QUESTIONS_URL + '/api/v1/questions?query=%QUERY',
+
+        LANG = $('html').attr('lang') || 'en',
+
+        HEADERS = {
+            'fr': {
+                'topics': 'Thématiques',
+                'questions': 'Questions',
+                'datasets': 'Jeux de données'
+            },
+            'en': {
+                'topics': 'Topics',
+                'questions': 'Questions',
+                'datasets': 'Datasets'
+            }
+        },
+
+        SWIG_ENGINE = {
+            compile: function(template) {
+                var tpl = swig.compile(template);
+
+                return {
+                    render: function(context) {
+                        return tpl(context);
+                    }
+                };
+            }
+        };
+
+    /**
+     * Swig compatibility wrapper for Typeahead expected API
+     */
+    var swigForTypeahead = function(template) {
+
+        var compiled = swig.compile(template);
+
+        return {
+            render: function(context) {
+                return compiled(context);
+            }
+        };
+    };
 
     /**
      * Filter the Territory API to match Typeahead expected format.
      */
     var filter_territory_api = function(response) {
         return response.data.items;
+    };
+
+    var filter_mediawiki_api = function(response) {
+        return response.query.search;
+    };
+
+    var filter_ckan_api = function(response) {
+        return response.result.results;
+    };
+
+    var filter_askbot_api = function(response) {
+        return response.questions;
     };
 
     /**
@@ -64,12 +125,16 @@
             .removeClass('glyphicon-remove')
             .removeClass('territory-clear')
             .addClass('glyphicon-globe');
-    }
+    };
 
 
     $(function() {
-        // Force cookie raw
+        // Force cookie common parameters
+        // raw to not parse the content
         $.cookie.raw = true;
+        // Domain extracted from HOME_URL
+        $.cookie.domain = $('<a/>').prop('href', HOME_URL).prop('hostname');
+
 
         // Fix collapse on sidebar
         $("#sidebar .panel-heading a").on('click', function (e) { e.preventDefault(); });
@@ -79,12 +144,56 @@
         $('[rel=popover]').popover();
 
         // Search field behavior
+        $('#search-input')
+            .typeahead([
+                {
+                    name: 'CKAN',
+                    header: HEADERS[LANG].datasets,
+                    valueKey: 'title',
+                    remote: {
+                        url: CKAN_API_URL,
+                        filter: filter_ckan_api
+                    }
+                },
+                {
+                    name: 'Wiki',
+                    header: HEADERS[LANG].topics,
+                    valueKey: 'title',
+                    remote: {
+                        url: WIKI_API_URL,
+                        filter: filter_mediawiki_api
+                    }
+                },
+                {
+                    name: 'Questions',
+                    header: HEADERS[LANG].questions,
+                    valueKey: 'title',
+                    remote: {
+                        url: ASKBOT_API_URL,
+                        filter: filter_askbot_api
+                    }
+                }
+            ])
+            .on('typeahead:selected typeahead:autocompleted', function(e, data, dataset) {
+                switch (dataset) {
+                    case 'Wiki':
+                        window.location = WIKI_URL + '/' + data.title;
+                        break;
+                    case 'CKAN':
+                        window.location = HOME_URL + '/' + LANG + '/dataset/' + data.name;
+                        break;
+                    case 'Questions':
+                        window.location = QUESTIONS_URL + '/question/' + data.id + '/' + data.title;
+                        break;
+                }
+            });
+
         $('#where-input')
             .typeahead({
                 name: 'territories',
                 valueKey: 'main_postal_distribution',
                 remote: {
-                    url: API_URL,
+                    url: TERRITORY_API_URL,
                     wildcard: '_QUERY',
                     dataType: 'jsonp',
                     filter: filter_territory_api,
@@ -113,4 +222,4 @@
     });
 
 
-}(window.jQuery));
+}(window.jQuery, window.swig));

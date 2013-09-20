@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="fr"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="fr"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="fr"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Données ouvertes françaises">
+    <meta name="author" content="ETALAB">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Demo - Data.Gouv.fr</title>
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <link rel="home" href="http://etalab.dev" />
+    <link rel="wiki" href="http://wiki.etalab.dev" />
+    <link rel="questions" href="http://questions.etalab.dev" />
+
+    <link rel="stylesheet" media="screen" href="css/etalab.css">
+
+    <script src="bower/modernizr/modernizr.js"></script>
+    <script src="bower/respond/respond.min.js"></script>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <header class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="">Data.Gouv.fr</a>
+        </header>
+
+        <div class="collapse navbar-collapse">
+            <p class="navbar-text">The open platform for french public data</p>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <button class="btn btn-dark navbar-btn dropdown-toggle" data-toggle="dropdown">
+                        Sign In / Register
+                        <b class="caret"></b>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="" title="Connexion">
+                                <span class="glyphicon glyphicon-log-in"></span>
+                                Connexion
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" title="Créer un compte">
+                                <span class="glyphicon glyphicon-edit"></span>
+                                Créer un compte
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <button class="btn btn-dark navbar-btn dropdown-toggle" data-toggle="dropdown">
+                        <img src="bower/flags/flags/flags-iso/shiny/16/FR.png" />
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="">
+                                <img src="bower/flags/flags/flags-iso/shiny/16/FR.png" />
+                                Français
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="bower/flags/flags/flags-iso/shiny/16/US.png" />
+                                English
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="full-container">
+        <div class="row">
+            <div class="col-sm-3 col-md-3">
+                <nav id="sidebar" class="panel">
+
+                <! -- Public data presentation -->
+                <div class="panel-heading">
+                    <a href data-toggle="collapse" data-target="#navigation-panel">Données publiques</a>
+                </div>
+                <div id="navigation-panel" class="panel-body collapse">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Definition</a></li>
+                        <li><a href="#">Publishers</a></li>
+                        <li>
+                            <a href="http://www.etalab.gouv.fr/pages/licence-ouverte-open-licence-5899923.html">
+                                License ouverte
+                            </a>
+                        </li>
+                        <li><a href="#">Quelles données ?</a></li>
+                        <li><a href="http://www.etalab.gouv.fr/">ETALAB</a></li>
+                    </ul>
+                </div>
+
+                <!-- Search -->
+                <form id="search-form" action="">
+                    <div id="search-group" class="input-group input-group-lg">
+                        <input id="search-input" name="q" type="search" class="form-control input-lg"
+                            autocomplete="off" placeholder="Search">
+                        <span class="input-group-btn">
+                            <button class="btn btn-highlight" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                        </span>
+                    </div>
+                    <div id="where-group" class="input-group">
+                        <input id="where-input" type="search" class="form-control"
+                            autocomplete="off" placeholder="Where">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
+                    </div>
+                    <input id="ext_territory" name="ext_territory" type="hidden" />
+                </form>
+
+                <!-- Groups -->
+                <div class="list-group">
+                    <a class="list-group-item" href="/fr/group/culture-et-communication">
+                        <span class="icon icon-culture"></span>
+                        Culture et communication
+                    </a>
+
+                    <a class="list-group-item" href="http://wiki.etalab2.fr/wiki/Le_D%C3%A9veloppement_Durable">
+                        <span class="icon icon-wind"></span>
+                        Développement durable
+                    </a>
+
+                    <a class="list-group-item" href="/fr/group/education-et-recherche">
+                        <span class="icon icon-education"></span>
+                        Éducation et recherche
+                    </a>
+
+                    <a class="list-group-item" href="/fr/group/etat-et-collectivites">
+                        <span class="icon icon-france"></span>
+                        État et collectivités
+                    </a>
+
+                    <a class="list-group-item" href="/fr/group/europe">
+                        <span class="icon icon-europe"></span>
+                        Europe
+                    </a>
+
+                    <a class="list-group-item" href="/fr/group/justice">
+                        <span class="icon icon-justice"></span>
+                        Justice
+                    </a>
+
+                    <a class="list-group-item" href="/fr/group/monde">
+                        <span class="icon icon-world"></span>
+                        Monde
+                    </a>
+
+                    <a class="list-group-item" href="/fr/group/sante-et-solidarite">
+                        <span class="icon icon-heart"></span>
+                        Santé et solidarité
+                    </a>
+
+                    <a class="list-group-item" href="/fr/group/securite-et-defense">
+                        <span class="icon icon-shield"></span>
+                        Sécurité et défense
+                    </a>
+
+                    <a class="list-group-item" href="/fr/group/societe">
+                        <span class="icon icon-people"></span>
+                        Société
+                    </a>
+
+                    <a class="list-group-item" href="/fr/group/travail-economie-emploi">
+                        <span class="icon icon-case"></span>
+                        Travail, économie, emploi
+                    </a>
+
+                </div>
+
+            </nav>
+
+            </div>
+
+            <div class="col-sm-9 col-md-9">
+            {% block content %}{% endblock %}
+            </div>
+        </div>
+
+        <hr/>
+        <footer>
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p>
+                &copy; 2013 ETALAB, Inc. &middot;
+                <a href="#">Privacy</a> &middot;
+                <a href="#">Terms</a>
+            </p>
+        </footer>
+
+    </div>
+
+
+    <!--[if lt IE 9]>
+        <script src="bower/jquery-legacy/index.js"></script>
+        <script src="bower/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower/typeahead.js/dist/typeahead.js"></script>
+        <script src="bower/jquery.cookie/jquery.cookie.js"></script>
+        <script src="js/etalab-site.js"></script>
+    <![endif]-->
+     <!--[if gte IE 9]><!-->
+        <script src="bower/jquery/jquery.js"></script>
+        <script src="bower/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower/typeahead.js/dist/typeahead.js"></script>
+        <script src="bower/jquery.cookie/jquery.cookie.js"></script>
+        <script src="bower/swig/index.js"></script>
+        <script src="js/etalab-site.js"></script>
+    <!--<![endif]-->
+</body>
+</html>
