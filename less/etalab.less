@@ -73,6 +73,56 @@ a.thumbnail-link {
     }
 }
 
+.navbar-default {
+    margin-bottom: 0;
+}
+
+.navbar-subnav {
+    background-color: lighten(@bg-dark, 10%);
+    z-index: 800;
+
+    input[type="search"] {
+        color: white;
+        background-color: @bg-darker;
+        border-radius: 0;
+        border: 1px solid transparent;
+    }
+
+    .glyphicon {
+        color: white;
+    }
+
+    .territory-clear {
+        color: red;
+        cursor: pointer;
+    }
+
+    .navbar-form {
+        border: none;
+        .box-shadow(none);
+    }
+
+    .input-group {
+        .input-group-addon {
+            background-color: @bg-darker;
+            border: 1px solid @bg-darker;
+        }
+
+        .input-group-btn .btn {
+            background-color: @bg-darker;
+            border: 1px solid @bg-darker;
+        }
+
+        .form-control.tt-query, .tt-hint {
+            border-radius: 0 4px 4px 0;
+        }
+
+        @media (max-width: @screen-sm) {
+            margin: 5px;
+        }
+    }
+}
+
 .input-group.collapse {
     display: none;
 }
@@ -82,6 +132,50 @@ a.thumbnail-link {
         .btn-lg();
         font-size: 22px;
         font-weight: bold;
+    }
+}
+
+// Typeahead.js fixes for BS3
+.twitter-typeahead {
+    width: 100%;
+
+    .tt-hint {
+        width: 100%;
+        height: @input-height-base;;
+        padding: 6px 12px;
+    }
+
+    .tt-dropdown-menu {
+        color: white;
+        font-weight: bold;
+        width: 100%;
+        background-color: @bg-dark;
+        margin-top: -1px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0,0,0,.2);
+        *border-right-width: 2px;
+        *border-bottom-width: 2px;
+        border-radius: 6px;
+        .box-shadow(0 5px 10px rgba(0,0,0,.2));
+          -webkit-background-clip: padding-box;
+             -moz-background-clip: padding;
+                  background-clip: padding-box;
+    }
+
+    .tt-suggestion {
+        font-weight: normal;
+        display: block;
+        padding: 3px 20px;
+
+        &.tt-is-under-cursor {
+            background-color: @bg-light;
+            #gradient.vertical(@bg-light, @highlight);
+        }
+
+        p {
+            margin: 0;
+        }
     }
 }
 
@@ -135,87 +229,6 @@ a.thumbnail-link {
                 }
             }
         }
-    }
-
-
-    form {
-        margin: -1px;
-        display: block;
-    }
-
-    input[type="search"] {
-        color: white;
-        background-color: @bg-darker;
-        border-radius: 0;
-        border: 1px solid transparent;
-    }
-
-    .input-group-addon, .input-group-btn .btn {
-        border-radius: 0;
-    }
-
-    #where-group {
-        width: 100%;
-
-        .input-group-addon {
-            background-color: @bg-darker;
-            border: 1px solid @bg-darker;
-        }
-
-    }
-
-    #search-group .tt-hint {
-        height: @input-height-large;
-    }
-
-    // Typeahead.js fixes for BS3
-    .twitter-typeahead {
-        width: 100%;
-
-        .tt-hint {
-            width: 100%;
-            height: @input-height-base;;
-            padding: 6px 12px;
-        }
-
-        .tt-dropdown-menu {
-            width: 100%;
-            background-color: @bg-dark;
-            margin-top: -1px;
-            padding: 5px 0;
-            border: 1px solid #ccc;
-            border: 1px solid rgba(0,0,0,.2);
-            *border-right-width: 2px;
-            *border-bottom-width: 2px;
-            border-radius: 6px;
-            .box-shadow(0 5px 10px rgba(0,0,0,.2));
-              -webkit-background-clip: padding-box;
-                 -moz-background-clip: padding;
-                      background-clip: padding-box;
-        }
-
-        .tt-suggestion {
-            display: block;
-            padding: 3px 20px;
-
-            &.tt-is-under-cursor {
-                background-color: @bg-light;
-                #gradient.vertical(@bg-light, @highlight);
-            }
-
-            p {
-                margin: 0;
-            }
-        }
-    }
-
-    .glyphicon {
-        color: white;
-    }
-
-    .territory-clear {
-        color: red;
-        cursor: pointer;
     }
 
     .list-group-item {
