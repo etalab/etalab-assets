@@ -19,9 +19,10 @@
 
         HOME_URL = $('link[rel="home"]').attr('href'),
         WIKI_URL = $('link[rel="wiki"]').attr('href'),
+        WIKI_API = $('link[rel="wiki-api"]').attr('href'),
         QUESTIONS_URL = $('link[rel="questions"]').attr('href'),
 
-        WIKI_API_URL = WIKI_URL + '/api.php?format=json&action=query&list=search&srsearch=%QUERY&srprop=timestamp',
+        WIKI_API_URL = WIKI_API + '?format=json&action=query&list=search&srsearch=%QUERY&srprop=timestamp',
         CKAN_API_URL = HOME_URL + '/api/3/action/package_search?rows=10&q=%QUERY',
         ASKBOT_API_URL = QUESTIONS_URL + '/api/v1/questions?query=%QUERY',
 
