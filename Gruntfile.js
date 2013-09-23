@@ -23,7 +23,6 @@ module.exports = function(grunt) {
                     'bower/jquery/jquery.js',
                     'bower/jquery.cookie/jquery.cookie.js',
                     'bower/bootstrap/dist/js/bootstrap.js',
-                    'bower/swig/index.js',
                     'bower/typeahead.js/dist/typeahead.js'
                 ]
             }

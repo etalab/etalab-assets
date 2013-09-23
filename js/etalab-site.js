@@ -1,7 +1,7 @@
 /**
  * Site-wide features, helpers and fixes
  */
-(function($, swig) {
+(function($) {
 
     "use strict";
 
@@ -38,33 +38,7 @@
                 'questions': 'Questions',
                 'datasets': 'Datasets'
             }
-        },
-
-        SWIG_ENGINE = {
-            compile: function(template) {
-                var tpl = swig.compile(template);
-
-                return {
-                    render: function(context) {
-                        return tpl(context);
-                    }
-                };
-            }
         };
-
-    /**
-     * Swig compatibility wrapper for Typeahead expected API
-     */
-    var swigForTypeahead = function(template) {
-
-        var compiled = swig.compile(template);
-
-        return {
-            render: function(context) {
-                return compiled(context);
-            }
-        };
-    };
 
     /**
      * Filter the Territory API to match Typeahead expected format.
@@ -222,4 +196,4 @@
     });
 
 
-}(window.jQuery, window.swig));
+}(window.jQuery));
