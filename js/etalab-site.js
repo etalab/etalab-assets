@@ -100,7 +100,7 @@
             .addClass('territory-clear');
 
         // Persist the filter into the cookie
-        $.cookie(COOKIE_NAME, value + '|' + display, {path: '/'});
+        $.cookie(COOKIE_NAME, value + '|' + display);
     };
 
     /**
@@ -121,8 +121,11 @@
         // Force cookie common parameters
         // raw to not parse the content
         $.cookie.raw = true;
-        // Domain extracted from HOME_URL
-        $.cookie.domain = $('<a/>').prop('href', HOME_URL).prop('hostname');
+        $.cookie.defaults = {
+            // Domain extracted from HOME_URL
+            domain: $('<a/>').prop('href', HOME_URL).prop('hostname'),
+            path: '/'
+        };
 
 
         // Fix collapse on sidebar
