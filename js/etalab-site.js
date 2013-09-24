@@ -22,9 +22,18 @@
         WIKI_API = $('link[rel="wiki-api"]').attr('href'),
         QUESTIONS_URL = $('link[rel="questions"]').attr('href'),
 
-        WIKI_API_URL = WIKI_API + '?format=json&action=query&list=search&srsearch=%QUERY&srprop=timestamp',
+        ORIGIN = window.location.origin || window.location.protocol + "//" + window.location.hostname,
+
         CKAN_API_URL = HOME_URL + '/api/3/action/package_search?rows=10&q=%QUERY',
         ASKBOT_API_URL = QUESTIONS_URL + '/api/v1/questions?query=%QUERY',
+        WIKI_API_URL = WIKI_API + '?' + $.param({
+            format: 'json',
+            action: 'query',
+            list: 'search',
+            srsearch: '__QUERY',
+            srprop: 'timestamp',
+            origin: ORIGIN
+        }),
 
         LANG = $('html').attr('lang') || 'en',
 
@@ -136,6 +145,7 @@
                     valueKey: 'title',
                     remote: {
                         url: WIKI_API_URL,
+                        wildcard: '__QUERY',
                         filter: filter_mediawiki_api
                     }
                 },
