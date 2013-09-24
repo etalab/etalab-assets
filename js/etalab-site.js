@@ -26,14 +26,14 @@
 
         CKAN_API_URL = HOME_URL + '/api/3/action/package_search?rows=10&q=%QUERY',
         ASKBOT_API_URL = QUESTIONS_URL + '/api/v1/questions?query=%QUERY',
-        WIKI_API_URL = WIKI_API + '?' + $.param({
+        WIKI_API_URL = WIKI_API + '?',
+        wikiParams = {
             format: 'json',
             action: 'query',
             list: 'search',
             srsearch: '__QUERY',
-            srprop: 'timestamp',
-            origin: ORIGIN
-        }),
+            srprop: 'timestamp'
+        },
 
         LANG = $('html').attr('lang') || 'en',
 
@@ -49,6 +49,11 @@
                 'datasets': 'Datasets'
             }
         };
+
+    if (WIKI_API.indexOf(ORIGIN) < 0) {
+        wikiParams.origin = ORIGIN;
+    }
+    WIKI_API_URL = WIKI_API_URL + $.param(wikiParams);
 
     /**
      * Filter the Territory API to match Typeahead expected format.
