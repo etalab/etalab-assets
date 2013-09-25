@@ -17,6 +17,7 @@
         TERRITORY_API_URL = TERRYTORIES_END_POINT + '?' + $.param({ kind: TERRITORIES_KIND, term: '_QUERY'}, true),
         COOKIE_NAME = 'territory-infos',
 
+        DOMAIN = $('link[rel="domain"]').attr('href'),
         HOME_URL = $('link[rel="home"]').attr('href'),
         WIKI_URL = $('link[rel="wiki"]').attr('href'),
         WIKI_API = $('link[rel="wiki-api"]').attr('href'),
@@ -123,7 +124,7 @@
         $.cookie.raw = true;
         $.cookie.defaults = {
             // Domain extracted from HOME_URL
-            domain: $('<a/>').prop('href', HOME_URL).prop('hostname'),
+            domain: DOMAIN,
             path: '/'
         };
 
