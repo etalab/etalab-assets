@@ -25,7 +25,8 @@
 
         ORIGIN = window.location.origin || window.location.protocol + "//" + window.location.hostname,
 
-        CKAN_API_URL = HOME_URL + '/api/3/action/package_search?rows=10&q=%QUERY',
+        DATASET_API_URL = HOME_URL + '/api/3/action/package_search?rows=10&q=%QUERY',
+        ORGANIZATION_API_URL = HOME_URL + '/api/3/action/organization_list?sort=packages&all_fields=true',
         ASKBOT_API_URL = QUESTIONS_URL + '/api/v1/questions?query=%QUERY',
         WIKI_API_URL = WIKI_API + '?',
         wikiParams = {
@@ -42,11 +43,13 @@
             'fr': {
                 'topics': 'Thématiques',
                 'questions': 'Questions',
+                'organizations': 'Organisations',
                 'datasets': 'Jeux de données'
             },
             'en': {
                 'topics': 'Topics',
                 'questions': 'Questions',
+                'organizations': 'Organizations',
                 'datasets': 'Datasets'
             }
         };
@@ -67,8 +70,12 @@
         return response.query.search;
     };
 
-    var filter_ckan_api = function(response) {
+    var filter_dataset_api = function(response) {
         return response.result.results;
+    };
+
+    var filter_organization_api = function(response) {
+        return response.result;
     };
 
     var filter_askbot_api = function(response) {
@@ -140,17 +147,28 @@
         $('#search-input')
             .typeahead([
                 {
-                    name: 'CKAN',
+                    name: 'Organizations',
+                    header: HEADERS[LANG].organizations,
+                    limit: 2,
+                    valueKey: 'display_name',
+                    prefetch: {
+                        url: ORGANIZATION_API_URL,
+                        filter: filter_organization_api
+                    }
+                },
+                {
+                    name: 'Datasets',
                     header: HEADERS[LANG].datasets,
                     valueKey: 'title',
                     remote: {
-                        url: CKAN_API_URL,
-                        filter: filter_ckan_api
+                        url: DATASET_API_URL,
+                        filter: filter_dataset_api
                     }
                 },
                 {
                     name: 'Wiki',
                     header: HEADERS[LANG].topics,
+                    limit: 2,
                     valueKey: 'title',
                     remote: {
                         url: WIKI_API_URL,
@@ -161,6 +179,7 @@
                 {
                     name: 'Questions',
                     header: HEADERS[LANG].questions,
+                    limit: 2,
                     valueKey: 'title',
                     remote: {
                         url: ASKBOT_API_URL,
@@ -173,8 +192,11 @@
                     case 'Wiki':
                         window.location = WIKI_URL + '/' + data.title;
                         break;
-                    case 'CKAN':
+                    case 'Datasets':
                         window.location = HOME_URL + '/' + LANG + '/dataset/' + data.name;
+                        break;
+                    case 'Organizations':
+                        window.location = HOME_URL + '/' + LANG + '/organization/' + data.name;
                         break;
                     case 'Questions':
                         window.location = QUESTIONS_URL + '/question/' + data.id + '/' + data.title;
