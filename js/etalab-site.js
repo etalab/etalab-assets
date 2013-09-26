@@ -25,7 +25,12 @@
 
         ORIGIN = window.location.origin || window.location.protocol + "//" + window.location.hostname,
 
-        DATASET_API_URL = HOME_URL + '/api/3/action/package_search?rows=10&q=%QUERY',
+        MAX_DATASETS = 5,
+        MAX_ORGANIZATIONS = 2,
+        MAX_TOPICS = 2,
+        MAX_QUESTIONS = 2,
+
+        DATASET_API_URL = HOME_URL + '/api/3/action/package_search?rows='+MAX_DATASETS+'&q=%QUERY',
         ORGANIZATION_API_URL = HOME_URL + '/api/3/action/organization_list?sort=packages&all_fields=true',
         ASKBOT_API_URL = QUESTIONS_URL + '/api/v1/questions?query=%QUERY',
         WIKI_API_URL = WIKI_API + '?',
@@ -33,6 +38,7 @@
             format: 'json',
             action: 'query',
             list: 'search',
+            srlimit: MAX_TOPICS,
             srsearch: '__QUERY',
             srprop: 'timestamp'
         },
@@ -149,7 +155,7 @@
                 {
                     name: 'Organizations',
                     header: HEADERS[LANG].organizations,
-                    limit: 2,
+                    limit: MAX_ORGANIZATIONS,
                     valueKey: 'display_name',
                     prefetch: {
                         url: ORGANIZATION_API_URL,
@@ -159,6 +165,7 @@
                 {
                     name: 'Datasets',
                     header: HEADERS[LANG].datasets,
+                    limit: MAX_DATASETS,
                     valueKey: 'title',
                     remote: {
                         url: DATASET_API_URL,
@@ -168,7 +175,7 @@
                 {
                     name: 'Wiki',
                     header: HEADERS[LANG].topics,
-                    limit: 2,
+                    limit: MAX_TOPICS,
                     valueKey: 'title',
                     remote: {
                         url: WIKI_API_URL,
@@ -179,7 +186,7 @@
                 {
                     name: 'Questions',
                     header: HEADERS[LANG].questions,
-                    limit: 2,
+                    limit: MAX_QUESTIONS,
                     valueKey: 'title',
                     remote: {
                         url: ASKBOT_API_URL,
