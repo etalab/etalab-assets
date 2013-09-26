@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Etalab Jasmine Spec Runner</title>
+<% options.metas.forEach(function(meta){ %>
+  <meta name="<%= meta.name %>" content="<%= meta.content %>" />
+<% }) %>
+<% options.links.forEach(function(link){ %>
+  <link rel="<%= link.rel %>" href="<%= link.href %>" />
+<% }) %>
+<% css.forEach(function(style){ %>
+  <link rel="stylesheet" type="text/css" href="<%= style %>">
+<% }) %>
+<% with (scripts) { %>
+  <% [].concat(polyfills, jasmine, vendor, helpers, src, specs, reporters, start).forEach(function(script){ %>
+  <script src="<%= script %>"></script>
+  <% }) %>
+<% }; %>
+</head>
+<body>
+</body>
+</html>

@@ -1,7 +1,7 @@
 /**
  * Site-wide features, helpers and fixes
  */
-(function($) {
+(function($, swig) {
 
     "use strict";
 
@@ -58,7 +58,19 @@
                 'organizations': 'Organizations',
                 'datasets': 'Datasets'
             }
-        };
+        },
+        SWIG_ENGINE = {
+            compile: function(template) {
+                var tpl = swig.compile(template);
+
+                return {
+                    render: function(context) {
+                        return tpl(context);
+                    }
+                };
+            }
+        },
+        headerTmpl = swig.compile('<p class="search-header"><strong>{{title}}</strong></p>');
 
     if (WIKI_API.indexOf(ORIGIN) < 0) {
         wikiParams.origin = ORIGIN;
@@ -154,9 +166,16 @@
             .typeahead([
                 {
                     name: 'Organizations',
-                    header: HEADERS[LANG].organizations,
+                    header: headerTmpl({title: HEADERS[LANG].organizations}),
                     limit: MAX_ORGANIZATIONS,
                     valueKey: 'display_name',
+                    engine: SWIG_ENGINE,
+                    template: [
+                        '{% if image_url %}',
+                        '<img src="{{image_url}}">',
+                        '{% endif %}',
+                        '<p>{{display_name}}</p>'
+                    ].join(''),
                     prefetch: {
                         url: ORGANIZATION_API_URL,
                         filter: filter_organization_api
@@ -164,9 +183,16 @@
                 },
                 {
                     name: 'Datasets',
-                    header: HEADERS[LANG].datasets,
+                    header: headerTmpl({title: HEADERS[LANG].datasets}),
                     limit: MAX_DATASETS,
                     valueKey: 'title',
+                    engine: SWIG_ENGINE,
+                    template: [
+                        '{% if organization.image_url %}',
+                        '<img src="{{organization.image_url}}">',
+                        '{% endif %}',
+                        '<p>{{title}}</p>'
+                    ].join(''),
                     remote: {
                         url: DATASET_API_URL,
                         filter: filter_dataset_api
@@ -174,9 +200,16 @@
                 },
                 {
                     name: 'Wiki',
-                    header: HEADERS[LANG].topics,
+                    header: headerTmpl({title: HEADERS[LANG].topics}),
                     limit: MAX_TOPICS,
                     valueKey: 'title',
+                    engine: SWIG_ENGINE,
+                    template: [
+                        '<p>',
+                        '<span class="glyphicon glyphicon-info-sign"></span>',
+                        '&nbsp;{{title}}',
+                        '</p>'
+                    ].join(''),
                     remote: {
                         url: WIKI_API_URL,
                         wildcard: '__QUERY',
@@ -185,9 +218,16 @@
                 },
                 {
                     name: 'Questions',
-                    header: HEADERS[LANG].questions,
+                    header: headerTmpl({title: HEADERS[LANG].questions}),
                     limit: MAX_QUESTIONS,
                     valueKey: 'title',
+                    engine: SWIG_ENGINE,
+                    template: [
+                        '<p>',
+                        '<span class="glyphicon glyphicon-question-sign"></span>',
+                        '&nbsp;{{title}}',
+                        '</p>'
+                    ].join(''),
                     remote: {
                         url: ASKBOT_API_URL,
                         filter: filter_askbot_api
@@ -245,4 +285,4 @@
     });
 
 
-}(window.jQuery));
+}(window.jQuery, window.swig));

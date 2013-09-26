@@ -194,7 +194,6 @@ a.thumbnail-link {
 
     .tt-dropdown-menu {
         color: white;
-        font-weight: bold;
         width: 100%;
         background-color: @bg-dark;
         margin-top: -1px;
@@ -208,12 +207,21 @@ a.thumbnail-link {
           -webkit-background-clip: padding-box;
              -moz-background-clip: padding;
                   background-clip: padding-box;
+
+        p.search-header {
+            .text-center();
+            margin: 0;
+            background-color: @bg-light;
+        }
     }
 
     .tt-suggestion {
-        font-weight: normal;
+        @maxLines: 2;
+        @maxHeight: @maxLines * @line-height-computed;
         display: block;
-        padding: 3px 20px;
+        max-height: @maxHeight;
+        margin-top: 2px;
+        .clearfix();
 
         &.tt-is-under-cursor {
             background-color: @bg-light;
@@ -222,6 +230,16 @@ a.thumbnail-link {
 
         p {
             margin: 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-height: @maxHeight;
+        }
+
+        img {
+            .pull-left();
+            max-width: 40px;
+            max-height: @maxHeight - 5px;
+            margin: 2.5px 5px 2.5px 0;
         }
     }
 }

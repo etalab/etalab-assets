@@ -14,17 +14,32 @@ module.exports = function(grunt) {
                 }
             }
         },
-        jasmine : {
-            src: 'js/**/*.js',
-            options: {
-                specs: 'specs/**/*.specs.js',
-                helpers: 'specs/helpers/*.js',
-                vendor: [
-                    'bower/jquery/jquery.js',
-                    'bower/jquery.cookie/jquery.cookie.js',
-                    'bower/bootstrap/dist/js/bootstrap.js',
-                    'bower/typeahead.js/dist/typeahead.js'
-                ]
+        jasmine: {
+            etalab: {
+                src: 'js/**/*.js',
+                options: {
+                    specs: 'specs/**/*.specs.js',
+                    helpers: 'specs/helpers/*.js',
+                    template: 'runner.tmpl',
+                    vendor: [
+                        'bower/jquery/jquery.js',
+                        'bower/jquery.cookie/jquery.cookie.js',
+                        'bower/bootstrap/dist/js/bootstrap.js',
+                        'bower/typeahead.js/dist/typeahead.js',
+                        'bower/swig/index.js'
+                    ],
+                    templateOptions: {
+                        metas: [
+                            {name: 'domain', content: 'fake.fr'}
+                        ],
+                        links: [
+                            {rel: 'home', href: 'http://www.fake.fr'},
+                            {rel: 'wiki', href: 'http://wiki.fake.fr'},
+                            {rel: 'wiki-api', href: 'http://wiki.fake.fr/api.php'},
+                            {rel: 'questions', href: 'http://questions.fake.fr'}
+                        ]
+                    }
+                }
             }
         },
         jshint: {
@@ -54,7 +69,8 @@ module.exports = function(grunt) {
                 tasks: ['less']
             },
             js: {
-                files: 'js/*.js'
+                files: 'js/*.js',
+                tasks: ['test']
             },
             html: {
                 files: 'demo/*.html'
@@ -76,9 +92,9 @@ module.exports = function(grunt) {
     // Load Grunt tasks declared in the package.json file
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-    grunt.registerTask('demo', ['webfont', 'less', 'connect:server', 'watch']);
     grunt.registerTask('dist', ['default', 'webfont']);
     grunt.registerTask('test', ['jasmine', 'jshint']);
     grunt.registerTask('default', ['test', 'webfont']);
+    grunt.registerTask('demo', ['default', 'less', 'connect:server', 'watch']);
 
 };

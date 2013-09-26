@@ -19,7 +19,8 @@
     "respond": "~1.3.0",
     "flags": "*",
     "typeahead.js": "~0.9.3",
-    "jquery.cookie": "~1.3.1"
+    "jquery.cookie": "~1.3.1",
+    "swig": "http://paularmstrong.github.io/swig/js/swig.js"
   },
   "resolutions": {
     "jquery": "~2.0.3"
