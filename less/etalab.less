@@ -81,8 +81,51 @@ a.thumbnail-link {
     background-color: lighten(@bg-dark, 10%);
     z-index: 800;
 
-    form {
-        width: 100%;
+    @media (min-width: @grid-float-breakpoint) {
+        .navbar-form {
+            padding: 0;
+        }
+    }
+
+    .subnav-collapse { // Copied from bootstrap navbar-collapse
+      max-height: 340px;
+      overflow-x: visible;
+      padding-right: @navbar-padding-horizontal;
+      padding-left:  @navbar-padding-horizontal;
+      border-top: 1px solid transparent;
+      .clearfix();
+      -webkit-overflow-scrolling: touch;
+
+      &.in {
+        overflow-y: auto;
+      }
+
+      @media (min-width: @grid-float-breakpoint) {
+        border-top: 0;
+        box-shadow: none;
+
+        &.collapse {
+          display: block !important;
+          height: auto !important;
+          padding-bottom: 0; // Override default setting
+          overflow: visible !important;
+        }
+
+        &.in {
+          overflow-y: visible;
+        }
+
+        // Account for first and last children spacing
+        .navbar-nav.navbar-left:first-child {
+          margin-left: -@navbar-padding-horizontal;
+        }
+        .navbar-nav.navbar-right:last-child {
+          margin-right: -@navbar-padding-horizontal;
+        }
+        .navbar-text:last-child {
+          margin-right: 0;
+        }
+      }
     }
 
     input[type="search"] {
