@@ -11,9 +11,9 @@
   </rdf:RDF>
  </metadata>
  <g id="layer1" transform="translate(0,-802.36218)">
-  <g id="g3839" stroke-linejoin="miter" transform="translate(-205,75)" stroke="#000" stroke-linecap="butt" stroke-width="1px" fill="#000">
-   <path id="path3067" d="m430,410,0-20-20,0,0-100-40,30c2.2383,10.145,0-20,0-30l-40,30v-30l-40,30v-80h-40v150h-20v20z" transform="translate(0,552.36218)"/>
-   <path id="path3837" opacity="0.98000004" d="m270,782.36c0-50,30,0,60-40-10,50-50,20-60,40z"/>
+  <g id="g3007" stroke-linejoin="miter" transform="matrix(1.0846561,0,0,1.0846561,0.75757568,-89.723224)" stroke="#000" stroke-linecap="butt" stroke-width="1.11363637px" fill="#000">
+   <path id="path3067" d="m225.91,1042.6,0-22.273-22.273,0,0-111.36-44.545,33.409c2.4927,11.298,0-22.273,0-33.409l-44.545,33.409v-33.409l-44.56,33.42v-60h-45l0.45454,137.95h-22.273v22.273z"/>
+   <path id="path3837" opacity="0.98000004" d="m45,877.36c0-55.682,33.409,0,66.818-44.545-11.14,55.68-55.684,22.27-66.82,44.54z"/>
   </g>
  </g>
 </svg>
