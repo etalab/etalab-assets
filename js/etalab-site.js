@@ -30,7 +30,7 @@
         MAX_TOPICS = 2,
         MAX_QUESTIONS = 2,
 
-        DATASET_API_URL = HOME_URL + '/api/3/action/package_search?rows='+MAX_DATASETS+'&q=%QUERY',
+        DATASET_API_URL = HOME_URL + '/dataset/autocomplete?num='+MAX_DATASETS+'&q=%QUERY',
         ORGANIZATION_API_URL = HOME_URL + '/api/3/action/organization_list?sort=packages&all_fields=true',
         ASKBOT_API_URL = QUESTIONS_URL + '/api/v1/questions?query=%QUERY',
         WIKI_API_URL = WIKI_API + '?',
@@ -86,10 +86,6 @@
 
     var filter_mediawiki_api = function(response) {
         return response.query.search;
-    };
-
-    var filter_dataset_api = function(response) {
-        return response.result.results;
     };
 
     var filter_organization_api = function(response) {
@@ -188,14 +184,13 @@
                     valueKey: 'title',
                     engine: SWIG_ENGINE,
                     template: [
-                        '{% if organization.image_url %}',
-                        '<img src="{{organization.image_url}}">',
+                        '{% if image_url %}',
+                        '<img src="{{image_url}}">',
                         '{% endif %}',
                         '<p>{{title}}</p>'
                     ].join(''),
                     remote: {
-                        url: DATASET_API_URL,
-                        filter: filter_dataset_api
+                        url: DATASET_API_URL
                     }
                 },
                 {
