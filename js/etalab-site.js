@@ -77,6 +77,20 @@
     }
     WIKI_API_URL = WIKI_API_URL + $.param(wikiParams);
 
+    // Exports commont form validation rules
+    window.ETALAB_VALIDATION_RULES = {
+        errorClass: "help-block",
+        highlight: function(element) {
+            $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+        },
+        unhighlight: function(element) {
+            $(element).closest('.form-group').removeClass('has-error');
+        },
+        success: function(element) {
+            $(element).closest('.form-group').addClass('has-success');
+        }
+    };
+
     /**
      * Filter the Territory API to match Typeahead expected format.
      */

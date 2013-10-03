@@ -206,13 +206,20 @@
             </div>
 
             <div class="col-sm-9 col-md-9">
-                <div class="jumbotron">
-                    <div class="container">
-                        <h1>Etalab Assets</h1>
-                        <p>Simple test site....</p>
-                        <p><a class="btn btn-primary btn-lg">Learn more</a></p>
-                    </div>
+                <div class="page-header">
+                    <h1>Etalab Assets <small>demo</small></h1>
                 </div>
+                <form id="demo-form" role="form" novalidate>
+                    <div class="form-group">
+                        <label for="email" class="control-label">Email address</label>
+                        <input id="email" type="email" class="form-control" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">Password</label>
+                        <input id="password" type="password" class="form-control" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
             </div>
         </div>
 
@@ -234,15 +241,25 @@
         <script src="bower/bootstrap/dist/js/bootstrap.js"></script>
         <script src="bower/typeahead.js/dist/typeahead.js"></script>
         <script src="bower/jquery.cookie/jquery.cookie.js"></script>
+        <script src="bower/jquery.validation/jquery.validate.js"></script>
+        <script src="bower/swig/index.js"></script>
         <script src="js/etalab-site.js"></script>
     <![endif]-->
-     <!--[if gte IE 9]><!-->
+    <!--[if gte IE 9]><!-->
         <script src="bower/jquery/jquery.js"></script>
         <script src="bower/bootstrap/dist/js/bootstrap.js"></script>
         <script src="bower/typeahead.js/dist/typeahead.js"></script>
         <script src="bower/jquery.cookie/jquery.cookie.js"></script>
+        <script src="bower/jquery.validation/jquery.validate.js"></script>
         <script src="bower/swig/index.js"></script>
         <script src="js/etalab-site.js"></script>
     <!--<![endif]-->
+
+    <script>
+        $(function() {
+            // Test form validation
+            $('#demo-form').validate(ETALAB_VALIDATION_RULES);
+        });
+    </script>
 </body>
 </html>

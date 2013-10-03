@@ -20,7 +20,8 @@
     "flags": "*",
     "typeahead.js": "~0.9.3",
     "jquery.cookie": "~1.3.1",
-    "swig": "http://paularmstrong.github.io/swig/js/swig.js"
+    "swig": "http://paularmstrong.github.io/swig/js/swig.js",
+    "jquery.validation": "~1.11.1"
   },
   "resolutions": {
     "jquery": "~2.0.3"
