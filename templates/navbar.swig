@@ -21,9 +21,9 @@
                 </button>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="" title="Profile">
+                        <a href="" title="Profil">
                             <span class="glyphicon glyphicon-wrench"></span>
-                            Connexion
+                            Profil
                         </a>
                     </li>
                     <li>
@@ -35,7 +35,7 @@
                 </ul>
             </li>
             {% else %}
-            <li class="dropdown">
+            <li>
                 <a href="logged.html" class="btn btn-dark navbar-btn">
                     <span class="glyphicon glyphicon-log-in"></span>
                     Sign In / Register

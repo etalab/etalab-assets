@@ -61,10 +61,6 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            options: {
-                spawn: false,
-                livereload: true
-            },
             less: {
                 files: ['less/*.less'],
                 tasks: ['less']
@@ -83,6 +79,10 @@ module.exports = function(grunt) {
                     'data/*.json'
                 ],
                 tasks: ['assemble']
+            },
+            livereload: {
+                options: { livereload: true },
+                files: ['demo/**/*']
             }
         },
         connect: {

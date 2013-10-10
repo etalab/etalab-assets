@@ -69,6 +69,11 @@ a.thumbnail-link {
 /**
  * Navbar style and fixes
  */
+.navbar-nav > li > a.navbar-btn {
+    margin-right: 5px;
+    padding: @padding-base-vertical @padding-base-horizontal;
+}
+
 .navbar-static-top {
     .navbar-right .dropdown {
         margin-right: 5px;
@@ -83,6 +88,12 @@ a.thumbnail-link {
 
 .navbar-default {
     margin-bottom: 0;
+
+    // Specific fix for btn-dark
+    .btn-dark:hover, .btn-dark:focus {
+        color: white !important;
+        background-color: darken(@bg-dark, 8%) !important;
+    }
 }
 
 .navbar-subnav {
@@ -96,44 +107,44 @@ a.thumbnail-link {
     }
 
     .subnav-collapse { // Copied from bootstrap navbar-collapse
-      max-height: 340px;
-      overflow-x: visible;
-      padding-right: @navbar-padding-horizontal;
-      padding-left:  @navbar-padding-horizontal;
-      border-top: 1px solid transparent;
-      .clearfix();
-      -webkit-overflow-scrolling: touch;
-
-      &.in {
-        overflow-y: auto;
-      }
-
-      @media (min-width: @grid-float-breakpoint) {
-        border-top: 0;
-        box-shadow: none;
-
-        &.collapse {
-          display: block !important;
-          height: auto !important;
-          padding-bottom: 0; // Override default setting
-          overflow: visible !important;
-        }
+        max-height: 340px;
+        overflow-x: visible;
+        padding-right: @navbar-padding-horizontal;
+        padding-left:  @navbar-padding-horizontal;
+        border-top: 1px solid transparent;
+        .clearfix();
+        -webkit-overflow-scrolling: touch;
 
         &.in {
-          overflow-y: visible;
+            overflow-y: auto;
         }
 
-        // Account for first and last children spacing
-        .navbar-nav.navbar-left:first-child {
-          margin-left: -@navbar-padding-horizontal;
+        @media (min-width: @grid-float-breakpoint) {
+            border-top: 0;
+            box-shadow: none;
+
+            &.collapse {
+                display: block !important;
+                height: auto !important;
+                padding-bottom: 0; // Override default setting
+                overflow: visible !important;
+            }
+
+            &.in {
+                overflow-y: visible;
+            }
+
+            // Account for first and last children spacing
+            .navbar-nav.navbar-left:first-child {
+                margin-left: -@navbar-padding-horizontal;
+            }
+            .navbar-nav.navbar-right:last-child {
+                margin-right: -@navbar-padding-horizontal;
+            }
+            .navbar-text:last-child {
+                margin-right: 0;
+            }
         }
-        .navbar-nav.navbar-right:last-child {
-          margin-right: -@navbar-padding-horizontal;
-        }
-        .navbar-text:last-child {
-          margin-right: 0;
-        }
-      }
     }
 
     input[type="search"] {
