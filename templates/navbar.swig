@@ -44,18 +44,18 @@
             {% endif %}
             <li class="dropdown">
                 <button class="btn btn-dark navbar-btn dropdown-toggle" data-toggle="dropdown">
-                    <img src="bower/flags/flags/flags-iso/shiny/16/FR.png" />
+                    <img src="img/flags/fr.png" />
                 </button>
                 <ul class="dropdown-menu">
                     <li>
                         <a href="">
-                            <img src="bower/flags/flags/flags-iso/shiny/16/FR.png" />
+                            <img src="img/flags/fr.png" />
                             Français
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img src="bower/flags/flags/flags-iso/shiny/16/US.png" />
+                            <img src="img/flags/en.png" />
                             English
                         </a>
                     </li>
