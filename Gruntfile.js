@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        clean: ['demo'],
         webfont: {
             icons: {
                 src: 'icons/*.{svg,eps}',
@@ -68,12 +69,20 @@ module.exports = function(grunt) {
                 files: ['less/*.less'],
                 tasks: ['less']
             },
+            font: {
+                files: ['icons/*.{svg,eps}'],
+                tasks: ['webfont']
+            },
             js: {
                 files: 'js/*.js',
                 tasks: ['test']
             },
-            html: {
-                files: 'demo/*.html'
+            templates: {
+                files: [
+                    'templates/*.swig',
+                    'data/*.json'
+                ],
+                tasks: ['assemble']
             }
         },
         connect: {
@@ -85,16 +94,32 @@ module.exports = function(grunt) {
                 base: ['.', 'demo', 'bower/bootstrap']
             },
             server: {}
+        },
+        assemble: {
+            options: {
+                engine: 'swig',
+                data: 'data/*.json'
+            },
+            demo: {
+                expand: true,
+                src: [
+                    'templates/index.swig',
+                    'templates/logged.swig'
+                ],
+                dest: 'demo',
+                flatten: true
+            }
         }
 
     });
 
     // Load Grunt tasks declared in the package.json file
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+    grunt.loadNpmTasks('assemble');
 
-    grunt.registerTask('dist', ['default', 'webfont']);
+    grunt.registerTask('default', ['test']);
     grunt.registerTask('test', ['jasmine', 'jshint']);
-    grunt.registerTask('default', ['test', 'webfont']);
-    grunt.registerTask('demo', ['default', 'less', 'connect:server', 'watch']);
+    grunt.registerTask('dist', ['default', 'webfont']);
+    grunt.registerTask('demo', ['clean', 'default', 'less', 'assemble', 'connect:server', 'watch']);
 
 };

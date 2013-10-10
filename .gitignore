@@ -1,4 +1,4 @@
 /bower/
 /node_modules/
-/css/
-/demo/css/
+/demo/
+/data/local.json
