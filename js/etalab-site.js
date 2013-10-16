@@ -45,6 +45,26 @@
 
         LANG = $('html').attr('lang') || 'en',
 
+        /**
+         * Swig adapter for typeahead.js templatre engine
+         * @type {Object}
+         */
+        SWIG_ENGINE = {
+            compile: function(template) {
+                var tpl = swig.compile(template);
+
+                return {
+                    render: function(context) {
+                        return tpl(context);
+                    }
+                };
+            }
+        },
+
+        /**
+         * Typeahead.js datasets titles
+         * @type {Object}
+         */
         HEADERS = {
             'fr': {
                 'topics': 'Thématiques',
@@ -57,17 +77,6 @@
                 'questions': 'Questions',
                 'organizations': 'Organizations',
                 'datasets': 'Datasets'
-            }
-        },
-        SWIG_ENGINE = {
-            compile: function(template) {
-                var tpl = swig.compile(template);
-
-                return {
-                    render: function(context) {
-                        return tpl(context);
-                    }
-                };
             }
         },
         headerTmpl = swig.compile('<p class="search-header"><strong>{{title}}</strong></p>');
@@ -86,8 +95,11 @@
         unhighlight: function(element) {
             $(element).closest('.form-group').removeClass('has-error');
         },
-        success: function(element) {
-            $(element).closest('.form-group').addClass('has-success');
+        success: function(label) {
+            label.closest('.form-group').addClass('has-success');
+            if (!label.text()) {
+                label.remove();
+            }
         }
     };
 
