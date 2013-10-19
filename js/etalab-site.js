@@ -77,6 +77,12 @@
                 'questions': 'Questions',
                 'organizations': 'Organizations',
                 'datasets': 'Datasets'
+            },
+            'de': {
+                'topics': 'Themen',
+                'questions': 'Fragen',
+                'organizations': 'Organisationen',
+                'datasets': 'Datensätze'
             }
         },
         headerTmpl = swig.compile('<p class="search-header"><strong>{{title}}</strong></p>');
