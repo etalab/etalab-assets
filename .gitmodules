@@ -1,3 +1,0 @@
-[submodule "demo/images"]
-	path = demo/images
-	url = git@github.com:etalab/etalab-assets-demo-images.git
