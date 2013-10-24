@@ -34,13 +34,9 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-3 col-md-3 col-xs-12">
-                {% include 'sidebar.swig' %}
-            </div>
 
-            <div class="col-sm-9 col-md-9">
                 {% block "content" %}{% endblock %}
-            </div>
+        
         </div>
 
         <hr/>
