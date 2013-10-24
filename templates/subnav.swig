@@ -9,19 +9,27 @@
 <div class="search_sidebar col-sm-4 col-md-4 col-xs-12">
     
 
-<div class="col-sm-3 col-md-3 col-xs-12">
     <nav id="sidebar" class="panel">
-
-    <!-- <div class="col-sm-3 col-md-3 col-xs-12">
         <form class="navbar-form form-inline" role="search">
-            <div class="input-group col-sm-8 col-xs-12">
+            <div class="input-group">
                 <div class="input-group-btn">
                     <button class="btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                 </div>
                 <input id="search-input" name="q" type="search" class="form-control"
                             autocomplete="off" placeholder="Search">
             </div>
-            <div class="collapse subnav-collapse col-sm-4 col-xs-12">
+
+        </form>
+
+    </nav>
+
+
+    <nav id="sidebar" class="panel">
+
+    
+        <form class="navbar-form form-inline" role="search">
+            
+            <div class="collapse subnav-collapse">
                 <div id="where-group" class="input-group">
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-globe"></span>
@@ -32,8 +40,12 @@
                 </div>
             </div>
         </form>
-    </div> -->
 
+    </nav>
+
+
+
+    <nav id="sidebar" class="panel">
     <!-- Groups -->
     <div class="list-group">
         {% for group in groups %}
@@ -51,19 +63,19 @@
 
 
 
-
-    <h2>“Partager, améliorer et réutiliser  l'information publique”</h2>
+<div class="call-to-action">
+    <h2>“Partager, améliorer et valoriser </br> l'information publique”</h2>
     <div class="navbar-left col-sm-4 col-md-3 col-xs-12 collapse subnav-collapse">
-        <a class="btn btn-primary navbar-btn btn-block"
+        <a class="btn btn-big navbar-btn btn-block"
                 title="Publish a dataset !"
                 href>
             <span class="glyphicon glyphicon-plus-sign"></span>
-            Publish a dataset !
+            Publier une serie de Données
         </a>
     </div>
 
 
-    </div>
+</div>
 
 
 

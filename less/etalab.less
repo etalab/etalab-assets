@@ -399,13 +399,19 @@ padding: 8px;
  * Sidebar style and fixes
  */
 #sidebar {
-    background-color: rgb(19,86,122,0.5);
+    background-color: rgba(19,86,122,0.5);
+    border-radius: 0px;
     color: white;
     max-width: 400px;
+    margin-bottom: 3px;
 
     a {
         color: white;
         text-decoration: none;
+    }
+
+    .panel {
+        margin-bottom: 3px !important;
     }
 
     .panel-heading {
@@ -446,6 +452,10 @@ padding: 8px;
         }
     }
 
+    .list-group {
+        margin: 8px 0px;
+    }
+
     .list-group-item {
         background: none;
         border: 0px;
@@ -478,3 +488,8 @@ h2 {
 
 }
 
+.search_sidebar {
+padding-left: 0px;
+margin-top: 11px;
+margin-bottom: 8px;
+}
