@@ -1,7 +1,7 @@
 
 <div class="container">
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
-    
+
     <header class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse, .subnav-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -9,18 +9,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="">Data.gouv.fr</a>
+        <a class="navbar-brand" href="/">Data.gouv.fr</a>
         <p class="navbar-text pull-right">La plateforme ouverte des données publiques françaises.</p>
     </header>
 
     <ul class="nav navbar-nav">
-      <li><a href="#">A propos</a></li>
-      <li><a href="#">Comment ça marche</a></li>
-      <li><a href="#">Licence Ouverte</a></li>
-      <li><a href="#">Sources</a></li>
-      <li><a href="#">Activiz</a></li>
-      <li><a href="#">Blog</a></li>
-
+      <li><a href="/">home</a></li>
+      <li><a href="/search.html">Search</a></li>
+      <li><a href="/dataset.html">Dataset</a></li>
+      <li><a href="/widgets.html">Widgets</a></li>
     </ul>
 
       <div class="collapse navbar-collapse">
@@ -40,7 +37,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/" title="Logout">
+                        <a href="{{basename}}.html" title="Logout">
                             <span class="glyphicon glyphicon-log-out"></span>
                             Log out
                         </a>
@@ -49,7 +46,7 @@
             </li>
             {% else %}
             <li>
-                <a href="logged.html">
+                <a href="{{basename}}-logged.html">
                     <span class="glyphicon glyphicon-log-in"></span>
                     Sign In / Register
                 </a>
@@ -83,11 +80,11 @@
         </ul>
     </div>
 
-    
 
 
-   
+
+
 </nav>
-</div> 
+</div>
 
 

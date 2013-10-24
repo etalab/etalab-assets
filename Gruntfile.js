@@ -79,7 +79,7 @@ module.exports = function(grunt) {
             templates: {
                 files: [
                     'templates/*.swig',
-                    'data/*.json'
+                    'data/*.{json,yaml}'
                 ],
                 tasks: ['assemble']
             },
@@ -101,16 +101,22 @@ module.exports = function(grunt) {
         assemble: {
             options: {
                 engine: 'swig',
-                data: 'data/*.json'
+                data: 'data/*'
             },
             demo: {
                 expand: true,
+                cwd: 'templates',
                 src: [
-                    'templates/index.swig',
-                    'templates/logged.swig'
+                    'index.swig',
+                    // 'index-logged.swig',
+                    'dataset.swig',
+                    // 'dataset-logged.swig',
+                    'search.swig',
+                    // 'search-logged.swig',
+                    'wdigets.swig',
+                    // 'wdigets-logged.swig',
                 ],
-                dest: 'demo',
-                flatten: true
+                dest: 'demo'
             }
         }
 

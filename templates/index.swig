@@ -1,4 +1,5 @@
 {% extends "templates/base.swig" %}
+{% set basename = 'index' %}
 
 {% block "title" %}Home{% endblock %}
 
