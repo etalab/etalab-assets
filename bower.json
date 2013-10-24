@@ -9,7 +9,10 @@
     "node_modules",
     "bower",
     "test",
-    "tests"
+    "tests",
+    "demo",
+    "icons",
+    "data/datasets.json"
   ],
   "dependencies": {
     "bootstrap": "~3.0.0",
