@@ -113,7 +113,7 @@ module.exports = function(grunt) {
                     // 'dataset-logged.swig',
                     'search.swig',
                     // 'search-logged.swig',
-                    'wdigets.swig',
+                    'widgets.swig',
                     // 'wdigets-logged.swig',
                 ],
                 dest: 'demo'
