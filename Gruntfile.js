@@ -1,7 +1,10 @@
 module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        clean: ['demo'],
+        clean: [
+            'demo/*.html',
+            'demo/css/*.css'
+        ],
         webfont: {
             icons: {
                 src: 'icons/*.{svg,eps}',
