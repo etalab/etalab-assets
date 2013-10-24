@@ -32,6 +32,14 @@ The localization use the ``<html>`` tag ``lang`` attribute to guess the locale:
 
 This project use Grunt to manage development workflow.
 
+### submodules
+
+Images are in their own repository and you need to initialize it:
+
+```bash
+$ git submodule update --init
+```
+
 ### System dependencies
 
 You need the following system dependencies to build the fonts:
