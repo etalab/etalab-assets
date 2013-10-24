@@ -9,6 +9,7 @@
 @import url(http://fonts.googleapis.com/css?family=Sansita+One);
 @title-font: 'Sansita One', cursive;
 
+
 .full-container {
     padding-left: 15px;
     padding-right: 15px;
@@ -101,9 +102,36 @@ a.thumbnail-link {
 /**
  * Navbar style and fixes
  */
+
+.navbar {
+min-height: 95px;
+color: #373c42;
+margin-bottom: 20px;
+border: none;
+}
+
+.navbar-header {
+    width: 100%;
+}
+
+.navbar-text {
+    font-style: italic;
+}
+
+.navbar-nav li {
+font-weight: bold;
+font-size: 12px;
+
+a {
+padding: 8px;
+}
+
+}
+
 .navbar-nav > li > a.navbar-btn {
     margin-right: 5px;
     padding: @padding-base-vertical @padding-base-horizontal;
+
 }
 
 .navbar-static-top {
@@ -120,6 +148,25 @@ a.thumbnail-link {
 
 .navbar-default {
     margin-bottom: 0;
+
+    .navbar-brand   {
+        margin: 10px ;
+        display: block;
+        width: 400px;
+        min-height: 42px;
+        padding-left: 90px;
+        line-height: 10px;
+        font-weight: bold;
+        color: #373c42;
+        background-image: url('../img/logo_etat.png') ;
+        background-repeat: no-repeat;
+
+        &:hover {
+            color: #49a5d7;
+
+        }
+        
+    }
 
     // Specific fix for btn-dark
     .btn-dark:hover, .btn-dark:focus {
@@ -300,7 +347,7 @@ a.thumbnail-link {
  * Sidebar style and fixes
  */
 #sidebar {
-    background-color: @bg-light;
+    background-color: rgb(19,86,122,0.5);
     color: white;
     max-width: 400px;
 
@@ -348,17 +395,14 @@ a.thumbnail-link {
     }
 
     .list-group-item {
+        background: none;
+        border: 0px;
         color: white;
-        background-color: @bg-light;
-        border-top: 1px solid lighten(@bg-dark, 20%);
-        border-bottom: 1px solid darken(@bg-dark, 15%);
-        -webkit-transition:padding .2s ease, background .2s ease;
-
+        padding: 4px 0px;
+        font-weight: normal;
+        font-size: 13px;
         &:hover, &:focus {
-            background-color: darken(@bg-light, 8%);
-            padding-left: 20px;
-            border-top: 1px solid lighten(@highlight-dark, 20%);
-            border-bottom: 1px solid darken(@highlight-dark, 15%);
+            border: 0px;
         }
 
         &:last-child {

@@ -30,8 +30,9 @@
 <body>
 
     {% include 'navbar.swig' %}
+    {% include 'subnav.swig' %}
 
-    <div class="full-container">
+    <div class="container">
         <div class="row">
             <div class="col-sm-3 col-md-3 col-xs-12">
                 {% include 'sidebar.swig' %}

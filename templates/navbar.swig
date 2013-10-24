@@ -1,4 +1,7 @@
+
+<div class="container">
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    
     <header class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse, .subnav-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -6,11 +9,21 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="">Data.Gouv.fr</a>
+        <a class="navbar-brand" href="">Data.gouv.fr</a>
+        <p class="navbar-text pull-right">La plateforme ouverte des données publiques françaises.</p>
     </header>
 
-    <div class="collapse navbar-collapse">
-        <p class="navbar-text">The open platform for french public data</p>
+    <ul class="nav navbar-nav">
+      <li><a href="#">A propos</a></li>
+      <li><a href="#">Comment ça marche</a></li>
+      <li><a href="#">Licence Ouverte</a></li>
+      <li><a href="#">Sources</a></li>
+      <li><a href="#">Activiz</a></li>
+      <li><a href="#">Blog</a></li>
+
+    </ul>
+
+      <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
             {% if user %}
             <li class="dropdown">
@@ -36,14 +49,14 @@
             </li>
             {% else %}
             <li>
-                <a href="logged.html" class="btn btn-dark navbar-btn">
+                <a href="logged.html">
                     <span class="glyphicon glyphicon-log-in"></span>
                     Sign In / Register
                 </a>
             </li>
             {% endif %}
             <li class="dropdown">
-                <button class="btn btn-dark navbar-btn dropdown-toggle" data-toggle="dropdown">
+                <button class="dropdown-toggle" data-toggle="dropdown">
                     <img src="img/flags/fr.png" />
                 </button>
                 <ul class="dropdown-menu">
@@ -69,36 +82,12 @@
             </li>
         </ul>
     </div>
-</nav>
 
-<nav class="navbar navbar-static-top navbar-subnav">
-    <div class="navbar-left col-sm-4 col-md-3 col-xs-12 collapse subnav-collapse">
-        <a class="btn btn-primary navbar-btn btn-block"
-                title="Publish a dataset !"
-                href>
-            <span class="glyphicon glyphicon-plus-sign"></span>
-            Publish a dataset !
-        </a>
-    </div>
-    <div class="col-sm-8 col-md-9 col-xs-12 navbar-left">
-        <form class="navbar-form form-inline" role="search">
-            <div class="input-group col-sm-8 col-xs-12">
-                <div class="input-group-btn">
-                    <button class="btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                </div>
-                <input id="search-input" name="q" type="search" class="form-control"
-                            autocomplete="off" placeholder="Search">
-            </div>
-            <div class="collapse subnav-collapse col-sm-4 col-xs-12">
-                <div id="where-group" class="input-group">
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-globe"></span>
-                    </span>
-                    <input id="where-input" type="search" class="form-control"
-                            autocomplete="off" placeholder="Where">
-                    <input id="ext_territory" name="ext_territory" type="hidden" />
-                </div>
-            </div>
-        </form>
-    </div>
+    
+
+
+   
 </nav>
+</div> 
+
+
