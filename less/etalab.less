@@ -126,7 +126,7 @@ form {
     height: 40px;
 }
 .btn-dark {
-    .button-variant(white; @bg-darker; @bg-dark);
+    background-color: #045783;
 }
 .btn-highlight {
     .button-variant(white; @highlight; @highlight);
@@ -166,7 +166,7 @@ font-weight: bold;
 font-size: 12px;
 
 a {
-padding: 8px;
+padding: 8px 16px 5px 0px;
 }
 
 }
@@ -193,16 +193,18 @@ padding: 8px;
     margin-bottom: 0;
 
     .navbar-brand   {
-        margin: 10px ;
+        margin: 10px 0px;
         display: block;
         width: 400px;
         min-height: 42px;
+        padding: 0px;
         padding-left: 90px;
-        line-height: 10px;
+        line-height: 42px;
         font-weight: bold;
         color: #373c42;
         background-image: url('../img/logo_etat.png') ;
         background-repeat: no-repeat;
+        font-family: @title-font;
 
         &:hover {
             color: #49a5d7;
