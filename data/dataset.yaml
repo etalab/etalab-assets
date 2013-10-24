@@ -11,11 +11,20 @@ notes: |
     les tableaux récapitulatifs d'attribution de ces subventions depuis l'année 2011
 author: Moi
 author_email: coucou@cmoi.fr
+
 supplier:
-    display_name: supplier
+    display_name: Supplier
     image_url: images/cg33.png
     name: supplier
+
 resources:
+    -   name: Une resource
+        description: Descrption de la resource
+        format: html
+    -   name: Une autre resource
+        description: une autre description de resource
+        format: csv
+
 organization:
     certified_public_service: true
     name: ministère-de-l-interieur
@@ -24,24 +33,47 @@ organization:
     description: |
         Placé au cœur de l’Etat, le ministère de l’intérieur assure, en premier lieu,
         la permanence et la continuité de l’Etat. Cette fonction régalienne se matérialise par le rôle...
+
 license:
     title: Licence Ouverte / Open Licence
     url: http://www.data.gouv.fr/Licence-Ouverte-Open-Licence
+
 temporal_coverage:
     from: 01/01/2011
     to: 31/12/2011
+
 territorial_coverage:
     name: Country/FR
     granularity: Commune
+
 quality:
     weight: 7.16
     warnings: 5
     errors: 1
     url: http://some.where
+
 tags:
     - tag-1
     - tag-2
+
 groups:
     -   title: Société
         image_url: images/societe.png
 
+related:
+    -   title: Fichier au format Tableur
+        image_url: images/regards-citoyens.png
+        description: |
+            Les informations transmises en PDF par le ministère de l’intérieur étant peu exploitables,
+            nous les avons transformées en collaboration avec Alexandre Léchenet en données,
+            enrichies de certaines informations relatives aux parlementaires
+            et les publions sous conditions OpenData dans un format tableur.
+    -   title: Datavisualisation par Rue89
+        image_url: images/capture_carte.png
+        description: Article de fond et positionnement sur Googlemaps
+    -   title: Toute la vérité sur la Réserve parlementaire
+        image_url: images/toute-la-verite-sur-la-reserve-parlementaire-des-elus_article_main.jpg
+        description: Article de La Croix et graphique interprétatif
+    -   title: Le moteur de recherche du Monde
+        image_url: images/penguin-cash.jpg
+        description: Article du monde.fr et moteur de recherche

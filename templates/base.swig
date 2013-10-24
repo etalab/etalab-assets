@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>{% block title %}{% endblock %} - Demo - Data.Gouv.fr</title>
+    <title>{% block "title" %}{% endblock %} - Demo - Data.Gouv.fr</title>
     <link rel="shortcut icon" href="img/favicon.png">
 
     <meta name="domain" content="{{ local.domain|default('etalab2.fr') }}" />
@@ -36,7 +36,7 @@
         <div class="row">
 
                 {% block "content" %}{% endblock %}
-        
+
         </div>
 
         <hr/>

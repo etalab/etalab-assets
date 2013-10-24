@@ -56,21 +56,15 @@
             <div class="list-group resources-list">
                 {% for resource in dataset.resources %}
                     <a class="list-group-item" href="{{ resource.url }}"
-                        {% if resource.format.lower() == 'html' %}target="_blank"{% endif %}
+                        {% if resource.format == 'html' %}target="_blank"{% endif %}
                         >
                         <span class="format-label pull-left" property="dc:format" data-format="{{ resource.format }}">{{ resource.format }}</span>
                         <h4 class="list-group-item-heading ellipsis {% if not resource.description %}dual{% endif %}">
-                            {% if resource.name or resource.description %}
-                            {{ resource.name or resource.description }}
-                            {% else %}
-                            Nameless resource
-                            {% endif %}
+                            {{ resource.name }}
                         </h4>
-                        {% if resource.description %}
                         <p class="list-group-item-text">
                         {{ resource.description }}
                         </p>
-                        {% endif %}
                     </a>
                 {% endfor %}
             </div>
@@ -177,7 +171,7 @@
                                 title="Temporal coverage">
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </a>
-                            {{ temporal_coverage.from }} to {{ temporal_coverage.to }}
+                            {{ dataset.temporal_coverage.from }} to {{ dataset.temporal_coverage.to }}
                         </li>
                         {% endif %}
 
