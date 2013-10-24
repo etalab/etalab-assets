@@ -59,6 +59,12 @@
                             English
                         </a>
                     </li>
+                    <li>
+                        <a href="">
+                            <img src="img/flags/de.png" />
+                            Deutsch
+                        </a>
+                    </li>
                 </ul>
             </li>
         </ul>

@@ -48,6 +48,34 @@
     }
 }
 
+.card {
+    background-color: white;
+    border: 1px solid darken(@gray-lighter, 10%);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/**
+ * Form adjustments
+ */
+form {
+    label.required:after {
+        color: red;
+        content: '*';
+    }
+
+    span.red {
+        color: red;
+    }
+
+    .form-help {
+        .glyphicon();
+        .glyphicon-info-sign();
+        cursor: pointer;
+    }
+}
+
 // Custom buttons
 .btn-dark {
     .button-variant(white; @bg-darker; @bg-dark);
