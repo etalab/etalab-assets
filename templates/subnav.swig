@@ -3,6 +3,11 @@
     <div class="container">
 
     
+<div class="sidebackground1"></div>
+<div class="sidebackground2"></div>
+<div class="sidebackground3"></div>
+<div class="search_sidebar col-sm-4 col-md-4 col-xs-12">
+    
 
 <div class="col-sm-3 col-md-3 col-xs-12">
     <nav id="sidebar" class="panel">
