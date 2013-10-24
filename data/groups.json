@@ -1,13 +1,10 @@
 [
-    { "title": "Culture et communication", "icon": "culture", "url": "culture-et-communication" },
-    { "title": "Développement durable", "icon": "wind", "url": "{wiki}/Le_Développement_Durable" },
+    { "title": "Culture", "icon": "culture", "url": "culture-et-communication" },
+    { "title": "Economie & Travail", "icon": "wind", "url": "{wiki}/Le_Développement_Durable" },
     { "title": "Éducation et recherche", "icon": "education", "url": "education-et-recherche" },
-    { "title": "État et collectivités", "icon": "france", "url": "etat-et-collectivites" },
-    { "title": "Europe", "icon": "europe", "url": "europe" },
-    { "title": "Justice", "icon": "justice", "url": "justice" },
-    { "title": "Monde", "icon": "world", "url": "monde" },
-    { "title": "Santé et solidarité", "icon": "heart", "url": "sante-et-solidarite" },
-    { "title": "Sécurité et défense", "icon": "shield", "url": "securite-et-defense" },
-    { "title": "Société", "icon": "people", "url": "societe" },
-    { "title": "Travail, économie, emploi", "icon": "case", "url": "travail-economie-emploi" }
+    { "title": "Etat et Collectivités", "icon": "france", "url": "etat-et-collectivites" },
+    { "title": "Habitat et Ecologie", "icon": "europe", "url": "europe" },
+    { "title": "Santé", "icon": "heart", "url": "sante-et-solidarite" },
+    { "title": "Société : justice, vie publique", "icon": "people", "url": "societe" },
+    { "title": "Sécurité et défense", "icon": "shield", "url": "securite-et-defense" }
 ]
