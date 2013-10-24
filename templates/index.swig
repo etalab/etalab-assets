@@ -3,29 +3,23 @@
 {% block "title" %}Home{% endblock %}
 
 {% block "content" %}
-<div class="row">
-    <div class="col-md-12">
-        <p id="claim" class="lead text-center">
-        <strong>Let's debate facts to make them undebatable</strong>
-        </p>
-    </div>
-</div>
+
+<div class="container">
+
 
 <div class="row first-row">
-    <div class="col-md-6">
+    <div class="col-md-4">
 
-        {# Home carousel #}
-        <div class="panel panel-default">
-            <div id="home-carousel" class="carousel slide">
+        {# News highlight #}
 
-                <ol class="carousel-indicators">
-                    <li data-target="#home-caroussel" data-slide-to="0" class="active"></li>
-                </ol>
+            <div id="news">
+
+                
 
                 <div class="carousel-inner">
 
                     <div class="item active">
-                        <img src="images/hommes-femmes.jpg" alt="First slide">
+                        <img src="images/news.jpg" alt="First slide">
                         <div class="container">
                             <a class="carousel-caption no-decoration" href="">
                             Projet de loi pour l’égalité entre les femmes et les hommes
@@ -34,17 +28,12 @@
                     </div>
                 </div>
 
-                <a class="left carousel-control" href="#home-caroussel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a class="right carousel-control" href="#home-caroussel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
+                
             </div>
-        </div>
+       
 
     </div>
-    <div class="col-md-6">
+    <div class="col-md-8">
 
         {# Feeds tabs #}
         <div class="feeds panel panel-default">
@@ -159,3 +148,4 @@
     </div>
 </div>
 {% endblock %}
+</div>
