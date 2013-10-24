@@ -229,6 +229,10 @@ padding: 8px;
     background-color: lighten(@bg-dark, 10%);
     z-index: 800;
 
+    .navbar-form {
+        margin: 0px;
+    }
+
     @media (min-width: @grid-float-breakpoint) {
         .navbar-form {
             padding: 0;
@@ -238,9 +242,7 @@ padding: 8px;
     .subnav-collapse { // Copied from bootstrap navbar-collapse
         max-height: 340px;
         overflow-x: visible;
-        padding-right: @navbar-padding-horizontal;
-        padding-left:  @navbar-padding-horizontal;
-        border-top: 1px solid transparent;
+        padding: 0px;
         .clearfix();
         -webkit-overflow-scrolling: touch;
 
@@ -277,14 +279,14 @@ padding: 8px;
     }
 
     input[type="search"] {
-        color: white;
-        background-color: @bg-darker;
+        color: #bfbfbf;
+        background-color: @bg-light;
         border-radius: 0;
-        border: 1px solid transparent;
+        border: 1px solid white;
     }
 
     .glyphicon {
-        color: white;
+        color: #bfbfbf;
     }
 
     .territory-clear {
@@ -299,18 +301,18 @@ padding: 8px;
 
     .input-group {
         .input-group-addon {
-            background-color: @bg-darker;
-            border: 1px solid @bg-darker;
+            background-color: @bg-light;
+            border: 1px solid white;
+            border-radius: 0;
         }
 
         .input-group-btn .btn {
-            background-color: @bg-darker;
-            border: 1px solid @bg-darker;
+            background-color: @bg-light;
+            border-radius: 0px;
+            color: #999;
+            border: 1px solid white;
         }
 
-        .form-control.tt-query, .tt-hint {
-            border-radius: 0 4px 4px 0;
-        }
 
         @media (max-width: @screen-sm) {
             margin: 5px;
