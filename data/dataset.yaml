@@ -13,7 +13,35 @@ author: Moi
 author_email: coucou@cmoi.fr
 supplier:
     display_name: supplier
-    image_url:
+    image_url: images/cg33.png
     name: supplier
 resources:
 organization:
+    certified_public_service: true
+    name: ministère-de-l-interieur
+    display_name: Ministère de l'Intérieur
+    image_url: images/ministere-de-l-interieur.jpg
+    description: |
+        Placé au cœur de l’Etat, le ministère de l’intérieur assure, en premier lieu,
+        la permanence et la continuité de l’Etat. Cette fonction régalienne se matérialise par le rôle...
+license:
+    title: Licence Ouverte / Open Licence
+    url: http://www.data.gouv.fr/Licence-Ouverte-Open-Licence
+temporal_coverage:
+    from: 01/01/2011
+    to: 31/12/2011
+territorial_coverage:
+    name: Country/FR
+    granularity: Commune
+quality:
+    weight: 7.16
+    warnings: 5
+    errors: 1
+    url: http://some.where
+tags:
+    - tag-1
+    - tag-2
+groups:
+    -   title: Société
+        image_url: images/societe.png
+

@@ -127,7 +127,7 @@
             {% set organization = dataset.organization %}
             <div class="thumbnail">
                 {% if organization.certified_public_service %}
-                <img src="images/certified-stamp.png" alt="certified"
+                <img src="img/certified-stamp.png" alt="certified"
                     class="certified" rel="popover"
                     data-title="Certified public service"
                     data-content="This organization and its datasets are certified by data.gouv.fr"
@@ -171,7 +171,7 @@
                         {% endif %}
 
                         {# Temporal coverage #}
-                        {% if temporal_coverage.from and temporal_coverage.to %}
+                        {% if dataset.temporal_coverage.from and dataset.temporal_coverage.to %}
                         <li>
                             <a href class="btn btn-xs btn-default" rel="tooltip" data-placement="right auto"
                                 title="Temporal coverage">
@@ -182,34 +182,34 @@
                         {% endif %}
 
                         {# Periodicity #}
-                        {% if periodicity %}
+                        {% if dataset.periodicity %}
                         <li>
                             <a href class="btn btn-xs" rel="tooltip" data-placement="right auto"
                                 title="Periodicity">
                                 <span class="glyphicon glyphicon-time"></span>
                             </a>
-                            {{ periodicity }}
+                            {{ dataset.periodicity }}
                         </li>
                         {% endif %}
 
                         {# Territorial coverage #}
-                        {% if territorial_coverage.name %}
+                        {% if dataset.territorial_coverage.name %}
                         <li>
                             <a href class="btn btn-xs btn-default" rel="tooltip" data-placement="right auto"
                                 title="Territorial coverage">
                                 <span class="glyphicon glyphicon-globe"></span>
                             </a>
-                            {{ territorial_coverage.name }}
+                            {{ dataset.territorial_coverage.name }}
                         </li>
                         {% endif %}
 
-                        {% if territorial_coverage.granularity %}
+                        {% if dataset.territorial_coverage.granularity %}
                         <li>
                             <a href class="btn btn-xs btn-default" rel="tooltip" data-placement="right auto"
                                 title="Territorial coverage granularity">
                                 <span class="glyphicon glyphicon-screenshot"></span>
                             </a>
-                            {{ territorial_coverage.granularity }}
+                            {{ dataset.territorial_coverage.granularity }}
                         </li>
                         {% endif %}
 
@@ -221,8 +221,8 @@
                             </a>
                             <a href="{{ dataset.quality.url }}" title="Go to the report page">
                                 <span class="label label-default" title="score" rel="tooltip">{{ dataset.quality.weight }}</span>
-                                <span class="label label-warning" title="warnings" rel="tooltip">{{ dataset.qualitywarnings }}</span>
-                                <span class="label label-danger" title="errors" rel="tooltip">{{ dataset.qualityerrors }}</span>
+                                <span class="label label-warning" title="warnings" rel="tooltip">{{ dataset.quality.warnings }}</span>
+                                <span class="label label-danger" title="errors" rel="tooltip">{{ dataset.quality.errors }}</span>
                             </a>
                             <a href="{{ dataset.quality.url }}" title="Improve quality" class="btn btn-success btn-block">
                                 <span class="glyphicon glyphicon-tasks"></span>
