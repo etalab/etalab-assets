@@ -66,10 +66,10 @@
 <div class="call-to-action">
     <h2>“Partager, améliorer et valoriser </br> l'information publique”</h2>
     <div class="navbar-left col-sm-4 col-md-3 col-xs-12 collapse subnav-collapse">
-        <a class="btn btn-big navbar-btn btn-block"
+        <a class="btn btn-primary btn-big"
                 title="Publish a dataset !"
                 href>
-            <span class="glyphicon glyphicon-plus-sign"></span>
+            <span class="glyphicon glyphicon-plus"></span>
             Publier une serie de Données
         </a>
     </div>
