@@ -149,5 +149,6 @@
         </div>
     </div>
 </div>
+</div>
 {% endblock %}
 </div>

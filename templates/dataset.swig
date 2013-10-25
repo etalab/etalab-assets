@@ -22,15 +22,12 @@
                     </small>
                     {% endif %}
                 </h1>
-            </div>
 
-            <p>{{ dataset.notes }}</p>
-
-            <div class="row">
-                <p class="col-md-6 text-muted">
+                <div class="row">
+                <p class="col-md-6">
                 {% if dataset.author %}
                     <small>
-                        Published by
+                        Publié le 25 octobre 2013 par
                         {% if dataset.author_email %}
                         <a href="mailto:{{ dataset.author_email }}" title="{{ dataset.author }}">{{ dataset.author }}</a>
                         {% else %}
@@ -39,22 +36,43 @@
                     </small>
                 {% endif %}
                 </p>
+
+            </div>
+
+            </div>
+
+            
+
+            <div class="row provider"> 
                 {% if dataset.supplier %}
-                <p class="col-md-6 text-right text-muted">
+                <h3>Fourni par</h3>
+                <p>
                     <small>
-                        Provided by
+                        
                         <a href="" title="{{ dataset.supplier.display_name }}">
-                            {{ dataset.supplier.display_name }}
                             {% if dataset.supplier.image_url %}
                             <img src="{{ dataset.supplier.image_url }}" alt="{{ dataset.supplier.name }}" height="16px"/>
                             {% endif %}
+
+                            <span class="name">
+                            {{ dataset.supplier.display_name }}
+                            </span>
+                            
+                        </a>
+                        <a href="" class="btn btn-grey btn-primary btn-sm pull-right">
+                            Voir sur le site original 
                         </a>
                     </small>
                 </p>
                 {% endif %}
             </div>
 
+            <p>{{ dataset.notes }}</p>
+
+            
+
             <div class="list-group resources-list">
+                <h3>Ressources</h3>
                 {% for resource in dataset.resources %}
                     <a class="list-group-item" href="{{ resource.url }}"
                         {% if resource.format == 'html' %}target="_blank"{% endif %}
@@ -70,48 +88,6 @@
                 {% endfor %}
             </div>
 
-            <div class="page-header">
-                <h2>Community resources</h2>
-            </div>
-
-            <div class="panel panel-default related-panel">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Reuse</h3>
-                </div>
-                <div class="panel-body">
-                    {% if dataset.related %}
-                    <div class="row">
-                        {% for related in dataset.related %}
-                        <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail">
-                                <a href="{{ related.url }}" target="_blank">
-                                    <img class="media-object img-responsive" alt="{{ related.title }}"
-                                        src="{{ related.image_url }}">
-                                </a>
-                                <div class="caption">
-                                    <h4>
-                                        <a href="{{ related.url }}" target="_blank">
-                                        {{ related.title }}
-                                        </a>
-                                    </h4>
-                                    {% if related.description %}
-                                    <div>{{ related.description }}</div>
-                                    {% endif %}
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                    <br/>
-                    {% endif %}
-                    <p class="text-center">
-                        <a class="btn btn-success btn-punch" href="">
-                            <span class="glyphicon glyphicon-signal"></span>&nbsp;
-                            Publish a reuse case !
-                        </a>
-                    </p>
-                </div>
-            </div>
         </div>
 
         {# Right sidebar #}
@@ -120,7 +96,8 @@
             {# Optionnal organization panel #}
             {% if dataset.organization %}
             {% set organization = dataset.organization %}
-            <div class="thumbnail">
+            <div class="card text-center">
+                 <h3>Producteur</h3>
                 {% if organization.certified_public_service %}
                 <img src="img/certified-stamp.png" alt="certified"
                     class="certified" rel="popover"
@@ -130,28 +107,27 @@
                 {% endif %}
                 <img src="{{ organization.image_url }}"
                     alt="{{ organization.name }}" class="organization-logo" />
-                <div class="caption">
-                    <h3>{{ organization.display_name }}</h3>
+                <div class="caption text-left">
                     {% if organization.description %}
                     <p>
                         {{ organization.description }}
-                    </p>
-                    <p class="text-center">
-                        <a href="" class="btn btn-default btn-primary btn-sm">
-                        more
+                        <a href="" class="btn btn-grey btn-primary btn-mini">
+                        +
                         </a>
                     </p>
+                    
+                    <a href="{{ dataset.quality.url }}" title="Improve quality" class="btn btn-primary btn-block">
+                                <span class="glyphicon glyphicon-tasks"></span>
+                                S'abonner
+                        </a>
                     {% endif %}
                 </div>
             </div>
             {% endif %}
 
             {# Information panel #}
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Informations</h3>
-                </div>
-                <div class="panel-body">
+            <div class="card">
+                    <h3>Informations</h3>
                     <ul id="infos-list" class="list-unstyled">
 
                         {# License #}
@@ -208,6 +184,32 @@
                         </li>
                         {% endif %}
 
+                        
+
+                    </ul>
+
+
+                    <div class="tags">
+                        {% for tag in dataset.tags %}
+                        <a href="" class="btn btn-grey btn-primary btn-xs"
+                            title="{{ tag }}">
+                            {{ tag }}
+                        </a>
+                        {% endfor %}
+                    </div>
+
+            </div>
+
+
+
+
+            {# Quality panel #}
+            <div class="card">
+                    <h3>Qualité des données</h3>
+                    <ul id="infos-list" class="list-unstyled">
+
+                        
+
                         {% if dataset.quality %}
                         <li class="quality-report">
                             <a href class="btn btn-xs btn-default" rel="tooltip" data-placement="right auto"
@@ -219,49 +221,23 @@
                                 <span class="label label-warning" title="warnings" rel="tooltip">{{ dataset.quality.warnings }}</span>
                                 <span class="label label-danger" title="errors" rel="tooltip">{{ dataset.quality.errors }}</span>
                             </a>
-                            <a href="{{ dataset.quality.url }}" title="Improve quality" class="btn btn-success btn-block">
-                                <span class="glyphicon glyphicon-tasks"></span>
-                                Improve
-                            </a>
-                            <a title="Fork" class="btn btn-success btn-block"
-                                data-toggle="modal" href="#fork-modal"
-                                rel="popover" data-placement="left" data-trigger="hover" data-container="body"
-                                data-content="Duplicate this dataset and improve it !" >
-                                <span class="glyphicon glyphicon-random"></span>
-                                Fork
-                            </a>
+                            
                         </li>
                         {% endif %}
 
                     </ul>
-
-
-                    <div class="tags">
-                        {% for tag in dataset.tags %}
-                        <a href="" class="btn btn-primary btn-xs"
-                            title="{{ tag }}">
-                            {{ tag }}
-                        </a>
-                        {% endfor %}
-                    </div>
-
-                    {% if dataset.groups %}
-                    <div class="groups row">
-                        {% for group in dataset.groups %}
-                        <div class="col-sm-12">
-                            <a href="" class="thumbnail">
-                                <img src="{{ group.image_url }}"
-                                    alt="{{ group.title }}">
+                    <a title="Fork" class="btn btn-primary btn-block"
+                                data-toggle="modal" href="#fork-modal"
+                                rel="popover" data-placement="left" data-trigger="hover" data-container="body"
+                                data-content="Duplicate this dataset and improve it !" >
+                                <span class="glyphicon glyphicon-random"></span>
+                                Cloner et ameliorer
                             </a>
-                            <div class="caption text-center">
-                                <h4>{{ group.title }}</h4>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
-                </div>
+
+                    
             </div>
+
+
         </aside>
     </div>
 </div>
@@ -294,5 +270,55 @@
         </div>
     </div>
 </div>
+
+<section class="community_container">
+<div class="page-header">
+            <div class="container">  
+                <h2>Explorer avec Datagouv</h2>
+                <a class="btn btn-success btn-punch publish-reuse" href="">
+                            <span class="glyphicon glyphicon-signal"></span>&nbsp;
+                            Publish a reuse case !
+                </a>
+            </div>
+</div>
+
+
+<div class="container">   
+
+                <h3 class="panel-title">Réutilisations</h3>
+            
+                
+                    {% if dataset.related %}
+                    <div class="row">
+                        {% for related in dataset.related %}
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <a href="{{ related.url }}" target="_blank">
+                                    <img class="media-object img-responsive" alt="{{ related.title }}"
+                                        src="{{ related.image_url }}">
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="{{ related.url }}" target="_blank">
+                                        {{ related.title }}
+                                        </a>
+                                    </h4>
+                                    {% if related.description %}
+                                    <div>{{ related.description }}</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <br/>
+                    {% endif %}
+                    
+                
+            </div>
+</div>
+</section>
+
+
 {% endblock %}
 

@@ -33,14 +33,13 @@
     {% include 'navbar.swig' %}
     {% include 'subnav.swig' %}
 
-    <div class="container">
-        <div class="row">
+    
+        
 
                 {% block "content" %}{% endblock %}
 
-        </div>
-
-        <hr/>
+<section class="footer">
+    <div class="container">
         <footer>
             <p class="pull-right"><a href="#">Back to top</a></p>
             <p>
@@ -51,6 +50,7 @@
         </footer>
 
     </div>
+</section>
 
 
     <!--[if lt IE 9]>
