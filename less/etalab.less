@@ -144,15 +144,22 @@ img.certified {
     border-radius: 0px;
     border: 0px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 .btn-big {
     background-color: #045783;
     color: white;
-    text-transform: uppercase;
     font-size: 13px;
-    line-height: 40px;
+    padding: 12px;
+}
+.btn-mini {
+    height: 16px;
+    width: 16px;
+    line-height: 13px;
     padding: 0px;
-    height: 40px;
+}
+.btn-grey {
+    background-color: #aeaeae;
 }
 .btn-dark {
     background-color: #045783;
@@ -236,7 +243,7 @@ padding: 8px 16px 5px 0px;
         font-family: @title-font;
 
         &:hover {
-            color: #49a5d7;
+            color: @bg-dark;
 
         }
 
@@ -356,8 +363,10 @@ padding: 8px 16px 5px 0px;
 }
 
 .btn-punch {
+
     @media (min-width: @screen-xs) {
         .btn-lg();
+        border-radius: 0px;
         font-size: 22px;
         font-weight: bold;
     }
