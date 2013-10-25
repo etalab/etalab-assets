@@ -13,7 +13,7 @@
         <p class="navbar-text pull-right">La plateforme ouverte des données publiques françaises.</p>
     </header>
 
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav links">
       <li><a href="/">Home</a></li>
       <li><a href="/search.html">Search</a></li>
       <li><a href="/dataset.html">Dataset</a></li>
@@ -47,13 +47,12 @@
             {% else %}
             <li>
                 <a href="{{basename}}-logged.html">
-                    <span class="glyphicon glyphicon-log-in"></span>
                     Sign In / Register
                 </a>
             </li>
             {% endif %}
             <li class="dropdown">
-                <button class="dropdown-toggle" data-toggle="dropdown">
+                <button class="dropdown-toggle btn btn-link" data-toggle="dropdown">
                     <img src="img/flags/fr.png" />
                 </button>
                 <ul class="dropdown-menu">
