@@ -59,7 +59,10 @@ module.exports = function(grunt) {
             },
             demo: {
                 files: {
-                    'demo/css/etalab.css': ['less/etalab.less']
+                    'demo/css/etalab.css': ['less/etalab.less'],
+                    'demo/css/etalab-home.css': ['less/etalab-home.less'],
+                    'demo/css/etalab-search.css': ['less/etalab-search.less'],
+                    'demo/css/etalab-dataset.css': ['less/etalab-dataset.less'],
                 }
             }
         },

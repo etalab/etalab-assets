@@ -21,7 +21,8 @@
     <link rel="wiki-api" href="{{ local.wiki_api|default('http://wiki.etalab2.fr/api.php') }}" />
     <link rel="questions" href="{{ local.questions|default('http://ask.etalab2.fr') }}" />
 
-    <link rel="stylesheet" media="screen" href="css/etalab.css">
+    {% set style = style|default('etalab') %}
+    <link rel="stylesheet" media="screen" href="css/{{style}}.css">
 
     <script src="bower/modernizr/modernizr.js"></script>
     <script src="bower/respond/respond.min.js"></script>

@@ -1,5 +1,6 @@
 {% extends "templates/base.swig" %}
 {% set basename = 'search' %}
+{% set style = 'etalab-search' %}
 {% block "title" %}Search{% endblock %}
 
 

@@ -14,7 +14,7 @@
     </header>
 
     <ul class="nav navbar-nav">
-      <li><a href="/">home</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="/search.html">Search</a></li>
       <li><a href="/dataset.html">Dataset</a></li>
       <li><a href="/widgets.html">Widgets</a></li>

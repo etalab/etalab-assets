@@ -1,5 +1,6 @@
 {% extends "templates/base.swig" %}
 {% set basename = 'index' %}
+{% set style = 'etalab-home' %}
 
 {% block "title" %}Home{% endblock %}
 
@@ -15,7 +16,7 @@
 
             <div id="news">
 
-                
+
 
                 <div class="carousel-inner">
 
@@ -29,9 +30,9 @@
                     </div>
                 </div>
 
-                
+
             </div>
-       
+
 
     </div>
     <div class="col-md-8">

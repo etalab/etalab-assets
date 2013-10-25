@@ -1,5 +1,6 @@
 {% extends "templates/base.swig" %}
 {% set basename = 'dataset' %}
+{% set style = 'etalab-dataset' %}
 
 {% block "title" %}{{ dataset.title }}{% endblock %}
 
