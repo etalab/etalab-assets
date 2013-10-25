@@ -116,8 +116,8 @@
                         </a>
                     </p>
                     
-                    <a href="{{ dataset.quality.url }}" title="Improve quality" class="btn btn-primary btn-block">
-                                <span class="glyphicon glyphicon-tasks"></span>
+                    <a href="{{ dataset.quality.url }}" title="Improve quality" class="btn btn-primary btn-block btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
                                 S'abonner
                         </a>
                     {% endif %}
@@ -226,7 +226,7 @@
                         {% endif %}
 
                     </ul>
-                    <a title="Fork" class="btn btn-primary btn-block"
+                    <a title="Fork" class="btn btn-primary btn-block btn-sm"
                                 data-toggle="modal" href="#fork-modal"
                                 rel="popover" data-placement="left" data-trigger="hover" data-container="body"
                                 data-content="Duplicate this dataset and improve it !" >
@@ -275,9 +275,10 @@
 <div class="page-header">
             <div class="container">  
                 <h2>Explorer avec Datagouv</h2>
-                <a class="btn btn-success btn-punch publish-reuse" href="">
-                            <span class="glyphicon glyphicon-signal"></span>&nbsp;
-                            Publish a reuse case !
+                <small>Contributions de la communaté</small>
+                <a class="btn btn-primary btn-punch publish-reuse" href="">
+                            <span class="glyphicon glyphicon-plus"></span>&nbsp;
+                            Publier une reutilisation
                 </a>
             </div>
 </div>
