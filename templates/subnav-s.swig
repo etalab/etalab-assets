@@ -52,7 +52,7 @@
     </div>
 
 
-    <div class="navbar-right col-sm-4 col-md-3 col-xs-12 collapse subnav-collapse pull-right">
+    <div class=" pull-right">
         <a class="btn btn-primary btn-dark"
                 title="Publish a dataset !"
                 href>
