@@ -93,63 +93,172 @@
     </div>
 </div>
 
-{# Featured projects #}
-<div class="container marketing">
-    <div id="featured" class="row featured">
-        <div class="col-md-4 col-lg-4 col-sm-6">
-            <a href="http://www.lemonde.fr/politique/visuel/2013/07/17/l-impossible-simplification-des-aides-aux-entreprises_3448359_823448.html" class="no-decoration">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Citizens</h3>
-                    </div>
-                    <div class="panel-body">
-                        <img src="images/dataviz-le-monde.png" class="img-responsive"
-                            alt="Les aides aux entreprises">
-                            <h3>Les aides aux entreprises</h3>
-                            <p>
-                            Infographie par Le Monde à partir des données brutes ayant fondées le rapport Queyranne-Desmaël-Jürgensen.
-                            </p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="col-md-4 col-lg-4 col-sm-6">
-            <a href="" class="no-decoration">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Public services</h3>
-                    </div>
-                    <div class="panel-body">
-                        <img src="images/logo_lacub.jpg"
-                            alt="Communauté Urbaine de Bordeaux" class="img-responsive">
-                            <h3>Communauté Urbaine de Bordeaux</h3>
-                            <p>
-                            Découvrez les 17 nouveaux jeux de données en provenance de la CUB. Orientés mobilité, ils expliquent par exemple l'évolution du trafic routier.
-                            </p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="col-md-4 col-lg-4 col-sm-6">
-            <a href="http://handistrict.com/" target="_blank" class="no-decoration">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Businesses</h3>
-                    </div>
-                    <div class="panel-body">
-                        <img src="images/handistrict.png"
-                            alt="Handistrict, la cartographie de l'accessibilité en France" class="img-responsive">
-                            <h3>Handistrict, la cartographie de l'accessibilité en France</h3>
-                            <p>
-                            Hôtels, restaurants, musées, établissements publics, salles de spectacles, ...tous les établissements recevant du public sont représentés sur cette plateforme. L'accessibilité est renseignée pour toutes les formes de handicap : moteur, auditif, visuel et mental.
-                            </p>
-                    </div>
-                </div>
-            </a>
-        </div>
+<div class="row">
+    <div class="col-xs-12">
+        <ul id="tabs" class="nav nav-pills" data-tabs="tabs">
+                <li class="active"><a href="#recent" data-toggle="tab">Les plus récentes</a></li>
+                <li><a href="#popular" data-toggle="tab">Les plus populaires</a></li>
+        </ul>
     </div>
+</div>
+
+<div class="row">
+    
+    <div id="my-tab-content" class="tab-content">
+        <div class="tab-pane  active" id="recent">
+
+            <ul class="search-results">
+            {% for dataset in datasets %}
+            {# {% include "widgets/dataset-search-result.html" %} #}
+            <div class="col-md-4 col-sm-8">
+            <li class="search-result dataset-result">
+                {% if dataset.organization %}
+                <a class="result-logo pull-left" href="">
+                    <img alt="{{ dataset.organization.title }}"
+                        src="{{ dataset.organization.image_url }}">
+                </a>
+                {% endif %}
+                <div class="result-body">
+                    <h4>
+                        <a href="" title="{{dataset.title}}">
+                        {{ dataset.title }}
+                        </a>
+                    </h4>
+                    {{dataset.notes}}
+
+                    <ul class="list-inline result-infos">
+
+                        {# Temporal coverage #}
+                        {% if dataset.temporal_coverage.from and dataset.temporal_coverage.to %}
+                        <li>
+                            <a href class="btn btn-xs btn-default" rel="tooltip" data-placement="left"
+                                title="Temporal coverage">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </a>
+                            {{ dataset.temporal_coverage.from }} to {{ dataset.temporal_coverage.to }}
+                        </li>
+                        {% endif %}
+
+                        {# Periodicity #}
+                        {% if dataset.periodicity %}
+                        <li>
+                            <a href class="btn btn-xs" rel="tooltip" data-placement="left"
+                                title="Periodicity">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </a>
+                            {{ dataset.periodicity }}
+                        </li>
+                        {% endif %}
+
+                        {# Territorial coverage #}
+                        {% if dataset.territorial_coverage.name %}
+                        <li>
+                            <a href class="btn btn-xs btn-default" rel="tooltip" data-placement="left"
+                                title="Territorial coverage">
+                                <span class="glyphicon glyphicon-globe"></span>
+                            </a>
+                            {{ dataset.territorial_coverage.name }}
+                        </li>
+                        {% endif %}
+
+                        {% if dataset.territorial_coverage.granularity %}
+                        <li>
+                            <a href class="btn btn-xs btn-default" rel="tooltip" data-placement="left"
+                                title="Territorial coverage granularity">
+                                <span class="glyphicon glyphicon-screenshot"></span>
+                            </a>
+                            {{ dataset.territorial_coverage.granularity }}
+                        </li>
+                        {% endif %}
+
+                    </ul>
+                    <div class="result-text-mask"></div>
+                </div>
+            </li>
+            </div>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="tab-pane" id="popular">
+
+            <ul class="search-results">
+            {% for dataset in datasets|reverse %}
+            {# {% include "widgets/dataset-search-result.html" %} #}
+            <div class="col-md-4 col-sm-8">
+            <li class="search-result dataset-result">
+                {% if dataset.organization %}
+                <a class="result-logo pull-left" href="">
+                    <img alt="{{ dataset.organization.title }}"
+                        src="{{ dataset.organization.image_url }}">
+                </a>
+                {% endif %}
+                <div class="result-body">
+                    <h4>
+                        <a href="" title="{{dataset.title}}">
+                        {{ dataset.title }}
+                        </a>
+                    </h4>
+                    {{dataset.notes}}
+
+                    <ul class="list-inline result-infos">
+
+                        {# Temporal coverage #}
+                        {% if dataset.temporal_coverage.from and dataset.temporal_coverage.to %}
+                        <li>
+                            <a href class="btn btn-xs btn-default" rel="tooltip" data-placement="left"
+                                title="Temporal coverage">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </a>
+                            {{ dataset.temporal_coverage.from }} to {{ dataset.temporal_coverage.to }}
+                        </li>
+                        {% endif %}
+
+                        {# Periodicity #}
+                        {% if dataset.periodicity %}
+                        <li>
+                            <a href class="btn btn-xs" rel="tooltip" data-placement="left"
+                                title="Periodicity">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </a>
+                            {{ dataset.periodicity }}
+                        </li>
+                        {% endif %}
+
+                        {# Territorial coverage #}
+                        {% if dataset.territorial_coverage.name %}
+                        <li>
+                            <a href class="btn btn-xs btn-default" rel="tooltip" data-placement="left"
+                                title="Territorial coverage">
+                                <span class="glyphicon glyphicon-globe"></span>
+                            </a>
+                            {{ dataset.territorial_coverage.name }}
+                        </li>
+                        {% endif %}
+
+                        {% if dataset.territorial_coverage.granularity %}
+                        <li>
+                            <a href class="btn btn-xs btn-default" rel="tooltip" data-placement="left"
+                                title="Territorial coverage granularity">
+                                <span class="glyphicon glyphicon-screenshot"></span>
+                            </a>
+                            {{ dataset.territorial_coverage.granularity }}
+                        </li>
+                        {% endif %}
+
+                    </ul>
+                    <div class="result-text-mask"></div>
+                </div>
+            </li>
+            </div>
+            {% endfor %}
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+</div>
+
 </div>
 </div>
 {% endblock %}
