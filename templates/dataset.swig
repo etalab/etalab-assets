@@ -119,7 +119,7 @@
                         </a>
                     </p>
 
-                    <a href="{{ dataset.quality.url }}" title="Improve quality" class="btn btn-primary btn-block btn-sm">
+                    <a href="{{ dataset.quality.url }}" title="Improve quality" class="btn btn-primary btn-block btn-sm icon-left">
                                 <span class="glyphicon glyphicon-eye-open"></span>
                                 S'abonner
                         </a>
@@ -206,7 +206,7 @@
             {# Performance panel #}
             <div class="card">
                     <h3>Performance</h3>
-                    <ul id="infos-list" class="list-unstyled">
+                    
 
                         
 
@@ -216,21 +216,28 @@
                             </a>
                         {% endif %}
 
-                    </ul>
-                    <a title="Fork" class="btn btn-success btn-sm"
+                    
+                    <div class="row">
+                    <div class="col-md-10 col-sm-12">
+                    <a title="Utile" class="btn btn-success btn-sm btn-block icon-left"
                                 data-toggle="modal" href="#fork-modal"
                                 rel="popover" data-placement="left" data-trigger="hover" data-container="body"
                                 data-content="Duplicate this dataset and improve it !" >
-                                <span class="counter">98</span>
-                                Utile
+                                <span class="glyphicon glyphicon-star"></span>
+                                Utile<span class="counter"> (98)</span>
                     </a>
-                    <a title="Fork" class="btn btn-danger btn-sm"
+
+                    </div>
+                    <div class="col-md-1 col-sm-1">
                                 data-toggle="modal" href="#fork-modal"
                                 rel="popover" data-placement="left" data-trigger="hover" data-container="body"
                                 data-content="Duplicate this dataset and improve it !" >
-                                <span class="counter">2</span>
-                                Signaler
+                                <span class="glyphicon glyphicon-warning-sign"></span>
                     </a>
+                    
+                </div>
+            </div>
+                    
 
                     
             </div>
@@ -254,7 +261,7 @@
                         {% endif %}
 
                     </ul>
-                    <a title="Fork" class="btn btn-primary btn-block btn-sm"
+                    <a title="Fork" class="btn btn-primary btn-block btn-sm icon-left"
                                 data-toggle="modal" href="#fork-modal"
                                 rel="popover" data-placement="left" data-trigger="hover" data-container="body"
                                 data-content="Duplicate this dataset and improve it !" >
