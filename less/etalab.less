@@ -145,9 +145,9 @@ img.certified {
     border: 0px;
     font-weight: bold;
     text-transform: uppercase;
+    color: white;
 }
 .btn-big {
-    background-color: #045783;
     font-size: 13px;
     padding: 12px 16px;
 }
@@ -165,6 +165,27 @@ img.certified {
 }
 .btn-highlight {
     .button-variant(white; @highlight; @highlight);
+}
+.btn-light {
+    background: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    text-align: left;
+    text-transform: none;
+    padding: 6px 10px;
+    .glyphicon {
+        padding-top: 1px;
+        color: rgba(255, 255, 255, 0.5) !important;
+    }
+    &:hover {
+        background: rgba(255, 255, 255, 0.2) !important;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    &:focus {
+        background: rgba(0, 0, 0, 0.1) !important;
+        color: white;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
 }
 
 // Clickable thumbnail
@@ -186,7 +207,7 @@ a.thumbnail-link {
  */
 
 .navbar {
-min-height: 95px;
+min-height: 80px;
 color: #373c42;
 margin-bottom: 20px;
 border: none;
@@ -544,6 +565,12 @@ h2 {
 padding-left: 0px;
 margin-top: 11px;
 margin-bottom: 8px;
+}
+.search_bar {
+padding-left: 0px;
+margin-top: 34px;
+margin-bottom: 0px;
+
 }
 
 .footer {
