@@ -200,7 +200,37 @@
 
             </div>
 
+            {# Performance panel #}
+            <div class="card">
+                    <h3>Performance</h3>
+                    <ul id="infos-list" class="list-unstyled">
 
+                        
+
+                        {% if dataset.quality %}
+                        <a href="{{ dataset.quality.url }}" title="Go to the report page">
+                                <span class="big_number" title="score" rel="tooltip">{{ dataset.quality.weight }}</span>
+                            </a>
+                        {% endif %}
+
+                    </ul>
+                    <a title="Fork" class="btn btn-success btn-sm"
+                                data-toggle="modal" href="#fork-modal"
+                                rel="popover" data-placement="left" data-trigger="hover" data-container="body"
+                                data-content="Duplicate this dataset and improve it !" >
+                                <span class="counter">98</span>
+                                Utile
+                    </a>
+                    <a title="Fork" class="btn btn-danger btn-sm"
+                                data-toggle="modal" href="#fork-modal"
+                                rel="popover" data-placement="left" data-trigger="hover" data-container="body"
+                                data-content="Duplicate this dataset and improve it !" >
+                                <span class="counter">2</span>
+                                Signaler
+                    </a>
+
+                    
+            </div>
 
 
             {# Quality panel #}
@@ -212,12 +242,7 @@
 
                         {% if dataset.quality %}
                         <li class="quality-report">
-                            <a href class="btn btn-xs btn-default" rel="tooltip" data-placement="right auto"
-                                title="Quality">
-                                <span class="glyphicon glyphicon-signal"></span>
-                            </a>
                             <a href="{{ dataset.quality.url }}" title="Go to the report page">
-                                <span class="label label-default" title="score" rel="tooltip">{{ dataset.quality.weight }}</span>
                                 <span class="label label-warning" title="warnings" rel="tooltip">{{ dataset.quality.warnings }}</span>
                                 <span class="label label-danger" title="errors" rel="tooltip">{{ dataset.quality.errors }}</span>
                             </a>
