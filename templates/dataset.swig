@@ -5,6 +5,9 @@
 {% block "title" %}{{ dataset.title }}{% endblock %}
 
 {% block "content" %}
+
+{% include 'templates/subnav.swig' %}
+
 <div class="container dataset-container">
     <div class="row">
 
@@ -41,14 +44,14 @@
 
             </div>
 
-            
 
-            <div class="row provider"> 
+
+            <div class="row provider">
                 {% if dataset.supplier %}
                 <h3>Fourni par</h3>
                 <p>
                     <small>
-                        
+
                         <a href="" title="{{ dataset.supplier.display_name }}">
                             {% if dataset.supplier.image_url %}
                             <img src="{{ dataset.supplier.image_url }}" alt="{{ dataset.supplier.name }}" height="16px"/>
@@ -57,10 +60,10 @@
                             <span class="name">
                             {{ dataset.supplier.display_name }}
                             </span>
-                            
+
                         </a>
                         <a href="" class="btn btn-grey btn-primary btn-sm pull-right">
-                            Voir sur le site original 
+                            Voir sur le site original
                         </a>
                     </small>
                 </p>
@@ -69,7 +72,7 @@
 
             <p>{{ dataset.notes }}</p>
 
-            
+
 
             <div class="list-group resources-list">
                 <h3>Ressources</h3>
@@ -115,7 +118,7 @@
                         +
                         </a>
                     </p>
-                    
+
                     <a href="{{ dataset.quality.url }}" title="Improve quality" class="btn btn-primary btn-block btn-sm">
                                 <span class="glyphicon glyphicon-eye-open"></span>
                                 S'abonner
@@ -184,7 +187,7 @@
                         </li>
                         {% endif %}
 
-                        
+
 
                     </ul>
 
@@ -238,7 +241,7 @@
                     <h3>Qualité des données</h3>
                     <ul id="infos-list" class="list-unstyled">
 
-                        
+
 
                         {% if dataset.quality %}
                         <li class="quality-report">
@@ -246,7 +249,7 @@
                                 <span class="label label-warning" title="warnings" rel="tooltip">{{ dataset.quality.warnings }}</span>
                                 <span class="label label-danger" title="errors" rel="tooltip">{{ dataset.quality.errors }}</span>
                             </a>
-                            
+
                         </li>
                         {% endif %}
 
@@ -259,7 +262,7 @@
                                 Cloner et ameliorer
                             </a>
 
-                    
+
             </div>
 
 
@@ -298,7 +301,7 @@
 
 <section class="community_container">
 <div class="page-header">
-            <div class="container">  
+            <div class="container">
                 <h2>Explorer avec Datagouv</h2>
                 <small>Contributions de la communaté</small>
                 <a class="btn btn-primary btn-punch publish-reuse" href="">
@@ -309,11 +312,11 @@
 </div>
 
 
-<div class="container">   
+<div class="container">
 
                 <h3 class="panel-title">Réutilisations</h3>
-            
-                
+
+
                     {% if dataset.related %}
                     <div class="row">
                         {% for related in dataset.related %}
@@ -339,8 +342,8 @@
                     </div>
                     <br/>
                     {% endif %}
-                    
-                
+
+
             </div>
 </div>
 </section>

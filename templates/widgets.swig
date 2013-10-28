@@ -1,6 +1,9 @@
 {% extends "templates/base.swig" %}
 
 {% block "content" %}
+
+{% include 'templates/subnav.swig' %}
+
 <div class="container">
     <div class="page-header">
         <h1>Etalab Assets <small>demo</small></h1>

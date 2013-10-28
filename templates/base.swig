@@ -31,12 +31,9 @@
 <body>
 
     {% include 'navbar.swig' %}
-    {% include 'subnav.swig' %}
 
-    
-        
 
-                {% block "content" %}{% endblock %}
+    {% block "content" %}{% endblock %}
 
 <section class="footer">
     <div class="container">

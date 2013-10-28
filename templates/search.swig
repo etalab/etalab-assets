@@ -5,6 +5,9 @@
 
 
 {% block "content" %}
+
+{% include 'templates/subnav.swig' %}
+
 <div class="container">
 
     <h2>
