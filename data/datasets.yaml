@@ -1,0 +1,260 @@
+-   display_name: Agriculture biologique 2008-2011 - nombre d'opérateurs engagés en agriculture biologique
+    name: agriculture-biologique-2008-2011-nombre-d-operateurs-engages-en-agriculture-biologique-30378896
+    notes: Nombre d'opérateurs engagés en agriculture biologique sur la période 2008-2011 inclus.
+    organization:
+        certified_public_service: true
+        description: |
+            Créée en novembre
+            2001, l''Agence française pour le développement et la promotion de l''agriculture
+            biologique, est une plateforme nationale d''information et d''actions
+            qui s''inscrit dans une dynamique de développement, de promotion et de
+            structuration de l''agriculture biologique française.
+        image_url: http://agriculture.gouv.fr/local/cache-vignettes/L273xH195/logo_agence_cle4e61f5-2cec0.png
+        name: agence-bio
+        title: Agence Bio
+    periodicity: null
+    temporal_coverage: {from: !!timestamp '2008-01-01 00:00:00', to: !!timestamp '2011-12-31
+            00:00:00'}
+    territorial_coverage: {granularity: null, name: Country/FR}
+    title: Agriculture biologique 2008-2011 - nombre d'opérateurs engagés en agriculture biologique
+-   display_name: Classement des institutions de formation par nombre de dirigeants formés
+    name: classement-des-institutions-de-formation-par-nombre-de-dirigeants-formes
+    notes: "Un classement des institutions de formation mondiale peut-être plus parlant,\
+        \ et surtout concret : le nombre de diplômes dispensés aux dirigeants des\
+        \ grandes entreprises mondiales (Fortune Global 500 companies).\r\n\r\nSource\
+        \ : http://www.timeshighereducation.co.uk/news/alma-mater-index-global-executives-2013/2007032.article\r\
+        \n"
+    organization: null
+    periodicity: null
+    temporal_coverage: {from: '2013', to: '2013'}
+    territorial_coverage: {granularity: '', name: ''}
+    title: Classement des institutions de formation par nombre de dirigeants formés
+-   display_name: comptage du trafic CUB
+    name: comptage-du-trafic-cub-rdl
+    notes: "en 2010 - débit routier aux heures de pointe 2009-2010 : comptage, moyenne\
+        \ et évolution\nen 2011 - débit routier aux heures de pointe 20010-2011 :\
+        \ comptage, moyenne et évolution\n\nLa Communauté urbaine de Bordeaux a installé\
+        \ un réseau de capteurs pour évaluer l'état de la circulation sur son territoire.\
+        \ Ce trafic peut êtreconsultéen temps réel sur http://www.lacub.fr/trafic.\n\
+        \nCe jeu de données consolide sur 2009 et 2010 les comptages du débit routier\
+        \ aux heures de pointes (matin et soir), la moyenne de ce débit sur les jours\
+        \ ouvrés,et l'évolution de ces débits entreces 2années pour chaque compteur.\
+        \ \n\nPour les compteurs de type SIREDO, ce tableau fourni en plus le nombre\
+        \ de poids lourds et la vitesse moyenne de circulation ainsi que leursévolutions\
+        \ entre 2009 et 2010."
+    organization: {certified_public_service: false, description: "La Communauté urbaine\
+            \ de Bordeaux regroupe 28 communes autour de 3 objectifs : réaliser les\
+            \ grands équipements d\x92agglomération, moderniser les services urbains\
+            \ et développer l\x92économie locale. Bref, relever les défis d\x92'une\
+            \ grande métropole entrant dans le troisième millénaire.\nLes missions\
+            \ de la Communauté urbaine de Bordeaux correspondent d\x92abord aux 12\
+            \ compétences attribuées aux communautés urbaines par la loi du 31 décembre\
+            \ 1966 :\n\n* Le développement économique\n* L\x92'urbanisme\n* L'habitat\n\
+            * L'environnement (tri, collecte et traitement des déchets)\n* L'eau et\
+            \ l'assainissement\n* Les transports urbains\n* La voirie \x96 la signalisation\n\
+            * Le stationnement\n* Les abattoirs \x96 le Marché d'\x92Intérêt National\n\
+            * Les parcs cimetières\n\nÉvolution des compétences de la Cub\n\nLe bureau\
+            \ communautaire du 14 octobre 2010 a souhaité que soit engagée une réflexion\
+            \ sur l'\x92évolution des compétences de la Cub, d'\x92une part pour répondre\
+            \ à des contraintes réglementaires et, d\x92'autre part, pour prendre\
+            \ en compte de nouvelles sollicitations et attentes des élus, des citoyens\
+            \ et des partenaires.\n\nLe 8 juillet 2011, le Conseil de Cub a approuvé\
+            \ la nécessité de faire évoluer les compétences de la Communauté urbaine.\
+            \ Le 25 novembre 2011, le Conseil de Cub a adopté une délibération permettant\
+            \ d\x92étendre les compétences de la Cub, ce qui a été acté par l\x92\
+            'arrêté préfectoral en date du 30 mars 2012 et concernant :\n\n* l\x92\
+            'aménagement numérique du territoire\n* les aires de grand passage\n*\
+            \ l\x92'archéologie préventive\n* les réseaux de chaleur et de froid\n\
+            * le soutien et la promotion d\x92'une programmation culturelle des territoires\
+            \ de la métropole\n\nLe Conseil de Cub, en date du 8 juillet 2011 a aussi\
+            \ ouvert la voie vers l'\x92élargissement à d\x92'autres compétences,\
+            \ notamment dans le domaine de la nature, de la propreté, du sport, du\
+            \ tourisme, de l\x92'enseignement supérieur et de la recherche, des parcs\
+            \ de stationnement.", image_url: 'http://catalogue.datalocale.fr/storage/f/-logo_lacub_magenta_cv_fr.jpg',
+        name: communaute-urbaine-de-bordeaux, title: Communauté urbaine de Bordeaux}
+    periodicity: null
+    temporal_coverage: {from: null, to: null}
+    territorial_coverage: {granularity: null, name: null}
+    title: comptage du trafic CUB
+-   display_name: Déficit et dette publics - Dette publique brute - De 1995 à 2010
+    name: deficit-et-dette-publics-dette-publique-brute-de-1995-a-2010-dp
+    notes: 'Under construction
+
+
+        Tableau 1 : Données interprétées<br />Tableau 2 : Données brutes<br /><br
+        />Tableau 3 : Légende de l''indicateur geo (Entité géopolitique (déclarante))<br
+        />Tableau 4 : Légende de l''indicateur unit (Unité)<br />'
+    organization: {certified_public_service: false, description: 'Eurostat est une
+            direction générale de la Commission européenne chargée de l''information
+            statistique à l''échelle communautaire. Elle a pour rôle de produire les
+            statistiques officielles de l''Union européenne, principalement en collectant,
+            harmonisant et agrégeant les données publiées par les instituts nationaux
+            de statistiques des pays membres de l''UE, des pays candidats à l''adhésion
+            et des pays de l''AELE.', image_url: 'http://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Eurostat_logo.svg/220px-Eurostat_logo.svg.png',
+        name: eurostat, title: Eurostat}
+    periodicity: null
+    temporal_coverage: {from: null, to: null}
+    territorial_coverage: {granularity: null, name: null}
+    title: Déficit et dette publics - Dette publique brute - De 1995 à 2010
+-   display_name: IMPÔT SUR LE REVENU - RÉPARTITION DES FOYERS FISCAUX IMPOSABLES
+        PAR NOMBRE DE PARTS ET PAR TRANCHE DE REVENU
+    name: impot-sur-le-revenu-repartition-des-foyers-fiscaux-imposables-par-nombre-de-parts-et-par-tr-00000000
+    notes: ''
+    organization: {certified_public_service: true, description: '
+
+            Le ministère de l''économie et des finances prépare et met en œuvre la
+            politique du Gouvernement en matière économique, financière et de consommation
+            et répression des fraudes. Il est chargé de la promotion et du développement
+            de l''économie sociale et solidaire. Il prépare et met en œuvre la politique
+            du Gouvernement en matière budgétaire et fiscale. ', image_url: 'http://www.data.gouv.fr/var/data_gouv_fr/storage/images/producteurs/ministere-de-l-economie-et-des-finances/9094-1-fre-FR/Ministere-de-l-Economie-et-des-Finances_resultat.png',
+        name: ministere-de-l-economie-et-des-finances, title: Ministère de l’Economie
+            et des Finances}
+    periodicity: null
+    temporal_coverage: {from: !!timestamp '2008-01-01 00:00:00', to: !!timestamp '2009-12-31
+            00:00:00'}
+    territorial_coverage: {granularity: null, name: Country/FR}
+    title: IMPÔT SUR LE REVENU - RÉPARTITION DES FOYERS FISCAUX IMPOSABLES PAR NOMBRE
+        DE PARTS ET PAR TRANCHE DE REVENU
+-   display_name: Population
+    name: population
+    notes: "Ce jeu de données provient de la Banque de Données Macro-économiques de\
+        \ l'INSEE. La BDM est la principale base de données de séries et indices sur\
+        \ l'ensemble des domaines économiques et sociaux. Elle met à disposition toutes\
+        \ les informations nécessaires au diagnostic conjoncturel, et plus généralement\
+        \ à l'analyse des fluctuations de l'activité économique, aux niveaux global\
+        \ et sectoriel, dans une présentation harmonisée, pour un ensemble de séries\
+        \ en provenance de sources multiples.\r\n\r\n#### Population au recensement\
+        \  \r\n\r\n - Population au recensement de la France métropolitaine, par région\
+        \ \r\n - Population au recensement de la France métropolitaine, par département\r\
+        \n - Population au recensement de la France métropolitaine, depuis 1962, des\
+        \ villes de plus de 100.000 habitants\r\n - Population au recensement dans\
+        \ les Départements d'Outre-Mer\r\n#### Etat civil et mouvements démographiques\
+        \  \r\n\r\n - Indicateurs démographiques annuels et mensuels\r\n - Tableaux\
+        \ démographiques rétrospectifs - Séries trimestrielles - Naissances, mariages,\
+        \ décès enregistrés et domiciliés par département (y.c. DOM)\r\n - Tableaux\
+        \ démographiques rétrospectifs - Séries trimestrielles - Naissances, mariages,\
+        \ décès enregistrés et domiciliés par région ou regroupement de zones\r\n\
+        \ - Tableaux démographiques rétrospectifs - Séries annuelles - Naissances,\
+        \ mariages, décès par département (y.c. DOM)\r\n - Tableaux démographiques\
+        \ rétrospectifs - Séries annuelles -Naissances, mariages, décès par région\
+        \ ou regroupement de zones\r\n"
+    organization: {certified_public_service: true, description: '
+
+            L''Institut national de la statistique et des études économiques (INSEE)
+            collecte, produit, analyse et diffuse des informations sur l''économie
+            et la société françaises. Ces informations intéressent les pouvoirs publics,
+            les administrations, les entreprises, les chercheurs, les médias, les
+            enseignants, les étudiants, les particuliers. Elles leur permettent d''enrichir
+            leurs connaissances, d''effectuer des études, de faire des prévisions
+            et de prendre des décisions. Pour satisfaire ses utilisateurs, l''Insee
+            est à l''écoute de leurs besoins et oriente ses travaux en conséquence
+            en poursuivant un objectif principal : éclairer le débat économique et
+            social.', image_url: 'http://www.data.gouv.fr/var/data_gouv_fr/storage/images/producteurs/institut-national-de-la-statistique-et-des-etudes-economiques-insee/3490-4-fre-FR/Institut-National-de-la-Statistique-et-des-Etudes-Economiques-INSEE_resultat.jpg',
+        name: institut-national-de-la-statistique-et-des-etudes-economiques-insee,
+        title: Institut National de la Statistique et des Etudes Economiques (INSEE)}
+    periodicity: null
+    temporal_coverage: {from: '1962', to: '2013'}
+    territorial_coverage: {granularity: commune, name: Country/FR}
+    title: Population
+-   display_name: 'Population active et taux d''activité selon le sexe et l''âge '
+    name: population-active-et-taux-d-activite-selon-le-sexe-et-l-age
+    notes: Les taux d'activité des hommes et des femmes entre 1997 et 2011 sont présentés
+        par tranche d'âge. Ce jeu de données provisoire est actuellement republié
+        à titre expérimental pour la nouvelle version du site Etalab.
+    organization: {certified_public_service: true, description: '
+
+            L''Institut national de la statistique et des études économiques (INSEE)
+            collecte, produit, analyse et diffuse des informations sur l''économie
+            et la société françaises. Ces informations intéressent les pouvoirs publics,
+            les administrations, les entreprises, les chercheurs, les médias, les
+            enseignants, les étudiants, les particuliers. Elles leur permettent d''enrichir
+            leurs connaissances, d''effectuer des études, de faire des prévisions
+            et de prendre des décisions. Pour satisfaire ses utilisateurs, l''Insee
+            est à l''écoute de leurs besoins et oriente ses travaux en conséquence
+            en poursuivant un objectif principal : éclairer le débat économique et
+            social.', image_url: 'http://www.data.gouv.fr/var/data_gouv_fr/storage/images/producteurs/institut-national-de-la-statistique-et-des-etudes-economiques-insee/3490-4-fre-FR/Institut-National-de-la-Statistique-et-des-Etudes-Economiques-INSEE_resultat.jpg',
+        name: institut-national-de-la-statistique-et-des-etudes-economiques-insee,
+        title: Institut National de la Statistique et des Etudes Economiques (INSEE)}
+    periodicity: null
+    temporal_coverage: {from: '1997', to: '2011'}
+    territorial_coverage: {granularity: france, name: Country/FR}
+    title: 'Population active et taux d''activité selon le sexe et l''âge '
+-   display_name: Publication des montants des aides perçus par les personnes morales,
+        au titre de la Politique Agricole Commune
+    name: publication-des-montants-des-aides-percus-par-les-personnes-morales-au-titre-de-la-politiqu-00000000
+    notes: "Le Règlement communautaire (CE) n°259/2008 a imposé aux Etats Membres\
+        \ de publier les montants d’aides perçus par chaque bénéficiaire au titre\
+        \ de la PAC. A la suite de l'arrêt de la Cour de Justice de l'Union européenne\
+        \ rendu le 9 novembre 2010, la base juridique de la publication des bénéficiaires\
+        \ des paiements de la PAC a été partiellement invalidée : elle ne concerne\
+        \ désormais plus que les personnes morales.\r\nLes données disponibles au\
+        \ travers d’Etalab, sont donc pour chaque forme sociétaire concernée, les\
+        \ montants perçus au titre du Feader d’une part (hors et inclus prêts bonifiés)\
+        \ et du Feaga (paiements directs et autres) d’autre part."
+    organization: {certified_public_service: true, description: 'L''Agence de services
+            et de paiement (ASP) est un établissement public interministériel qui
+            contribue à la mise en œuvre de politiques publiques.
+
+
+            Elle mène des missions pour le compte de plus de 130 donneurs d''ordre
+            : l''Union européenne - elle est le premier payeur européen d''aides agricoles
+            -, plus de 10 ministères, la quasi-totalité des régions, plusieurs dizaines
+            de départements et des établissements publics.
+
+
+            L''ASP, avec ses 26 délégations régionales, est présente sur tout le territoire,
+            en métropole et à l''outre-mer.
+
+            ', image_url: 'http://upload.wikimedia.org/wikipedia/fr/4/48/Logo_ASP.PNG',
+        name: agence-de-services-et-de-paiement, title: Agence de services et de paiement}
+    periodicity: null
+    temporal_coverage: {from: !!timestamp '2010-01-01 00:00:00', to: !!timestamp '2012-12-31
+            00:00:00'}
+    territorial_coverage: {granularity: commune, name: Country/FR}
+    title: Publication des montants des aides perçus par les personnes morales, au
+        titre de la Politique Agricole Commune
+-   display_name: Recensement de la population, base de données de chiffres clés -
+        Évolution et structure de la population
+    name: recensement-de-la-population-base-de-donnees-de-chiffres-cles-evolution-et-structure-de-la--40535162
+    notes: 'Ce jeu de données propose une base de données d''indicateurs issus du
+        Recensement de la population sur le domaine suivant : Évolution et structure
+        de la population. Les données sont disponibles pour chacune des communes de
+        France et arrondissements municipaux de Paris, Lyon et Marseille. D''autres
+        jeux de données présentent les mêmes indicateurs sous forme de tableau, pour
+        divers niveaux géographiques du niveau communal au niveau national (un jeu
+        de données par zone géographique). Statistique publique.'
+    organization: {certified_public_service: true, description: '
+
+            L''Institut national de la statistique et des études économiques (INSEE)
+            collecte, produit, analyse et diffuse des informations sur l''économie
+            et la société françaises. Ces informations intéressent les pouvoirs publics,
+            les administrations, les entreprises, les chercheurs, les médias, les
+            enseignants, les étudiants, les particuliers. Elles leur permettent d''enrichir
+            leurs connaissances, d''effectuer des études, de faire des prévisions
+            et de prendre des décisions. Pour satisfaire ses utilisateurs, l''Insee
+            est à l''écoute de leurs besoins et oriente ses travaux en conséquence
+            en poursuivant un objectif principal : éclairer le débat économique et
+            social.', image_url: 'http://www.data.gouv.fr/var/data_gouv_fr/storage/images/producteurs/institut-national-de-la-statistique-et-des-etudes-economiques-insee/3490-4-fre-FR/Institut-National-de-la-Statistique-et-des-Etudes-Economiques-INSEE_resultat.jpg',
+        name: institut-national-de-la-statistique-et-des-etudes-economiques-insee,
+        title: Institut National de la Statistique et des Etudes Economiques (INSEE)}
+    periodicity: null
+    temporal_coverage: {from: !!timestamp '2008-01-01 00:00:00', to: !!timestamp '2008-12-31
+            00:00:00'}
+    territorial_coverage: {granularity: null, name: 'CommuneOfFrance/13055,CommuneOfFrance/69123,CommuneOfFrance/75056'}
+    title: Recensement de la population, base de données de chiffres clés - Évolution
+        et structure de la population
+-   display_name: Termes officiels professionnels - Franceterme
+    name: termes-officiels-professionnels-franceterme
+    notes: 'base de données des termes publiés au Journal Officiel '
+    organization: {certified_public_service: true, description: '
+
+            Le Ministère de la culture et de la communication a pour mission de rendre
+            accessible au plus grand nombre les œuvres culturelles mondiales et celles
+            de la France.', image_url: 'http://www.data.gouv.fr/var/data_gouv_fr/storage/images/producteurs/ministere-de-la-culture-et-de-la-communication/3246-4-fre-FR/Ministere-de-la-Culture-et-de-la-Communication_resultat.jpg',
+        name: ministere-de-la-culture-et-de-la-communication, title: Ministère de
+            la Culture et de la Communication}
+    periodicity: null
+    temporal_coverage: {from: !!timestamp '2008-01-01 00:00:00', to: !!timestamp '2013-08-30
+            00:00:00'}
+    territorial_coverage: {granularity: '', name: Country/FR}
+    title: Termes officiels professionnels - Franceterme

@@ -58,11 +58,11 @@
                 {# Last datasets #}
                 <div class="tab-pane active" id="last-datasets">
                     <table class="table table-striped table-hover">
-                        {% for dataset in datasets.last %}
+                        {% for dataset in datasets %}
                         <tr>
                             <td class="ellipsis">
-                                <a href="" title="{{ dataset }}">
-                                    {{ dataset }}
+                                <a href="" title="{{ dataset.title }}">
+                                    {{ dataset.title }}
                                 </a>
                             </td>
                         </tr>
@@ -73,11 +73,11 @@
                 {# Popular datasets #}
                 <div class="tab-pane" id="popular-datasets">
                     <table class="table table-striped table-hover">
-                        {% for dataset in datasets.popular %}
+                        {% for dataset in datasets %}
                         <tr>
                             <td class="ellipsis">
-                                <a href="" title="{{ dataset }}">
-                                    {{ dataset }}
+                                <a href="" title="{{ dataset.title }}">
+                                    {{ dataset.title }}
                                 </a>
                             </td>
                         </tr>
