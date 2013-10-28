@@ -229,6 +229,7 @@
 
                     </div>
                     <div class="col-md-1 col-sm-1">
+                    <a title="Report" class="btn btn-danger btn-sm pull-right"
                                 data-toggle="modal" href="#fork-modal"
                                 rel="popover" data-placement="left" data-trigger="hover" data-container="body"
                                 data-content="Duplicate this dataset and improve it !" >
