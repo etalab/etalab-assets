@@ -6,7 +6,7 @@
 
 {% block "content" %}
 
-{% include 'templates/subnav.swig' %}
+{% include 'templates/subnav-s.swig' %}
 
 <div class="container dataset-container">
     <div class="row">
