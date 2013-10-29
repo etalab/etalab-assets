@@ -23,8 +23,8 @@
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
             {% if user %}
-            <li class="dropdown">
-                <button class="btn btn-dark navbar-btn dropdown-toggle" data-toggle="dropdown">
+            <li class="dropdown  user">
+                <button class="dropdown-toggle btn-link" data-toggle="dropdown">
                     <span class="glyphicon glyphicon-user"></span>
                     {{ user }}
                     <b class="caret"></b>
@@ -51,7 +51,7 @@
                 </a>
             </li>
             {% endif %}
-            <li class="dropdown">
+            <li class="dropdown language">
                 <button class="dropdown-toggle btn btn-link" data-toggle="dropdown">
                     <img src="img/flags/fr.png" />
                 </button>
