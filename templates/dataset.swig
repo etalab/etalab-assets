@@ -221,17 +221,17 @@
                     <div class="col-md-10 col-sm-12">
                     <a title="Utile" class="btn btn-success btn-sm btn-block icon-left"
                                 data-toggle="modal" href="#fork-modal"
-                                rel="popover" data-placement="left" data-trigger="hover" data-container="body"
-                                data-content="Duplicate this dataset and improve it !" >
+                                rel="tooltip" data-placement="top" data-trigger="hover" data-container="body"
+                                data-content="Useful" >
                                 <span class="glyphicon glyphicon-star"></span>
                                 Utile<span class="counter"> (98)</span>
                     </a>
 
                     </div>
                     <div class="col-md-1 col-sm-1">
-                    <a title="Report" class="btn btn-danger btn-sm pull-right"
+                    <a title="Signaler" class="btn btn-danger btn-sm pull-right"
                                 data-toggle="modal" href="#fork-modal"
-                                rel="popover" data-placement="left" data-trigger="hover" data-container="body"
+                                rel="tooltip" data-placement="top" data-trigger="hover" data-container="body"
                                 data-content="Duplicate this dataset and improve it !" >
                                 <span class="glyphicon glyphicon-warning-sign"></span>
                     </a>
