@@ -1,6 +1,7 @@
-<nav class="navbar navbar-static-top navbar-subnav cover">
+<nav class="navbar navbar-static-top navbar-subnav">
     
     <div class="container">
+    <div class="cover-marianne"></div>
 
     
 <div class="search_bar">
