@@ -9,7 +9,7 @@
 <div class="search_sidebar col-sm-4 col-md-4 col-xs-12">
     
 
-    <nav id="sidebar" class="panel">
+    <nav class="sidebar panel">
         <form class="navbar-form form-inline" role="search">
             <div class="input-group">
                 <div class="input-group-btn">
@@ -24,7 +24,7 @@
     </nav>
 
 
-    <nav id="sidebar" class="panel">
+    <nav  class="sidebar panel">
 
     
         <form class="navbar-form form-inline" role="search">
@@ -45,7 +45,7 @@
 
 
 
-    <nav id="sidebar" class="panel">
+    <nav class="sidebar panel">
     <!-- Groups -->
     <div class="list-group">
         {% for group in groups %}
