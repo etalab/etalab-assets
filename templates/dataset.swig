@@ -351,6 +351,14 @@
                     </div>
                     <br/>
                     {% endif %}
+                </div>
+
+                <div class="col-md-3 col-sm-3 note">
+                <p>Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.
+Nulla vitae elit libero, a pharetra augue. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa </p>
+                </div>
+
+            </div>
 
 
             </div>
