@@ -15,82 +15,72 @@
     <div class="col-md-4">
 
         {# News highlight #}
-
-            <div id="news">
-
-
-
-                <div class="carousel-inner">
-
+    <h3>Actualités</h3>
+             <div id="news-carousel" class="carousel slide">
+            
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
                     <div class="item active">
-                        <img src="images/news.jpg" alt="First slide">
-                        <div class="container">
-                            <a class="carousel-caption no-decoration" href="">
-                            Projet de loi pour l’égalité entre les femmes et les hommes
-                            </a>
-                        </div>
+                      <img class="slide" src="images/news.jpg" alt="...">
+                      <div class="carousel-caption">
+                        
+                        <label>Thématique de discussion</label>
+                        <h4 class="title">
+                        <a href="" title="{{dataset.title}}">
+                        {{ dataset.title }}
+                        </a>
+                        </h4>
+                      </div>
                     </div>
+                    
+                  </div>
+
                 </div>
-
-
-            </div>
 
 
     </div>
     <div class="col-md-8">
 
-        {# Feeds tabs #}
-        <div class="feeds panel panel-default">
-            <ul class="nav nav-tabs nav-justified">
-                <li class="active">
-                    <a href="#last-datasets" data-toggle="tab">
-                        <span class="glyphicon glyphicon-time"></span>
-                        Last
-                    </a>
-                </li>
-                <li>
-                    <a href="#popular-datasets" data-toggle="tab">
-                        <span class="glyphicon glyphicon-fire"></span>
-                        Popular
-                    </a>
-                </li>
-            </ul>
-            <div class="tab-content tab-datasets">
+        {# Carousel #}
+        <h3>Les meilleures réutilisations</h3>
+                <div id="home-carousel" class="carousel slide">
+                  <!-- Indicators -->
+                  <!-- <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                  </ol> -->
 
-                {# Last datasets #}
-                <div class="tab-pane active" id="last-datasets">
-                    <table class="table table-striped table-hover">
-                        {% for dataset in datasets %}
-                        <tr>
-                            <td class="ellipsis">
-                                <a href="" title="{{ dataset.title }}">
-                                    {{ dataset.title }}
-                                </a>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </table>
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img class="slide" src="images/slide2.jpg" alt="...">
+                      <div class="carousel-caption">
+                        <a class="slide-logo pull-left" href="">
+                        <img alt="{{ dataset.organization.title }}"
+                        src="{{ dataset.organization.image_url }}">
+                        </a>
+                        <label>Citoyens</label>
+                        <h4 class="title">
+                        <a href="" title="{{dataset.title}}">
+                        {{ dataset.title }}
+                        </a>
+                        </h4>
+                      </div>
+                    </div>
+                    
+                  </div>
+
+                  <!-- Controls -->
+                  <!-- <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="icon-prev"></span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="icon-next"></span>
+                  </a> -->
                 </div>
-
-                {# Popular datasets #}
-                <div class="tab-pane" id="popular-datasets">
-                    <table class="table table-striped table-hover">
-                        {% for dataset in datasets %}
-                        <tr>
-                            <td class="ellipsis">
-                                <a href="" title="{{ dataset.title }}">
-                                    {{ dataset.title }}
-                                </a>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </table>
-                </div>
-
-            </div>
-        </div>
-
     </div>
+
 </div>
 
 <div class="row">

@@ -5,6 +5,18 @@
     font-size: 1.55em;
 }
 
+h3 {
+font-family: @title-font;
+text-transform: uppercase;
+font-size: 14px;
+font-weight: bold;
+padding: 0px;
+margin-right: 15px;
+margin-top: 12px;
+margin-bottom: 8px;
+color: @dark_text;
+}
+
 .marketing .panel {
     .img-responsive {
         width: 100%;
@@ -60,11 +72,107 @@
     }
 }
 
-// Fix carsoussel
-#home-carousel {
+
+// News carousel
+#news-carousel {
+    border: 1px solid #d9d9d7;
 
     @media (min-width: @screen-sm) {
-        height: 340px;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .carousel-inner > .item {
+
+        img {
+            margin: 0 auto;
+        }
+
+        @media (min-width: @screen-sm) {
+            height: 300px;
+
+            img.slide {
+                min-height: 200px;
+                position: absolute;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -50%;
+                margin-top: -48%;
+                min-width: 100%;
+            }
+        }
+    }
+
+    .carousel-caption {
+        height: 100px;
+        z-index: 10;
+        width: 100%;
+        color: #3e3e3e;
+        background-color: rgb(243, 243, 243);
+        padding: 5px;
+        bottom: 0px;
+        left: 0px;
+        text-shadow: none;
+        text-align: left;
+        text-transform: uppercase;
+        font-family: @title-font;
+        padding: 10px;
+
+        .slide-logo {
+            display: block;
+            width: 80px;
+            height: 80px;
+            border: 1px solid @gray-lighter;
+            position: absolute;
+            margin-right: 20px;
+            background: white;
+            
+
+            img {
+                max-width: 70px;
+                max-height: 70px;
+                position: absolute;
+                left: 50%;
+                top: 50%; 
+                margin-left: -40px;
+                margin-top: -40px;
+            }
+        }
+
+        label {
+            font-size: 12px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        .title  {
+            margin-top: 0px;
+
+        a {
+            color: #3e3e3e;
+            display: block;
+            font-size: 17px;
+            line-height: 20px;
+            font-weight: bold;
+            padding-right: 90px;
+            height: 55px;
+            overflow: hidden;
+            font-family: @title-font;
+
+        }
+        }
+    }
+}
+
+
+
+
+// Main Carsoussel
+#home-carousel {
+    border: 1px solid #d9d9d7;
+
+    @media (min-width: @screen-sm) {
+        height: 300px;
         overflow: hidden;
     }
 
@@ -77,8 +185,8 @@
         @media (min-width: @screen-sm) {
             height: 340px;
 
-            img {
-                min-height: 340px;
+            img.slide {
+                min-height: 300px;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -88,16 +196,63 @@
     }
 
     .carousel-caption {
+        height: 100px;
         z-index: 10;
-        color: white;
-        background-color: fadeout(@bg-light, 20%);
-        border-radius: 5px;
+        width: 100%;
+        color: #3e3e3e;
+        background-color: rgba(243, 243, 243, 0.92);
         padding: 5px;
-        margin: 20px 0 30px;
+        bottom: 40px;
+        left: 0px;
+        text-shadow: none;
+        text-align: left;
+        text-transform: uppercase;
+        font-family: @title-font;
+        padding: 10px;
 
-        &:hover {
-            color: white;
-            background-color: fadeout(@bg-light, 10%);
+        .slide-logo {
+            display: block;
+            width: 80px;
+            height: 80px;
+            border: 1px solid @gray-lighter;
+            position: absolute;
+            margin-right: 20px;
+            background: white;
+            
+
+            img {
+                max-width: 70px;
+                max-height: 70px;
+                position: absolute;
+                left: 50%;
+                top: 50%; 
+                margin-left: -40px;
+                margin-top: -40px;
+            }
+        }
+
+        label {
+            font-size: 12px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-left: 90px;
+        }
+        .title  {
+            margin-top: 0px;
+
+        a {
+            color: #3e3e3e;
+            display: block;
+            font-size: 28px;
+            line-height: 30px;
+            font-weight: bold;
+            padding-left: 90px;
+            padding-right: 90px;
+            height: 55px;
+            overflow: hidden;
+            font-family: @title-font;
+
+        }
         }
     }
 }
