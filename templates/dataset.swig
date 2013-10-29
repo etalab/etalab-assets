@@ -11,7 +11,7 @@
 <div class="container dataset-container">
     <div class="row">
 
-        <div class="col-md-9 col-sm-9">
+        <div class="col-md-9 col-sm-9 smaller">
             <div class="page-header">
                 <h1 data-name="{{ dataset.name }}">
                     {{ dataset.title }}
@@ -324,7 +324,8 @@
 
                 <h3 class="panel-title">Réutilisations</h3>
 
-
+                    <div class="row">
+                    <div class="col-md-9 col-sm-9 smaller">
                     {% if dataset.related %}
                     <div class="row">
                         {% for related in dataset.related %}
