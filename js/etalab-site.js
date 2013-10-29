@@ -200,7 +200,9 @@
                     engine: SWIG_ENGINE,
                     template: [
                         '{% if image_url %}',
+                        '<div class="logo">',
                         '<img src="{{image_url}}">',
+                        '</div>',
                         '{% endif %}',
                         '<p>{{display_name}}</p>'
                     ].join(''),
@@ -217,7 +219,9 @@
                     engine: SWIG_ENGINE,
                     template: [
                         '{% if image_url %}',
+                        '<div class="logo">',
                         '<img src="{{image_url}}">',
+                        '</div>',
                         '{% endif %}',
                         '<p>{{title}}</p>'
                     ].join(''),

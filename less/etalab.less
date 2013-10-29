@@ -4,6 +4,7 @@
 @import "bootstrap.less";
 @import "variables.less";
 @import "etalab-icons.less";
+@import "etalab-typeahead.less";
 
 // Web fonts
 
@@ -437,68 +438,6 @@ background: none;
     }
 }
 
-// Typeahead.js fixes for BS3
-.twitter-typeahead {
-    width: 100%;
-
-    .tt-hint {
-        width: 100%;
-        height: @input-height-base;;
-        padding: 6px 12px;
-    }
-
-    .tt-dropdown-menu {
-        color: white;
-        width: 100%;
-        background-color: @bg-dark;
-        margin-top: -1px;
-        padding: 5px;
-        border: 1px solid #ccc;
-        border: 1px solid rgba(0,0,0,.2);
-        *border-right-width: 2px;
-        *border-bottom-width: 2px;
-        border-radius: 6px;
-        .box-shadow(0 5px 10px rgba(0,0,0,.2));
-          -webkit-background-clip: padding-box;
-             -moz-background-clip: padding;
-                  background-clip: padding-box;
-
-        p.search-header {
-            .text-center();
-            margin: 0;
-            background-color: @bg-light;
-        }
-    }
-
-    .tt-suggestion {
-        @maxLines: 2;
-        @maxHeight: @maxLines * @line-height-computed;
-        display: block;
-        max-height: @maxHeight;
-        margin-top: 2px;
-        .clearfix();
-
-        &.tt-is-under-cursor {
-            background-color: @bg-light;
-            #gradient.vertical(@bg-light, @highlight);
-        }
-
-        p {
-            margin: 0;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            max-height: @maxHeight;
-        }
-
-        img {
-            .pull-left();
-            max-width: 40px;
-            max-height: @maxHeight - 5px;
-            margin: 2.5px 5px 2.5px 0;
-        }
-    }
-}
-
 
 /**
  * Sidebar style and fixes
@@ -569,7 +508,7 @@ background: none;
         padding: 4px 0px;
         font-weight: normal;
         font-size: 13px;
-        
+
         &:hover, &:focus {
             border: 0px;
             opacity: 0.75;

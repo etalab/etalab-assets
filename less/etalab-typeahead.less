@@ -1,0 +1,82 @@
+// Typeahead.js fixes for BS3
+.twitter-typeahead {
+    width: 100%;
+
+    .tt-query {
+        color: @gray-light !important;
+    }
+
+    .tt-hint {
+        width: 100%;
+        height: @input-height-base;;
+        padding: 6px 10px;
+        color: @gray-lighter
+    }
+
+    .tt-dropdown-menu {
+        color: white;
+        width: 100%;
+        background-color: @bg-dark;
+        margin-top: -1px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0,0,0,.2);
+        *border-right-width: 2px;
+        *border-bottom-width: 2px;
+        border-radius: 6px;
+        .box-shadow(0 5px 10px rgba(0,0,0,.2));
+          -webkit-background-clip: padding-box;
+             -moz-background-clip: padding;
+                  background-clip: padding-box;
+
+        p.search-header {
+            .text-center();
+            margin: 0;
+            background-color: darken(@bg-dark, 10%);
+            border-radius: 4px;
+        }
+    }
+
+    .tt-suggestion {
+        @max-lines: 2;
+        @max-height: @max-lines * @line-height-computed;
+        display: block;
+        max-height: @max-height;
+        margin-top: 2px;
+        .clearfix();
+
+        &.tt-is-under-cursor {
+            background-color: @highlight;
+            #gradient.vertical(darken(@bg-dark, 25%), darken(@bg-dark, 15%));
+            border-radius: 4px;
+        }
+
+        p {
+            margin: 0 0 0 5px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-height: @max-height;
+        }
+
+        @logo-width: 40px;
+        @logo-height: @max-height - 5px;
+        div.logo {
+            .pull-left();
+            display: table-cell;
+            width: @logo-width;
+            height: @logo-height;
+            // border: 1px solid @gray-lighter;
+            margin: 3px;
+            vertical-align: middle;
+            text-align: center;
+
+
+            img {
+                background-color: white;
+                max-width: @logo-width;
+                max-height: @logo-height;
+            }
+        }
+
+    }
+}
