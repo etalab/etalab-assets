@@ -40,8 +40,8 @@
         {# {% include "widgets/dataset-search-result.html" %} #}
         <li class="search-result dataset-result">
             {% if dataset.organization %}
-            <a class="pull-left" href="">
-                <img class="result-logo" alt="{{ dataset.organization.title }}"
+            <a class="result-logo pull-left" href="">
+                <img alt="{{ dataset.organization.title }}"
                     src="{{ dataset.organization.image_url }}">
             </a>
             {% endif %}
