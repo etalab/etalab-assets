@@ -51,14 +51,6 @@
                 </a>
             </li>
             {% endif %}
-            {% if user %}
-            <li>
-                <a class="btn btn-link" title="Advanced mode"
-                    href="">
-                    <span class="icon icon-factory"></span>
-                </a>
-            </li>
-            {% endif %}
             <li class="dropdown language">
                 <button class="dropdown-toggle btn btn-link" data-toggle="dropdown">
                     <img src="img/flags/fr.png" />
