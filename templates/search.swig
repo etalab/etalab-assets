@@ -37,7 +37,7 @@
     </ul>
 
         <p class="text-center">
-            <a class="btn btn-grey btn-primary btn-sm" href="">
+            <a class="btn btn-grey btn-sm" href="">
                 <span class="glyphicon glyphicon-list"></span>
                 See the 37 results
             </a>
@@ -118,7 +118,7 @@
     </ul>
 
         <p class="text-center">
-            <a class="btn btn-grey btn-primary btn-sm"  href="{{ url(lang, 'dataset') }}?{{ query_string }}&page=2">
+            <a class="btn btn-grey btn-sm"  href="{{ url(lang, 'dataset') }}?{{ query_string }}&page=2">
             <span class="glyphicon glyphicon-list"></span>
             See the 214 results
             </a>
@@ -138,7 +138,7 @@
         {% endfor %}
     </ul>
         <p class="text-center">
-            <a class="btn btn-grey btn-primary btn-sm" href="">
+            <a class="btn btn-grey btn-sm" href="">
             <span class="glyphicon glyphicon-list"></span>
             See all the results
             </a>
@@ -158,7 +158,7 @@
         {% endfor %}
     </ul>
         <p class="text-center">
-            <a class="btn btn-grey btn-primary btn-sm" href="">
+            <a class="btn btn-grey btn-sm" href="">
             <span class="glyphicon glyphicon-list"></span>
             See the 12 results
             </a>
