@@ -15,13 +15,13 @@
     "data/datasets.json"
   ],
   "dependencies": {
-    "bootstrap": "~3.0.0",
+    "bootstrap": "~3.0.1",
     "jquery": "~2.0.3",
     "jquery-legacy": "http://code.jquery.com/jquery-1.10.2.js",
     "modernizr": "~2.6.2",
     "respond": "~1.3.0",
     "typeahead.js": "~0.9.3",
-    "jquery.cookie": "~1.3.1",
+    "jquery.cookie": "~1.4.0",
     "swig": "http://paularmstrong.github.io/swig/js/swig.js",
     "jquery.validation": "~1.11.1"
   },
