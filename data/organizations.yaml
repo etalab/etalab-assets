@@ -1,4 +1,24 @@
 --- # Smaple organizations
 -
-    name: WWF
+    name: wwf
+    title: WWF
+    display_name: WWF
+    description: Le WWF est la première organisation mondiale de protection de la nature. Une organisation indépendante. Le WWF compte plus de 5 millions de donateurs à travers le...
+    image_url: images/wwf.jpg
+    nb_datasets: 10
 
+-
+    name: institut-national-de-l-information-geographique-et-forestiere
+    title: Institut National de l'Information Géographique et Forestière
+    display_name: Institut National de l'Information Géographique et Forestière
+    description: L’IGN a pour vocation de décrire, d’un point de vue géométrique et physique, la surface du territoire national et l’occupation de son sol, d’élaborer et de mettre à jour l’inventaire permanent des ressources forestières nationales.
+    image_url: images/ign.gif
+    nb_datasets: 31
+
+-
+    name: office-national-de-l-eau-et-des-milieux-aquatiques
+    title: Office national de l'eau et des milieux aquatiques
+    display_name: Office national de l'eau et des milieux aquatiques
+    description: L'Onema est l'organisme technique français de référence sur la connaissance et la surveillance de l'état des eaux et sur le fonctionnement écologique des milieux aquatiques.
+    image_url: images/onema.jpg
+    nb_datasets: 170

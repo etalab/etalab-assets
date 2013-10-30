@@ -18,7 +18,21 @@
     </h2>
     <ul class="search-results">
         {% for organization in organizations %}
-        {# {% include "widgets/organization-search-result.html" %} #}
+        <li class="search-result organization-result">
+            <a class="pull-left" href="{#{ url(lang, 'organization', organization.name) }#}">
+                <img class="result-logo" alt="{{ organization.display_name }}"
+                    src="{{ organization.image_url }}">
+            </a>
+            <div class="result-body">
+                <h4>
+                    <a href="{#{ url(lang, 'organization', organization.name) }#}" title="{{organization.display_name}}">
+                    {{ organization.display_name }}
+                    </a>
+                </h4>
+                {{ organization.description }}
+                <p><strong>{{ organization.nb_datasets }} datasets</strong></p>
+            </div>
+        </li>
         {% endfor %}
     </ul>
 
