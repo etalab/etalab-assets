@@ -108,7 +108,7 @@
                     data-content="This organization and its datasets are certified by data.gouv.fr"
                     data-container="body" data-placement="left" data-trigger="hover"/>
                 {% endif %}
-                <img src="{{ organization.image_url }}"
+                <img class="producer" src="{{ organization.image_url }}"
                     alt="{{ organization.name }}" class="organization-logo" />
                 <div class="caption text-left">
                     {% if organization.description %}
