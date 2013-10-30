@@ -110,7 +110,7 @@
             </a>
         </p>
 
-    <h2>Topics</h2>
+    <h2 class="result-type">Topics</h2>
     <ul class="search-results">
         {% for topic in topics %}
         <li class="search-result topic-result">
@@ -130,7 +130,7 @@
             </a>
         </p>
 
-    <h2>Questions</h2>
+    <h2 class="result-type">Questions</h2>
     <ul class="search-results">
         {% for question in questions %}
         <li class="search-result question-result">
