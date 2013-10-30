@@ -10,7 +10,7 @@
 
 <div class="container">
 
-    <h2>
+    <h2 class="result-type">
         Organizations
         <small>
             37 results
@@ -29,7 +29,7 @@
             </a>
         </p>
 
-    <h2>
+    <h2 class="result-type">
         Datasets
         <small>
             214 results
