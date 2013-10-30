@@ -19,8 +19,8 @@
     <ul class="search-results">
         {% for organization in organizations %}
         <li class="search-result organization-result">
-            <a class="pull-left" href="{#{ url(lang, 'organization', organization.name) }#}">
-                <img class="result-logo" alt="{{ organization.display_name }}"
+            <a class="result-logo pull-left" href="{#{ url(lang, 'organization', organization.name) }#}">
+                <img alt="{{ organization.display_name }}"
                     src="{{ organization.image_url }}">
             </a>
             <div class="result-body">
