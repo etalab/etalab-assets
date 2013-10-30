@@ -1,13 +1,13 @@
 <nav class="navbar navbar-static-top navbar-subnav cover">
-    
+
     <div class="container">
 
-    
+
 <div class="sidebackground1"></div>
 <div class="sidebackground2"></div>
 <div class="sidebackground3"></div>
-<div class="search_sidebar col-sm-4 col-md-4 col-xs-12">
-    
+<div class="search_sidebar col-sm-5 col-md-4 col-xs-12">
+
 
     <nav class="sidebar panel">
         <form class="navbar-form form-inline" role="search">
@@ -26,9 +26,9 @@
 
     <nav  class="sidebar panel">
 
-    
+
         <form class="navbar-form form-inline" role="search">
-            
+
             <div class="collapse subnav-collapse">
                 <div id="where-group" class="input-group">
                     <span class="input-group-addon">
@@ -59,7 +59,7 @@
 
 </div>
 
-    
+
 
 
 
