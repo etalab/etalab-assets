@@ -23,13 +23,16 @@ ul.search-results {
     .search-result {
         position: relative;
         background: white;
-        border-bottom: 1px solid @gray-lighter;
+        border-bottom: 1px solid #F0F0F0;
         overflow: hidden;
         zoom: 1;
-        padding: 18px 0;
+        padding: 18px 10px 18px 0;
 
         &:first-of-type {
            padding-top: 8px; 
+        }
+        &:hover {
+            background-color: #F3F3F3;
         }
 
         .result-logo {
@@ -39,6 +42,7 @@ ul.search-results {
             width: 80px;
             height: 80px;
             border: 1px solid @gray-lighter;
+            background-color: white;
             
             img {
                 max-width: 70px;
