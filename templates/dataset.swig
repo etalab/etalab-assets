@@ -253,9 +253,18 @@
 
                         {% if dataset.quality %}
                         <li class="quality-report">
-                            <a href="{{ dataset.quality.url }}" title="Go to the report page">
-                                <span class="label label-warning" title="warnings" rel="tooltip">{{ dataset.quality.warnings }}</span>
-                                <span class="label label-danger" title="errors" rel="tooltip">{{ dataset.quality.errors }}</span>
+                        <a href="{{ dataset.quality.url }}" title="Go to the report page">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3">
+                                <span class="medium_number warning" title="warnings" rel="tooltip">{{ dataset.quality.warnings }}<label>Alertes</label></span>
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                                <span class="medium_number error" title="errors" rel="tooltip">{{ dataset.quality.errors }}<label>Erreurs</label></span>
+                             </div>
+                             <div class="col-md-3 col-sm-3">
+                                <span class="medium_number critical" title="critical" rel="tooltip">{{ dataset.quality.errors }}<label>Critiques</label></span>
+                            </div>
+                        </div>
                             </a>
 
                         </li>

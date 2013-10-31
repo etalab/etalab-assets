@@ -118,7 +118,7 @@ a .name {
         }
     }
     .col-md-1 {
-        margin-left: 14px;
+        margin-left: 20px;
     }
     
     #infos-list { 
@@ -138,9 +138,11 @@ a .name {
     }
     .big_number {
         color: #a7a7a7;
-        font-size: 36px;
-        margin: 0 0 10px;
-
+        font-size: 34px;
+        margin: 0 0 0px;
+        font-weight: bold;
+        margin-top: -5px;
+        display: block;
     }
 }
 
@@ -241,12 +243,32 @@ aside {
 
 
     .quality-report {
+        margin-top: 10px;
         a:hover {
             text-decoration: none;
         }
 
-        .label {
-            vertical-align: text-top;
+        .medium_number {
+            font-size: 30px;
+            text-align: left;
+
+            label {
+                float: left;
+                width: 100%;
+                margin-top: -6px;
+                font-size: 13px;
+                color: #797979;
+                font-weight: normal;
+            }
+        }
+        .warning {
+                color: @yellow;
+        }
+        .error {
+                color: @red;
+        }
+        .critical {
+                color: @dark_text;
         }
     }
 }
