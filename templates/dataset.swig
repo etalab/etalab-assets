@@ -339,8 +339,8 @@
             <div class="row">
                 {% for related in dataset.related %}
                 <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <a href="{{ related.url }}" target="_blank">
+                    <div class="thumbnail reuse">
+                        <a class="preview" href="{{ related.url }}" target="_blank">
                             <img class="media-object img-responsive" alt="{{ related.title }}"
                                 src="{{ related.image_url }}">
                         </a>
@@ -350,9 +350,11 @@
                                 {{ related.title }}
                                 </a>
                             </h4>
-                            {% if related.description %}
-                            <div>{{ related.description }}</div>
-                            {% endif %}
+                            <div class="author">
+                                <img src="{{related.avatar}}" alt="{{related.user}} avatar">
+                                <span class="user">{{related.user}}</span>
+                                <span class="date">{{related.date}}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
