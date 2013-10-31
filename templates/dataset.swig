@@ -206,9 +206,9 @@
             {# Performance panel #}
             <div class="card">
                     <h3>Performance</h3>
-                    
 
-                        
+
+
 
                         {% if dataset.quality %}
                         <a href="{{ dataset.quality.url }}" title="Go to the report page">
@@ -216,7 +216,7 @@
                             </a>
                         {% endif %}
 
-                    
+
                     <div class="row">
                     <div class="col-md-10 col-sm-12">
                     <a title="Utile" class="btn btn-success btn-sm btn-block icon-left"
@@ -235,12 +235,12 @@
                                 data-content="Duplicate this dataset and improve it !" >
                                 <span class="glyphicon glyphicon-warning-sign"></span>
                     </a>
-                    
+
                 </div>
             </div>
-                    
 
-                    
+
+
             </div>
 
 
@@ -331,42 +331,54 @@
 
 <div class="container">
 
-                <h3 class="panel-title">Réutilisations</h3>
-
-                    <div class="row">
-                    <div class="col-md-9 col-sm-9 smaller">
-                    {% if dataset.related %}
-                    <div class="row">
-                        {% for related in dataset.related %}
-                        <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail">
+    <h3 class="panel-title">Réutilisations</h3>
+    <div class="row">
+        <div class="col-md-9 col-sm-9 smaller">
+            {% if dataset.related %}
+            <div class="row">
+                {% for related in dataset.related %}
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <a href="{{ related.url }}" target="_blank">
+                            <img class="media-object img-responsive" alt="{{ related.title }}"
+                                src="{{ related.image_url }}">
+                        </a>
+                        <div class="caption">
+                            <h4>
                                 <a href="{{ related.url }}" target="_blank">
-                                    <img class="media-object img-responsive" alt="{{ related.title }}"
-                                        src="{{ related.image_url }}">
+                                {{ related.title }}
                                 </a>
-                                <div class="caption">
-                                    <h4>
-                                        <a href="{{ related.url }}" target="_blank">
-                                        {{ related.title }}
-                                        </a>
-                                    </h4>
-                                    {% if related.description %}
-                                    <div>{{ related.description }}</div>
-                                    {% endif %}
-                                </div>
-                            </div>
+                            </h4>
+                            {% if related.description %}
+                            <div>{{ related.description }}</div>
+                            {% endif %}
                         </div>
-                        {% endfor %}
                     </div>
-                    <br/>
-                    {% endif %}
                 </div>
-
-                <div class="col-md-3 col-sm-3 note">
-                <p>Vous avez réutilisé ces données et publié un article, une infographie, ou une application ? C'est le moment de vous faire connaître ! Référencez votre travail en quelques clics et augmentez votre visibilité. </p>
-                </div>
-
+                {% endfor %}
             </div>
+            <br/>
+            {% endif %}
+        </div>
+
+        <div class="col-md-3 col-sm-3 note">
+        <p>Vous avez réutilisé ces données et publié un article, une infographie, ou une application ? C'est le moment de vous faire connaître ! Référencez votre travail en quelques clics et augmentez votre visibilité. </p>
+        </div>
+
+    </div>
+
+    <div class="comments">
+        <h3>Commentaires</h3>
+        {% for comment in dataset.comments %}
+        <div class="user-comment">
+            <img src="{{comment.avatar}}" alt="{{comment.user}} avatar">
+            <span class="user">{{comment.user}}</span>
+            <span class="date">{{comment.date}}</span>
+            <p>{{comment.content}}</p>
+        </div>
+        {% endfor %}
+    </div>
+
 
 
             </div>

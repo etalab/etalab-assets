@@ -61,19 +61,47 @@ groups:
         image_url: images/societe.png
 
 related:
-    -   title: Fichier au format Tableur
+    -
+        title: Fichier au format Tableur
         image_url: images/regards-citoyens.png
         description: |
             Les informations transmises en PDF par le ministère de l’intérieur étant peu exploitables,
             nous les avons transformées en collaboration avec Alexandre Léchenet en données,
             enrichies de certaines informations relatives aux parlementaires
             et les publions sous conditions OpenData dans un format tableur.
-    -   title: Datavisualisation par Rue89
+    -
+        title: Datavisualisation par Rue89
         image_url: images/capture_carte.png
         description: Article de fond et positionnement sur Googlemaps
-    -   title: Toute la vérité sur la Réserve parlementaire
+    -
+        title: Toute la vérité sur la Réserve parlementaire
         image_url: images/toute-la-verite-sur-la-reserve-parlementaire-des-elus_article_main.jpg
         description: Article de La Croix et graphique interprétatif
-    -   title: Le moteur de recherche du Monde
+    -
+        title: Le moteur de recherche du Monde
         image_url: images/penguin-cash.jpg
         description: Article du monde.fr et moteur de recherche
+
+comments:
+    -
+        user: Axel Haustant
+        content: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, ex quia incidunt cumque nulla sapiente! Ut, libero, magni rerum dolor deserunt commodi non hic aspernatur sequi reprehenderit vero suscipit delectus.
+        date: 30 Octobre 2013
+        avatar: images/avatar-axel.jpg
+    -
+        user: Angelo Chiacchio
+        content: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, ex quia incidunt cumque nulla sapiente! Ut, libero, magni rerum dolor deserunt commodi non hic aspernatur sequi reprehenderit vero suscipit delectus.
+        date: 30 Octobre 2013
+        avatar: images/avatar-angelo.jpg
+    -
+        user: Emmanuel Raviart
+        content: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, neque, quisquam omnis vitae ad dolores quasi laborum dignissimos libero incidunt quia consequatur non itaque ea facere amet sed id in.
+        date: 31 Octobre 2013
+        avatar: images/avatar-emmanuel.jpg
+    -
+        user: Pierre Pezziardi
+        content: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, voluptatum, laboriosam cum blanditiis maiores vitae dolorum! Ut, porro, ipsa dolor velit laudantium at perspiciatis facilis quis excepturi corporis iure nihil!
+        date: 1er Novembre 2013
+        avatar: images/avatar-pierre.jpg
+
+
