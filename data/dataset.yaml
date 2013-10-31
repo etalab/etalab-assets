@@ -64,6 +64,9 @@ related:
     -
         title: Fichier au format Tableur
         image_url: images/regards-citoyens.png
+        user: Axel Haustant
+        date: 30 Octobre 2013
+        avatar: images/avatar-axel.jpg
         description: |
             Les informations transmises en PDF par le ministère de l’intérieur étant peu exploitables,
             nous les avons transformées en collaboration avec Alexandre Léchenet en données,
@@ -72,13 +75,22 @@ related:
     -
         title: Datavisualisation par Rue89
         image_url: images/capture_carte.png
+        user: Angelo Chiacchio
+        date: 30 Octobre 2013
+        avatar: images/avatar-angelo.jpg
         description: Article de fond et positionnement sur Googlemaps
     -
         title: Toute la vérité sur la Réserve parlementaire
+        user: Emmanuel Raviart
+        date: 31 Octobre 2013
+        avatar: images/avatar-emmanuel.jpg
         image_url: images/toute-la-verite-sur-la-reserve-parlementaire-des-elus_article_main.jpg
         description: Article de La Croix et graphique interprétatif
     -
         title: Le moteur de recherche du Monde
+        user: Pierre Pezziardi
+        date: 1er Novembre 2013
+        avatar: images/avatar-pierre.jpg
         image_url: images/penguin-cash.jpg
         description: Article du monde.fr et moteur de recherche
 
