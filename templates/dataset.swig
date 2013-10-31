@@ -368,7 +368,7 @@
 
     </div>
 
-    <div class="comments">
+    {# <div class="comments">
         <h3>Commentaires</h3>
         {% for comment in dataset.comments %}
         <div class="user-comment">
@@ -378,7 +378,7 @@
             <p>{{comment.content}}</p>
         </div>
         {% endfor %}
-    </div>
+    </div> #}
 
 
 
