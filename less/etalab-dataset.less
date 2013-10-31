@@ -228,7 +228,7 @@ aside {
         img.certified {
             position: absolute;
             top: -15px;
-            right: 0px;
+            right: -5px;
             widht: 70px;
             height: 70px;
             cursor: pointer;
@@ -311,19 +311,35 @@ background-color: #3c5464;
 
     }
 
-    .thumbnail {
+    .reutilisation {
         border-radius: 0px;
+        border: none;
         height: 210px;
         margin-bottom: 20px;
         overflow: hidden;
         background-color: #fafafa;
+        padding: 0px;
+
+        a.preview {
+            display: block;
+            height: 110px;
+            text-align: center;
+            overflow: hidden;
+
+            img {
+                min-height: 110px;
+                min-width: 100%;
+
+            }
+        }
+
 
         .caption {
-            padding: 9px;
+            padding: 13px;
             color: #6B6B6B;
             font-size: 13px;
             line-height: 16px;
-            }
+        }
 
         h4 {
 

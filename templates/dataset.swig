@@ -319,6 +319,7 @@
 <section class="community_container">
 <div class="page-header">
             <div class="container">
+                <div class="cover-communaute"></div>
                 <h2>Explorer avec Datagouv</h2>
                 <small>Contributions de la communaté</small>
                 <a class="btn btn-primary btn-punch publish-reuse" href="">
@@ -331,6 +332,8 @@
 
 <div class="container">
 
+
+
                 <h3 class="panel-title">Réutilisations</h3>
 
                     <div class="row">
@@ -339,8 +342,8 @@
                     <div class="row">
                         {% for related in dataset.related %}
                         <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail">
-                                <a href="{{ related.url }}" target="_blank">
+                            <div class="thumbnail reutilisation">
+                                <a class="preview" href="{{ related.url }}" target="_blank">
                                     <img class="media-object img-responsive" alt="{{ related.title }}"
                                         src="{{ related.image_url }}">
                                 </a>
@@ -350,9 +353,9 @@
                                         {{ related.title }}
                                         </a>
                                     </h4>
-                                    {% if related.description %}
-                                    <div>{{ related.description }}</div>
-                                    {% endif %}
+                                    
+                                    
+                                    
                                 </div>
                             </div>
                         </div>
