@@ -1,0 +1,125 @@
+
+.card {
+    background-color: white;
+    border: 1px solid darken(@gray-lighter, 10%);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+ul.card-list {
+    padding-left: 0;
+    list-style: none;
+
+    .card {
+        position: relative;
+        margin-bottom: 18px;
+        background: white;
+        border: 1px solid @gray-lighter;
+        padding: 13px;
+        overflow: hidden;
+        zoom: 1;
+        height: 170px;
+
+        @logo-size: 70px;
+        @logo-margin: 5px;
+        &.card-mini {
+            @logo-size: 35px;
+        }
+
+
+        .card-logo {
+            .pull-left();
+            display: table-cell;
+            text-align: center;
+            line-height: @logo-size + 7px;
+            width: @logo-size + 2 * @logo-margin;
+            height: @logo-size + 2 * @logo-margin;
+            border: 1px solid @gray-lighter;
+            background-color: white;
+
+            img {
+                max-width: @logo-size;
+                max-height: @logo-size;
+            }
+        }
+
+        .card-body {
+            @card-font-size: 13px;
+            padding-left: @logo-size + 2 * @logo-margin + @card-font-size;
+            color: #4f4f4f;
+            font-size: @card-font-size;
+            line-height: 1.3em;
+
+            ul.card-footer {
+                .list-inline();
+                z-index: 900; // High but lower that popup menus (z-index = 1000)
+                display: block;
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                background-color: #ececec;
+                height: 24px;
+                line-height: 25px;
+                font-weight: bold;
+                font-size: @card-font-size - 1px;
+                color: #6a6a6a;
+
+                .btn {
+                    background: none !important;
+                    color: #bababa;
+                }
+            }
+        }
+
+        .card-text-mask {
+            display: block;
+            position: absolute;
+            bottom: 15px;
+            left: 0px;
+            width: 100%;
+            height: 50px;
+            background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 99%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(69%,rgba(255,255,255,1)), color-stop(99%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 69%,rgba(255,255,255,1) 99%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 69%,rgba(255,255,255,1) 99%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 69%,rgba(255,255,255,1) 99%); /* IE10+ */
+            background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 69%,rgba(255,255,255,1) 99%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+        }
+
+        h4 {
+            margin: 0 0 8px;
+            line-height: 13px;
+
+            a {
+                font-size: 14px;
+                color: #494949;
+                font-family: @title-font;
+                font-weight: bold;
+            }
+        }
+
+        &.card-slim {
+            .glyphicon {
+                font-size: 2em;
+                top: -2px;
+                margin-right: 7px;
+            }
+
+            h4 {
+                vertical-align: top;
+                margin: 4px 0 0 5px;
+            }
+
+            .card-body {
+                padding-left: 0;
+                display: inline;
+            }
+        }
+
+    }
+}

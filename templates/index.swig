@@ -17,13 +17,13 @@
         {# News highlight #}
     <h3>Actualités</h3>
              <div id="news-carousel" class="carousel slide">
-            
+
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner">
                     <div class="item active">
                       <img class="slide" src="images/news.jpg" alt="...">
                       <div class="carousel-caption">
-                        
+
                         <label>Thématique de discussion</label>
                         <h4 class="title">
                         <a href="" title="{{dataset.title}}">
@@ -32,7 +32,7 @@
                         </h4>
                       </div>
                     </div>
-                    
+
                   </div>
 
                 </div>
@@ -68,7 +68,7 @@
                         </h4>
                       </div>
                     </div>
-                    
+
                   </div>
 
                   <!-- Controls -->
@@ -93,22 +93,22 @@
 </div>
 
 <div class="row">
-    
+
     <div id="my-tab-content" class="tab-content">
         <div class="tab-pane  active" id="recent">
 
-            <ul class="search-results">
+            <ul class="card-list">
             {% for dataset in datasets %}
             {# {% include "widgets/dataset-search-result.html" %} #}
             <div class="col-md-4 col-sm-8">
-            <li class="search-result dataset-result">
+            <li class="card dataset-result">
                 {% if dataset.organization %}
-                <a class="result-logo pull-left" href="">
+                <a class="card-logo" href="">
                     <img alt="{{ dataset.organization.title }}"
                         src="{{ dataset.organization.image_url }}">
                 </a>
                 {% endif %}
-                <div class="result-body">
+                <div class="card-body">
                     <h4>
                         <a href="" title="{{dataset.title}}">
                         {{ dataset.title }}
@@ -116,12 +116,13 @@
                     </h4>
                     {{dataset.notes}}
 
-                    <ul class="list-inline result-infos">
+                    <ul class="card-footer">
 
                         {# Temporal coverage #}
                         {% if dataset.temporal_coverage.from and dataset.temporal_coverage.to %}
                         <li>
-                            <a href class="btn btn-xs btn-default" rel="tooltip" data-placement="left"
+                            <a href class="btn btn-xs btn-default"
+                                rel="tooltip" data-placement="top" data-container="body"
                                 title="Temporal coverage">
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </a>
@@ -132,7 +133,8 @@
                         {# Periodicity #}
                         {% if dataset.periodicity %}
                         <li>
-                            <a href class="btn btn-xs" rel="tooltip" data-placement="left"
+                            <a href class="btn btn-xs"
+                                rel="tooltip" data-placement="top" data-container="body"
                                 title="Periodicity">
                                 <span class="glyphicon glyphicon-time"></span>
                             </a>
@@ -143,7 +145,8 @@
                         {# Territorial coverage #}
                         {% if dataset.territorial_coverage.name %}
                         <li>
-                            <a href class="btn btn-xs btn-default" rel="tooltip" data-placement="left"
+                            <a href class="btn btn-xs btn-default"
+                                rel="tooltip" data-placement="top" data-container="body"
                                 title="Territorial coverage">
                                 <span class="glyphicon glyphicon-globe"></span>
                             </a>
@@ -153,7 +156,8 @@
 
                         {% if dataset.territorial_coverage.granularity %}
                         <li>
-                            <a href class="btn btn-xs btn-default" rel="tooltip" data-placement="left"
+                            <a href class="btn btn-xs btn-default"
+                                rel="tooltip" data-placement="top" data-container="body"
                                 title="Territorial coverage granularity">
                                 <span class="glyphicon glyphicon-screenshot"></span>
                             </a>
@@ -162,7 +166,7 @@
                         {% endif %}
 
                     </ul>
-                    <div class="result-text-mask"></div>
+                    <div class="card-text-mask"></div>
                 </div>
             </li>
             </div>
@@ -171,18 +175,18 @@
         </div>
         <div class="tab-pane" id="popular">
 
-            <ul class="search-results">
+            <ul class="card-list">
             {% for dataset in datasets|reverse %}
             {# {% include "widgets/dataset-search-result.html" %} #}
             <div class="col-md-4 col-sm-8">
-            <li class="search-result dataset-result">
+            <li class="card dataset-result">
                 {% if dataset.organization %}
-                <a class="result-logo pull-left" href="">
+                <a class="card-logo" href="">
                     <img alt="{{ dataset.organization.title }}"
                         src="{{ dataset.organization.image_url }}">
                 </a>
                 {% endif %}
-                <div class="result-body">
+                <div class="card-body">
                     <h4>
                         <a href="" title="{{dataset.title}}">
                         {{ dataset.title }}
@@ -190,12 +194,13 @@
                     </h4>
                     {{dataset.notes}}
 
-                    <ul class="list-inline result-infos">
+                    <ul class="card-footer">
 
                         {# Temporal coverage #}
                         {% if dataset.temporal_coverage.from and dataset.temporal_coverage.to %}
                         <li>
-                            <a href class="btn btn-xs btn-default" rel="tooltip" data-placement="left"
+                            <a href class="btn btn-xs btn-default"
+                                rel="tooltip" data-placement="top" data-container="body"
                                 title="Temporal coverage">
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </a>
@@ -206,7 +211,8 @@
                         {# Periodicity #}
                         {% if dataset.periodicity %}
                         <li>
-                            <a href class="btn btn-xs" rel="tooltip" data-placement="left"
+                            <a href class="btn btn-xs"
+                                rel="tooltip" data-placement="top" data-container="body"
                                 title="Periodicity">
                                 <span class="glyphicon glyphicon-time"></span>
                             </a>
@@ -217,7 +223,8 @@
                         {# Territorial coverage #}
                         {% if dataset.territorial_coverage.name %}
                         <li>
-                            <a href class="btn btn-xs btn-default" rel="tooltip" data-placement="left"
+                            <a href class="btn btn-xs btn-default"
+                                rel="tooltip" data-placement="top" data-container="body"
                                 title="Territorial coverage">
                                 <span class="glyphicon glyphicon-globe"></span>
                             </a>
@@ -227,7 +234,8 @@
 
                         {% if dataset.territorial_coverage.granularity %}
                         <li>
-                            <a href class="btn btn-xs btn-default" rel="tooltip" data-placement="left"
+                            <a href class="btn btn-xs btn-default"
+                                rel="tooltip" data-placement="top" data-container="body"
                                 title="Territorial coverage granularity">
                                 <span class="glyphicon glyphicon-screenshot"></span>
                             </a>
@@ -243,7 +251,7 @@
             {% endfor %}
             </ul>
         </div>
-        
+
     </div>
 </div>
 
