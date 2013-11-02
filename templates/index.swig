@@ -103,14 +103,14 @@
             <div class="col-md-4 col-sm-8">
             <li class="card dataset-result">
                 {% if dataset.organization %}
-                <a class="card-logo" href="">
+                <a class="card-logo" href="/dataset.html">
                     <img alt="{{ dataset.organization.title }}"
                         src="{{ dataset.organization.image_url }}">
                 </a>
                 {% endif %}
                 <div class="card-body">
                     <h4>
-                        <a href="" title="{{dataset.title}}">
+                        <a href="/dataset.html" title="{{dataset.title}}">
                         {{ dataset.title }}
                         </a>
                     </h4>
@@ -181,14 +181,14 @@
             <div class="col-md-4 col-sm-8">
             <li class="card dataset-result">
                 {% if dataset.organization %}
-                <a class="card-logo" href="">
+                <a class="card-logo" href="/dataset.html">
                     <img alt="{{ dataset.organization.title }}"
                         src="{{ dataset.organization.image_url }}">
                 </a>
                 {% endif %}
                 <div class="card-body">
                     <h4>
-                        <a href="" title="{{dataset.title}}">
+                        <a href="/dataset.html" title="{{dataset.title}}">
                         {{ dataset.title }}
                         </a>
                     </h4>
