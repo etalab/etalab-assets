@@ -2,7 +2,7 @@
     { "title": "Culture", "icon": "culture", "url": "culture-et-communication" },
     { "title": "Economie & Travail", "icon": "wind", "url": "{wiki}/Le_Développement_Durable" },
     { "title": "Éducation et recherche", "icon": "education", "url": "education-et-recherche" },
-    { "title": "Etat et Collectivités", "icon": "france", "url": "etat-et-collectivites" },
+    { "title": "Territoire", "icon": "france", "url": "territoire" },
     { "title": "Habitat et Ecologie", "icon": "europe", "url": "europe" },
     { "title": "Santé", "icon": "heart", "url": "sante-et-solidarite" },
     { "title": "Société : justice, vie publique", "icon": "people", "url": "societe" },
