@@ -63,6 +63,7 @@ module.exports = function(grunt) {
                     'demo/css/etalab-home.css': ['less/etalab-home.less'],
                     'demo/css/etalab-search.css': ['less/etalab-search.less'],
                     'demo/css/etalab-dataset.css': ['less/etalab-dataset.less'],
+                    'demo/css/etalab-topic.css': ['less/etalab-topic.less'],
                 }
             }
         },
@@ -118,6 +119,8 @@ module.exports = function(grunt) {
                     // 'search-logged.swig',
                     'widgets.swig',
                     // 'wdigets-logged.swig',
+                    'topic.swig',
+                    // 'topic.swig',
                 ],
                 dest: 'demo'
             }

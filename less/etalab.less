@@ -41,13 +41,16 @@ body {
     background: url('../img/communaute_cover.png') no-repeat 0px 5px;
     opacity: 0.5;
 }
+.state {
+    background: #fc3f3f !important;
+}
 
 .sidebackground-width(@container-width, @cols) {
     width: round(1000px + @cols * (@container-width / @grid-columns) - (@grid-gutter-width / 2) + 1px);
 }
 
 .sidebackground1,.sidebackground2, .sidebackground3 {
-    background-color: rgba(19,86,122,0.5);
+    background-color: rgba(0,0,0,0.25);
     position: absolute;
     left: -1000px;
     z-index: -10;
@@ -178,6 +181,9 @@ img.certified {
     font-weight: bold;
     text-transform: uppercase;
     color: white;
+}
+.btn-default {
+    color: #474747;
 }
 
 .btn-big {
