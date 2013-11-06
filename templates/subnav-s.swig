@@ -40,9 +40,11 @@
                 </button>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="topics">
                     {% for topic in main_topics %}
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ topic.url }}">
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="topic.html">
                         {{ topic.title }}
-                    </a></li>
+                        </a>
+                    </li>
                     {% endfor %}
                 </ul>
             </div>

@@ -16,6 +16,7 @@
     <ul class="nav navbar-nav links">
       <li><a href="/">Home</a></li>
       <li><a href="/search.html">Search</a></li>
+      <li><a href="/topic.html">Topic</a></li>
       <li><a href="/dataset.html">Dataset</a></li>
       <li><a href="/widgets.html">Widgets</a></li>
     </ul>

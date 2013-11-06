@@ -49,7 +49,7 @@
     <!-- Groups -->
     <div class="list-group">
         {% for topic in main_topics %}
-        <a class="list-group-item" href="{{ topic.url }}">
+        <a class="list-group-item" href="topic.html">
             {{ topic.title }}
         </a>
         {% endfor %}
