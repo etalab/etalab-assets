@@ -48,9 +48,9 @@
     <nav class="sidebar panel">
     <!-- Groups -->
     <div class="list-group">
-        {% for group in groups %}
-        <a class="list-group-item" href="{{ group.url }}">
-            {{ group.title }}
+        {% for topic in main_topics %}
+        <a class="list-group-item" href="{{ topic.url }}">
+            {{ topic.title }}
         </a>
         {% endfor %}
     </div>

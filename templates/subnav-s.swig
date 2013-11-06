@@ -39,9 +39,9 @@
                     <span class="glyphicon glyphicon-chevron-down pull-right hidden-sm"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="topics">
-                    {% for group in groups %}
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ group.url }}">
-                        {{ group.title }}
+                    {% for topic in main_topics %}
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ topic.url }}">
+                        {{ topic.title }}
                     </a></li>
                     {% endfor %}
                 </ul>
