@@ -618,11 +618,44 @@ padding-left: 0px;
 
 // footer style
 .footer {
-    padding-top: 10px;
+    padding-top: 0px;
+    padding-bottom: 40px;
     background-color: #283843;
     color: white;
+    font-size: 12px;
+
     a {
-        color: white;
         font-weight: bold;
+        color: white;
+    }
+
+    h5 {
+        font-family: @title-font;
+        font-size: 14px;
+        margin: 20px 0px 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    ul {
+        padding: 0;
+        list-style: none;
+        line-height: 1.78em;
+
+    li a {
+    font-weight: normal;
+    }
+    }
+
+    .logo {
+        margin: 20px 0px 8px;
+    }
+    .bottom-right {
+        position: absolute;
+        bottom: -40px;
+        right: 0px;
+        a {
+            background-color: rgba(255, 255, 255, 0.42);
+            padding: 3px 10px;
+        }
     }
 }
