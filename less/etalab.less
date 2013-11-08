@@ -281,13 +281,12 @@ a.thumbnail-link {
 }
 
 .links li a {
-padding-left: 0px;
+    padding-left: 0px;
 }
 
 .navbar-nav > li > a.navbar-btn {
     margin-right: 5px;
     padding: @padding-base-vertical @padding-base-horizontal;
-
 }
 
 .navbar-static-top {
@@ -297,7 +296,6 @@ padding-left: 0px;
     }
 
     .navbar-right .dropdown {
-
         .caret {
             color: white;
             border-top-color: white;
@@ -306,17 +304,19 @@ padding-left: 0px;
     }
 
     .user {
-        position: relative;
-        bottom: -4px;
-        right: -30px;
+        // position: relative;
+        bottom: -3px;
+        // right: -30px;
 
         button {
             color: @dark_text;
+            border: 0;
+            padding-top: 5px;
         }
     }
 
     .language {
-        right: -10px;
+        // right: -10px;
     }
 }
 
@@ -664,11 +664,23 @@ padding-left: 0px;
 .topmenu {
     background-color: #e5e5e5;
     height: 30px;
-    .navbar-nav>li>a {
+
+    .navbar-nav > li > a {
         line-height: 16px!important;
     }
+
     .navbar-default {
         background: none !important;
+    }
+
+    .dropdown .caret {
+        color: black !important;
+        border-top-color: black !important;
+        border-bottom-color: black !important;
+    }
+
+    .btn {
+        padding: 5px 2px 4px 12px;
     }
 
 }

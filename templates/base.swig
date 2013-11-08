@@ -30,7 +30,7 @@
 </head>
 <body>
 
-    {% include 'navbar.swig' %}
+    {% include 'navbar2.swig' %}
 
 
     {% block "content" %}{% endblock %}

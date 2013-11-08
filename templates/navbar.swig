@@ -28,7 +28,6 @@
                 <button class="dropdown-toggle btn-link" data-toggle="dropdown">
                     <span class="glyphicon glyphicon-user"></span>
                     {{ user }}
-                    <b class="caret"></b>
                 </button>
                 <ul class="dropdown-menu">
                     <li>
