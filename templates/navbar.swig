@@ -26,7 +26,7 @@
             {% if user %}
             <li class="dropdown  user">
                 <button class="dropdown-toggle btn-link" data-toggle="dropdown">
-                    <span class="glyphicon glyphicon-user"></span>
+                    <img src="images/avatar-angelo.jpg" class="gravatar" width="20" height="20">
                     {{ user }}
                 </button>
                 <ul class="dropdown-menu">
