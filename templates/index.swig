@@ -60,11 +60,11 @@
                         <img alt="{{ dataset.organization.title }}"
                         src="{{ dataset.organization.image_url }}">
                         </a>
-                        <label>Citoyens</label>
                         <h4 class="title">
                         <a href="" title="{{dataset.title}}">
                         {{ dataset.title }}
                         </a>
+                        <label>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, facilis enim voluptatum iure itaque aut voluptas possimus eveniet nam atque ab cum inventore veniam...</label>
                         </h4>
                       </div>
                     </div>
