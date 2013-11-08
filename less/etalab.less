@@ -98,7 +98,7 @@ body {
     text-overflow: ellipsis;
 }
 
-.transition(...) {
+.transition2(...) {
     @value: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
 
     -webkit-transition: @value;
@@ -123,14 +123,6 @@ body {
         text-decoration: none;
     }
 }
-
-// .card {
-//     background-color: white;
-//     border: 1px solid darken(@gray-lighter, 10%);
-//     border-radius: 4px;
-//     padding: 10px;
-//     margin-bottom: 10px;
-// }
 
 // Custom modal style
 .modal {
@@ -525,7 +517,7 @@ padding-left: 0px;
         a {
             padding: 10px 15px;
             display: block;
-            .transition(padding .2s ease, background .2s ease);
+            .transition2(padding .2s ease, background .2s ease);
 
             &:hover, &:focus {
                 padding-left: 15px;
@@ -546,7 +538,7 @@ padding-left: 0px;
             li{
                 padding: 5px;
                 border-radius:4px;
-                .transition(padding .2s ease, background .2s ease);
+                .transition2(padding .2s ease, background .2s ease);
 
                 &:hover, &:focus {
                     padding-left: 15px;

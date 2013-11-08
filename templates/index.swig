@@ -55,7 +55,7 @@
             <div class="carousel-inner">
                 {% for reuse in best_reuses %}
                 <div class="item {% if loop.first %}active{% endif %}">
-                    <img class="slide" src="{{ reuse.image_url }}" alt="{{ reuse.title }}">
+                    <img src="{{ reuse.image_url }}" alt="{{ reuse.title }}">
                     <div class="carousel-caption">
                         <a class="slide-logo pull-left" href="">
                             <img alt="{{ reuse.owner.name }}" src="{{ reuse.owner.avatar }}">
