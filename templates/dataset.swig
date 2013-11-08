@@ -346,16 +346,26 @@
                         </a>
                         <div class="caption">
                             <h4>
-                                <a href="{{ related.url }}" target="_blank">
+                                <a href="{{ related.url }}" target="_blank" title="{{ related.title }}">
                                 {{ related.title }}
                                 </a>
                             </h4>
                             <div class="author">
+                                <a href title="{{related.user}}">
                                 <img src="{{related.avatar}}" alt="{{related.user}} avatar">
-                                <span class="user">{{related.user}}</span>
+                                </a>
+                                <a class="user" href title="{{related.user}}">{{related.user}}</a>
                                 <span class="date">{{related.date}}</span>
                             </div>
                         </div>
+                        <a class="rollover fade in" href="{{related.url}}" target="_blank">
+                            {{ related.description }}
+                        </a>
+                        {% if related.featured_button %}
+                        <a class="btn btn-xs btn-default featured" rel="tooltip" title="Mark as featured">
+                            <span class="glyphicon glyphicon-pushpin"></span>
+                        </a>
+                        {% endif %}
                     </div>
                 </div>
                 {% endfor %}

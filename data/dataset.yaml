@@ -86,6 +86,7 @@ related:
         avatar: images/avatar-emmanuel.jpg
         image_url: images/toute-la-verite-sur-la-reserve-parlementaire-des-elus_article_main.jpg
         description: Article de La Croix et graphique interprétatif
+        featured_button: true
     -
         title: Le moteur de recherche du Monde
         user: Pierre Pezziardi

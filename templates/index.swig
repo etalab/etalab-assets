@@ -57,7 +57,7 @@
                 <div class="item {% if loop.first %}active{% endif %}">
                     <img src="{{ reuse.image_url }}" alt="{{ reuse.title }}">
                     <div class="carousel-caption">
-                        <a class="slide-logo pull-left" href="">
+                        <a class="slide-logo pull-left" href="" title="{{ reuse.owner.name }}">
                             <img alt="{{ reuse.owner.name }}" src="{{ reuse.owner.avatar }}">
                         </a>
                         <h4 class="title">
