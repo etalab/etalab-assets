@@ -15,7 +15,7 @@
     "data/datasets.json"
   ],
   "dependencies": {
-    "bootstrap": "~3.0.1",
+    "bootstrap": "~3.0.2",
     "jquery": "~2.0.3",
     "jquery-legacy": "http://code.jquery.com/jquery-1.10.2.js",
     "modernizr": "~2.6.2",
