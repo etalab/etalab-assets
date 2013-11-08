@@ -43,42 +43,42 @@
 
         {# Carousel #}
         <h3>Les meilleures réutilisations</h3>
-                <div id="home-carousel" class="carousel slide">
-                  <!-- Indicators -->
-                  <!-- <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                  </ol> -->
+        <div id="home-carousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <!-- <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol> -->
 
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner">
-                    <div class="item active">
-                      <img class="slide" src="images/slide2.jpg" alt="...">
-                      <div class="carousel-caption">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                {% for reuse in best_reuses %}
+                <div class="item {% if loop.first %}active{% endif %}">
+                    <img class="slide" src="{{ reuse.image_url }}" alt="{{ reuse.title }}">
+                    <div class="carousel-caption">
                         <a class="slide-logo pull-left" href="">
-                        <img alt="{{ dataset.organization.title }}"
-                        src="{{ dataset.organization.image_url }}">
+                            <img alt="{{ reuse.owner.name }}" src="{{ reuse.owner.avatar }}">
                         </a>
                         <h4 class="title">
-                        <a href="" title="{{dataset.title}}">
-                        {{ dataset.title }}
-                        </a>
-                        <label>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, facilis enim voluptatum iure itaque aut voluptas possimus eveniet nam atque ab cum inventore veniam...</label>
+                            <a href="" title="{{reuse.title}}">
+                                {{ reuse.title }}
+                            </a>
+                            <label>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, facilis enim voluptatum iure itaque aut voluptas possimus eveniet nam atque ab cum inventore veniam...</label>
                         </h4>
-                      </div>
                     </div>
-
-                  </div>
-
-                  <!-- Controls -->
-                  <!-- <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                    <span class="icon-prev"></span>
-                  </a>
-                  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                    <span class="icon-next"></span>
-                  </a> -->
                 </div>
+                {% endfor %}
+            </div>
+
+            <!-- Controls -->
+            <!-- <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="icon-prev"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="icon-next"></span>
+            </a> -->
+        </div>
     </div>
 
 </div>
