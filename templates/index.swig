@@ -57,9 +57,20 @@
                 <div class="item {% if loop.first %}active{% endif %}">
                     <img src="{{ reuse.image_url }}" alt="{{ reuse.title }}">
                     <div class="carousel-caption">
-                        <a class="slide-logo pull-left" href="" title="{{ reuse.owner.name }}">
-                            <img alt="{{ reuse.owner.name }}" src="{{ reuse.owner.avatar }}">
-                        </a>
+                        <div class="slide-logo pull-left">
+                            {% if not reuse.organization %}
+                            <a class="slide-logo-big" href="" title="{{ reuse.owner.name }}">
+                                <img alt="{{ reuse.owner.name }}" src="{{ reuse.owner.avatar }}">
+                            </a>
+                            {% else %}
+                            <a class="slide-logo-big" href="" title="{{ reuse.organization.title }}">
+                                <img alt="{{ reuse.organization.title }}" src="{{ reuse.organization.image_url }}">
+                            </a>
+                            <a class="slide-logo-min" href="" title="{{ reuse.owner.name }}">
+                                <img alt="{{ reuse.owner.name }}" src="{{ reuse.owner.avatar }}">
+                            </a>
+                            {% endif %}
+                        </div>
                         <h4 class="title ellipsis-dot">
                             <a href="" title="{{reuse.title}}">
                                 {{ reuse.title }}
