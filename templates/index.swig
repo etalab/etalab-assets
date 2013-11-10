@@ -60,11 +60,11 @@
                         <a class="slide-logo pull-left" href="" title="{{ reuse.owner.name }}">
                             <img alt="{{ reuse.owner.name }}" src="{{ reuse.owner.avatar }}">
                         </a>
-                        <h4 class="title">
+                        <h4 class="title ellipsis-dot">
                             <a href="" title="{{reuse.title}}">
                                 {{ reuse.title }}
                             </a>
-                            <label>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, facilis enim voluptatum iure itaque aut voluptas possimus eveniet nam atque ab cum inventore veniam...</label>
+                            <label>{{ reuse.description }}</label>
                         </h4>
                     </div>
                 </div>
@@ -260,4 +260,11 @@
 </div>
 </div>
 {% endblock %}
-</div>
+
+{% block "extra-js" %}
+<script type="text/javascript">
+    $('#home-carousel .title').on('slide.bs.carousel', function() {
+        $(this).trigger('update');
+    });
+</script>
+{% endblock %}

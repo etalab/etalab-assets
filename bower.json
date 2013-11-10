@@ -23,7 +23,8 @@
     "typeahead.js": "~0.9.3",
     "jquery.cookie": "~1.4.0",
     "swig": "http://paularmstrong.github.io/swig/js/swig.js",
-    "jquery.validation": "~1.11.1"
+    "jquery.validation": "~1.11.1",
+    "jquery.dotdotdot": "~1.6.7"
   },
   "resolutions": {
     "jquery": "~2.0.3"

@@ -185,6 +185,15 @@
         // Fix collapse on sidebar
         $("#sidebar .panel-heading a").on('click', function (e) { e.preventDefault(); });
 
+        // Set simple ellipsis
+        $('.ellipsis-dot').dotdotdot({
+            watch: true
+        });
+        $('.ellipsis-keep').dotdotdot({
+            watch: true,
+            after: '.ellipsis-after'
+        });
+
         // Display tooltips and popovers
         $('[rel=tooltip]').tooltip();
         $('[rel=popover]').popover();

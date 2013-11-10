@@ -30,6 +30,7 @@ module.exports = function(grunt) {
                         'bower/jquery.cookie/jquery.cookie.js',
                         'bower/bootstrap/dist/js/bootstrap.js',
                         'bower/typeahead.js/dist/typeahead.js',
+                        'bower/jquery.dotdotdot/jquery.dotdotdot.js',
                         'bower/swig/index.js'
                     ],
                     templateOptions: {

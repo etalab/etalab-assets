@@ -1,0 +1,19 @@
+--- # Best reuses
+-
+    title: Une super valorisation
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aspernatur, consequuntur dicta rerum illum tempore doloribus neque et quos cumque id atque perferendis explicabo at voluptatum totam in sequi deleniti!
+    image_url: images/slide1.jpg
+    owner:
+        name: Angelo Chiacchio
+        avatar: images/avatar-angelo.jpg
+
+-
+    title: Une autre valorisation avec un titre super long qui doit dépasser du cadre
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error aut odio quia non eligendi. Hic, autem, voluptatibus quos iure excepturi sunt omnis dolorum temporibus eum blanditiis eaque maiores consequuntur quia.
+    image_url: images/slide2.jpg
+    owner:
+        name: Axel Haustant
+        avatar: images/avatar-axel.jpg
+    organization:
+        title: Ministère de l'Intérieur
+        image_url: images/ministere-de-l-interieur.jpg

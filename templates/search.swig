@@ -65,7 +65,11 @@
                     {{ dataset.title }}
                     </a>
                 </h4>
-                {{dataset.notes}}
+                <div class="result-description ellipsis-dot">
+                <div>
+                    {{dataset.notes|safe}}
+                </div>
+                </div>
                 <ul class="list-inline result-infos">
 
                     {# Temporal coverage #}

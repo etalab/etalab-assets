@@ -40,22 +40,17 @@
 
     <!--[if lt IE 9]>
         <script src="bower/jquery-legacy/index.js"></script>
-        <script src="bower/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="bower/typeahead.js/dist/typeahead.js"></script>
-        <script src="bower/jquery.cookie/jquery.cookie.js"></script>
-        <script src="bower/jquery.validation/jquery.validate.js"></script>
-        <script src="bower/swig/index.js"></script>
-        <script src="js/etalab-site.js"></script>
     <![endif]-->
     <!--[if gte IE 9]><!-->
         <script src="bower/jquery/jquery.js"></script>
+    <!--<![endif]-->
         <script src="bower/bootstrap/dist/js/bootstrap.js"></script>
         <script src="bower/typeahead.js/dist/typeahead.js"></script>
         <script src="bower/jquery.cookie/jquery.cookie.js"></script>
         <script src="bower/jquery.validation/jquery.validate.js"></script>
+        <script src="bower/jquery.dotdotdot/jquery.dotdotdot.js"></script>
         <script src="bower/swig/index.js"></script>
         <script src="js/etalab-site.js"></script>
-    <!--<![endif]-->
 
     <script>
         $(function() {
@@ -63,5 +58,7 @@
             $('#demo-form').validate(ETALAB_VALIDATION_RULES);
         });
     </script>
+    {% block "extra-js" %}{% endblock %}
+
 </body>
 </html>
