@@ -59,68 +59,65 @@
                     src="{{ dataset.organization.image_url }}">
             </a>
             {% endif %}
-            <div class="result-body">
+            <div class="result-body ellipsis-dot">
                 <h4>
                     <a href="/dataset.html" title="{{dataset.title}}">
                     {{ dataset.title }}
                     </a>
                 </h4>
-                <div class="result-description ellipsis-dot">
-                <div>
-                    {{dataset.notes|safe}}
-                </div>
-                </div>
-                <ul class="list-inline result-infos">
-
-                    {# Temporal coverage #}
-                    {% if dataset.temporal_coverage.from and dataset.temporal_coverage.to %}
-                    <li>
-                        <a href class="btn btn-xs btn-default"
-                            rel="tooltip" data-placement="top" data-container="body"
-                            title="Temporal coverage">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </a>
-                        {{ dataset.temporal_coverage.from }} to {{ dataset.temporal_coverage.to }}
-                    </li>
-                    {% endif %}
-
-                    {# Periodicity #}
-                    {% if dataset.periodicity %}
-                    <li>
-                        <a href class="btn btn-xs"
-                            rel="tooltip" data-placement="top" data-container="body"
-                            title="Periodicity">
-                            <span class="glyphicon glyphicon-time"></span>
-                        </a>
-                        {{ dataset.periodicity }}
-                    </li>
-                    {% endif %}
-
-                    {# Territorial coverage #}
-                    {% if dataset.territorial_coverage.name %}
-                    <li>
-                        <a href class="btn btn-xs btn-default"
-                            rel="tooltip" data-placement="top" data-container="body"
-                            title="Territorial coverage">
-                            <span class="glyphicon glyphicon-globe"></span>
-                        </a>
-                        {{ dataset.territorial_coverage.name }}
-                    </li>
-                    {% endif %}
-
-                    {% if dataset.territorial_coverage.granularity %}
-                    <li>
-                        <a href class="btn btn-xs btn-default"
-                            rel="tooltip" data-placement="top" data-container="body"
-                            title="Territorial coverage granularity">
-                            <span class="glyphicon glyphicon-screenshot"></span>
-                        </a>
-                        {{ dataset.territorial_coverage.granularity }}
-                    </li>
-                    {% endif %}
-
-                </ul>
+                <div class="result-description">{{dataset.notes|safe}}</div>
             </div>
+
+            <ul class="list-inline result-infos">
+
+                {# Temporal coverage #}
+                {% if dataset.temporal_coverage.from and dataset.temporal_coverage.to %}
+                <li>
+                    <a href class="btn btn-xs btn-default"
+                        rel="tooltip" data-placement="top" data-container="body"
+                        title="Temporal coverage">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </a>
+                    {{ dataset.temporal_coverage.from }} to {{ dataset.temporal_coverage.to }}
+                </li>
+                {% endif %}
+
+                {# Periodicity #}
+                {% if dataset.periodicity %}
+                <li>
+                    <a href class="btn btn-xs"
+                        rel="tooltip" data-placement="top" data-container="body"
+                        title="Periodicity">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </a>
+                    {{ dataset.periodicity }}
+                </li>
+                {% endif %}
+
+                {# Territorial coverage #}
+                {% if dataset.territorial_coverage.name %}
+                <li>
+                    <a href class="btn btn-xs btn-default"
+                        rel="tooltip" data-placement="top" data-container="body"
+                        title="Territorial coverage">
+                        <span class="glyphicon glyphicon-globe"></span>
+                    </a>
+                    {{ dataset.territorial_coverage.name }}
+                </li>
+                {% endif %}
+
+                {% if dataset.territorial_coverage.granularity %}
+                <li>
+                    <a href class="btn btn-xs btn-default"
+                        rel="tooltip" data-placement="top" data-container="body"
+                        title="Territorial coverage granularity">
+                        <span class="glyphicon glyphicon-screenshot"></span>
+                    </a>
+                    {{ dataset.territorial_coverage.granularity }}
+                </li>
+                {% endif %}
+
+            </ul>
         </li>
         {% endfor %}
     </ul>
