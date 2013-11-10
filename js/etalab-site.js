@@ -189,10 +189,6 @@
         $('.ellipsis-dot').dotdotdot({
             watch: true
         });
-        $('.ellipsis-keep').dotdotdot({
-            watch: true,
-            after: '.ellipsis-after'
-        });
 
         // Display tooltips and popovers
         $('[rel=tooltip]').tooltip();
