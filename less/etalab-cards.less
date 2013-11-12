@@ -27,7 +27,6 @@ ul.card-list {
             @logo-size: 35px;
         }
 
-
         .card-logo {
             .pull-left();
             display: table-cell;
@@ -42,6 +41,15 @@ ul.card-list {
                 max-width: @logo-size;
                 max-height: @logo-size;
             }
+        }
+
+        img.certified {
+            position: absolute;
+            top: @logo-size;
+            left: @logo-size;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
         }
 
         .card-body {
