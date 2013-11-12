@@ -31,6 +31,10 @@ ul.search-results {
 
         &:first-of-type {
            padding-top: 8px;
+
+           img.certified {
+                top: 0;
+            }
         }
         &:last-of-type {
            border: none;
@@ -41,12 +45,14 @@ ul.search-results {
             box-shadow: -8px 0px #f3f3f3;
         }
 
+        @logo-size: 70px;
+
         .result-logo {
             display: table-cell;
             text-align: center;
             line-height: 77px;
-            width: 80px;
-            height: 80px;
+            width: @logo-size + 10px;
+            height: @logo-size + 10px;
             border: 1px solid @gray-lighter;
             background-color: white;
 
@@ -55,6 +61,15 @@ ul.search-results {
                 max-height: 70px;
             }
 
+        }
+
+        img.certified {
+            position: absolute;
+            top: 10px;
+            left: @logo-size * 3/ 4;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
         }
 
         .result-body {

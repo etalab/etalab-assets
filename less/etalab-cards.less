@@ -12,17 +12,23 @@ ul.card-list {
     list-style: none;
 
     .card {
+        @card-font-size: 13px;
+        @logo-size: 70px;
+        @logo-margin: 5px;
+        @card-height: 170px;
+        @card-padding: 13px;
+        @card-footer-size: 24px;
+
         position: relative;
         margin-bottom: 18px;
         background: white;
         border: 1px solid @gray-lighter;
-        padding: 13px;
+        padding: @card-padding;
         overflow: hidden;
         zoom: 1;
-        height: 170px;
+        height: @card-height;
 
-        @logo-size: 70px;
-        @logo-margin: 5px;
+
         &.card-mini {
             @logo-size: 35px;
         }
@@ -45,39 +51,39 @@ ul.card-list {
 
         img.certified {
             position: absolute;
-            top: @logo-size;
-            left: @logo-size;
-            width: 35px;
-            height: 35px;
+            top: @logo-size + 5px;
+            left: @logo-size / 2;
+            width: 50px;
+            height: 50px;
             cursor: pointer;
         }
 
         .card-body {
-            @card-font-size: 13px;
             padding-left: @logo-size + 2 * @logo-margin + @card-font-size;
             color: #4f4f4f;
             font-size: @card-font-size;
             line-height: 1.3em;
+            height: @card-height - 2 * @card-padding - @card-footer-size;
+        }
 
-            ul.card-footer {
-                .list-inline();
-                z-index: 900; // High but lower that popup menus (z-index = 1000)
-                display: block;
-                position: absolute;
-                bottom: 0px;
-                left: 0px;
-                width: 100%;
-                background-color: #ececec;
-                height: 24px;
-                line-height: 25px;
-                font-weight: bold;
-                font-size: @card-font-size - 1px;
-                color: #6a6a6a;
+        ul.card-footer {
+            .list-inline();
+            z-index: 900; // High but lower that popup menus (z-index = 1000)
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            background-color: #ececec;
+            height: @card-footer-size;
+            line-height: 25px;
+            font-weight: bold;
+            font-size: @card-font-size - 1px;
+            color: #6a6a6a;
 
-                .btn {
-                    background: none !important;
-                    color: #bababa;
-                }
+            .btn {
+                background: none !important;
+                color: #bababa;
             }
         }
 

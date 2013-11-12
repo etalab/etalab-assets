@@ -25,6 +25,13 @@
                     <img alt="{{ organization.display_name }}"
                         src="{{ organization.image_url }}">
                 </a>
+                {% if organization.certified_public_service %}
+                <img src="img/certified-stamp.png" alt="certified"
+                    class="certified" rel="popover"
+                    data-title="Certified public service"
+                    data-content="This organization and its datasets are certified by data.gouv.fr"
+                    data-container="body" data-placement="left" data-trigger="hover"/>
+                {% endif %}
                 <div class="result-body">
                     <h4>
                         <a href="{#{ url(lang, 'organization', organization.name) }#}" title="{{organization.display_name}}">
@@ -56,10 +63,17 @@
             {# {% include "widgets/dataset-search-result.html" %} #}
             <li class="search-result dataset-result">
                 {% if dataset.organization %}
-                <a class="result-logo pull-left" href="/dataset.html">
-                    <img alt="{{ dataset.organization.title }}"
-                        src="{{ dataset.organization.image_url }}">
-                </a>
+                    <a class="result-logo pull-left" href="/dataset.html">
+                        <img alt="{{ dataset.organization.title }}"
+                            src="{{ dataset.organization.image_url }}">
+                    </a>
+                    {% if dataset.organization.certified_public_service %}
+                        <img src="img/certified-stamp.png" alt="certified"
+                            class="certified" rel="popover"
+                            data-title="Certified public service"
+                            data-content="This organization and its datasets are certified by data.gouv.fr"
+                            data-container="body" data-placement="left" data-trigger="hover"/>
+                        {% endif %}
                 {% endif %}
                 <div class="result-body ellipsis-dot">
                     <h4>
