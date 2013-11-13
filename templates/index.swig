@@ -79,6 +79,13 @@
                                 </a>
                                 <label>{{ reuse.description }}</label>
                             </h4>
+                            {% if user and is_admin %}
+                            <a class="btn btn-xs btn-warning unfeature" rel="tooltip"
+                                href=""
+                                title="Ne plus mettre en avant">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </a>
+                            {% endif %}
                         </div>
                     </div>
                     {% endfor %}
