@@ -344,7 +344,7 @@
                                     src="{{ related.image_url }}">
                             </a>
                             <div class="caption">
-                                <h4>
+                                <h4 class="ellipsis-dot">
                                     <a href="{{ related.url }}" target="_blank" title="{{ related.title }}">
                                     {{ related.title }}
                                     </a>
