@@ -37,7 +37,8 @@
                             {{ dataset.author}}
                             {% endif %}
                         </small>
-                        <small class="not-certified">Non certifié</small>
+                        <small rel="popover" class="not-certified" data-title="Non certifié" data-trigger="hover"
+                            data-content="Cette série ne provient pas d'un service public certifié">Non certifié</small>
                     {% endif %}
 
                 </div>
