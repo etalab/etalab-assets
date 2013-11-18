@@ -361,11 +361,16 @@
                             <a class="rollover fade in" href="{{related.url}}" target="_blank">
                                 {{ related.description }}
                             </a>
-                            {% if related.featured_button %}
-                            <a class="btn btn-xs btn-default featured" rel="tooltip" title="Mark as featured">
-                                <span class="glyphicon glyphicon-pushpin"></span>
-                            </a>
-                            {% endif %}
+                            <div class="btn-group btn-group-xs">
+                                <a class="btn btn-default" rel="tooltip" title="Edit">
+                                    <span class="glyphicon glyphicon-edit"></span>
+                                </a>
+                                {% if related.featured_button %}
+                                <a class="btn btn-default featured" rel="tooltip" title="Mark as featured">
+                                    <span class="glyphicon glyphicon-pushpin"></span>
+                                </a>
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                     {% endfor %}
