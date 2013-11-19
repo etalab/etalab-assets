@@ -90,6 +90,32 @@
                     {% endfor %}
                 </div>
 
+
+                <div class="row opinion">
+                <div class="col-md-3 col-sm-6 pull-right">
+                    <div class="row">
+                        <div class="col-md-11 col-sm-12">
+                        <a title="Utile" class="btn btn-success btn-sm btn-block icon-left"
+                                    data-toggle="modal" href="#fork-modal"
+                                    rel="tooltip" data-placement="top" data-trigger="hover" data-container="body"
+                                    data-content="Useful" >
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    Utile<span class="counter"> (98)</span>
+                        </a>
+
+                        </div>
+                        <div class="col-md-1 col-sm-12">
+                        <a title="Signaler" class="btn btn-danger btn-sm"
+                                    data-toggle="modal" href="#fork-modal"
+                                    rel="tooltip" data-placement="top" data-trigger="hover" data-container="body"
+                                    data-content="Duplicate this dataset and improve it !" >
+                                    <span class="glyphicon glyphicon-warning-sign"></span>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
             </div>
 
             {# Right sidebar #}
@@ -130,7 +156,7 @@
                 {# Information panel #}
                 <div class="card">
                         <h3>Informations</h3>
-                        <ul id="infos-list" class="list-unstyled">
+                        <ul id="info-list" class="list-unstyled">
 
                             {# License #}
                             {% if dataset.license %}
@@ -202,74 +228,50 @@
 
                 </div>
 
-                {# Performance panel #}
+
+                {# Quality panel #}
                 <div class="card">
-                        <h3>Performance</h3>
+                    <h3>Qualité des données</h3>
+                    <div class="stats">
 
-
-
-
+                        <div class="row">
+                            <div class="col-md-5 col-sm-8">
                             {% if dataset.quality %}
                             <a href="{{ dataset.quality.url }}" title="Go to the report page">
                                     <span class="big_number" title="score" rel="tooltip">{{ dataset.quality.weight }}</span>
                                 </a>
                             {% endif %}
-
-
-                        <div class="row">
-                        <div class="col-md-10 col-sm-12">
-                        <a title="Utile" class="btn btn-success btn-sm btn-block icon-left"
-                                    data-toggle="modal" href="#fork-modal"
-                                    rel="tooltip" data-placement="top" data-trigger="hover" data-container="body"
-                                    data-content="Useful" >
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    Utile<span class="counter"> (98)</span>
-                        </a>
-
-                        </div>
-                        <div class="col-md-1 col-sm-1">
-                        <a title="Signaler" class="btn btn-danger btn-sm pull-right"
-                                    data-toggle="modal" href="#fork-modal"
-                                    rel="tooltip" data-placement="top" data-trigger="hover" data-container="body"
-                                    data-content="Duplicate this dataset and improve it !" >
-                                    <span class="glyphicon glyphicon-warning-sign"></span>
-                        </a>
-
-                    </div>
-                </div>
-
-
-
-                </div>
-
-
-                {# Quality panel #}
-                <div class="card">
-                        <h3>Qualité des données</h3>
-                        <ul id="infos-list" class="list-unstyled">
-
-
-
-                            {% if dataset.quality %}
-                            <li class="quality-report">
-                            <a href="{{ dataset.quality.url }}" title="Go to the report page">
-                            <div class="row">
-                                <div class="col-md-3 col-sm-3">
-                                    <span class="medium_number warning" title="warnings" rel="tooltip">{{ dataset.quality.warnings }}<label>Alertes</label></span>
+                            Performance    
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-5">
+                            <ul id="error-list" class="list-unstyled">
+                                <li>Alertes</li>
+                                <li>Erreurs</li>
+                                <li>Crititques</li>   
+                            </div>
+                            <div class="col-lg-4 col-md-3 col-sm-7">
+                                
+                                <div class="progress">
+                                  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                    <span class="sr-only">60% Complete (warning)</span>
+                                  </div>
                                 </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <span class="medium_number error" title="errors" rel="tooltip">{{ dataset.quality.errors }}<label>Erreurs</label></span>
-                                 </div>
-                                 <div class="col-md-3 col-sm-3">
-                                    <span class="medium_number critical" title="critical" rel="tooltip">{{ dataset.quality.errors }}<label>Critiques</label></span>
+                                <div class="progress">
+                                  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                    <span class="sr-only">80% Complete</span>
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                    <span class="sr-only">20% Complete</span>
+                                  </div>
                                 </div>
                             </div>
-                                </a>
+                        </div>
+                    </div>
 
-                            </li>
-                            {% endif %}
 
-                        </ul>
+                        
                         <a title="Fork" class="btn btn-primary btn-block btn-sm icon-left"
                                     data-toggle="modal" href="#fork-modal"
                                     rel="popover" data-placement="left" data-trigger="hover" data-container="body"
