@@ -156,7 +156,7 @@
                 {# Information panel #}
                 <div class="card">
                         <h3>Informations</h3>
-                        <ul id="info-list" class="list-unstyled">
+                        <ul id="infos-list" class="list-unstyled">
 
                             {# License #}
                             {% if dataset.license %}
