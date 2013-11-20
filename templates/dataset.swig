@@ -337,9 +337,10 @@
             <div class="cover-communaute"></div>
             <h2>Explorer avec Datagouv</h2>
             <small>Contributions de la communaté</small>
+            <br class="visible-xs" />
             <a class="btn btn-primary btn-punch publish-reuse" href="">
-                        <span class="glyphicon glyphicon-plus"></span>&nbsp;
-                        Publier une reutilisation
+                <span class="glyphicon glyphicon-plus"></span>&nbsp;
+                Publier une reutilisation
             </a>
         </div>
     </div>

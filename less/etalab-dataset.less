@@ -259,7 +259,9 @@ aside {
     background-color: #3c5464;
 
     .page-header {
-        height: 80px;
+        @media(min-width: @screen-sm-min) {
+            height: 80px;
+        }
         background-color: #2d3e4b;
         color: white;
         border: 0px;
@@ -279,9 +281,11 @@ aside {
     }
 
     .publish-reuse {
-        position: absolute;
-        right: 15px;
-        top: 19px;
+        @media(min-width: @screen-sm-min) {
+            position: absolute;
+            right: 15px;
+            top: 19px;
+        }
     }
 
     h3 {
