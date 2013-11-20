@@ -114,7 +114,9 @@ h3 {
 #home-carousel {
     border: 1px solid #d9d9d7;
 
-    @media (min-width: @screen-sm) {
+    height: 200px;
+
+    @media (min-width: @screen-sm-min) {
         height: 300px;
         overflow: hidden;
     }
@@ -125,27 +127,36 @@ h3 {
             margin: 0 auto;
         }
 
-        @media (min-width: @screen-sm) {
+        height: 240px;
+
+        img.slide {
+            min-height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+        }
+
+        @media (min-width: @screen-sm-min) {
             height: 340px;
 
             img.slide {
                 min-height: 300px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                min-width: 100%;
             }
         }
     }
 
     .carousel-caption {
+        bottom: 0;
+        @media (min-width: @screen-sm-min) {
+            bottom: 40px;
+        }
         height: 100px;
         z-index: 10;
         width: 100%;
         color: #3e3e3e;
         background-color: rgba(243, 243, 243, 0.92);
         padding: 5px;
-        bottom: 40px;
         left: 0px;
         text-shadow: none;
         text-align: left;

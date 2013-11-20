@@ -13,15 +13,17 @@
         <p class="navbar-text pull-right">La plateforme ouverte des données publiques françaises.</p>
     </header>
 
-    <ul class="nav navbar-nav links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/search.html">Search</a></li>
-      <li><a href="/topic.html">Topic</a></li>
-      <li><a href="/dataset.html">Dataset</a></li>
-      <li><a href="/widgets.html">Widgets</a></li>
-    </ul>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/search.html">Search</a></li>
+            <li><a href="/topic.html">Topic</a></li>
+            <li><a href="/dataset.html">Dataset</a></li>
+            <li><a href="/widgets.html">Widgets</a></li>
+        </ul>
+    </div>
 
-      <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
             {% if user %}
             <li class="dropdown  user">

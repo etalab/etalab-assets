@@ -16,18 +16,19 @@
 </div>
 </section>
 
-<section class="topmenu">
+<section class="topmenu collapse navbar-collapse">
 <div class="container">
-<nav class="navbar navbar-default navbar-static-top" role="navigation">
-    <ul class="nav navbar-nav links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/search.html">Search</a></li>
-      <li><a href="/topic.html">Topic</a></li>
-      <li><a href="/dataset.html">Dataset</a></li>
-      <li><a href="/widgets.html">Widgets</a></li>
-    </ul>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
 
-      <div class="collapse navbar-collapse">
+    {# <div class="collapse navbar-collapse"> #}
+        <ul class="nav navbar-nav links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/search.html">Search</a></li>
+          <li><a href="/topic.html">Topic</a></li>
+          <li><a href="/dataset.html">Dataset</a></li>
+          <li><a href="/widgets.html">Widgets</a></li>
+        </ul>
+
         <ul class="nav navbar-nav navbar-right">
             {% if user %}
             <li class="dropdown  user">
@@ -83,7 +84,7 @@
                 </ul>
             </li>
         </ul>
-    </div>
+    {# </div> #}
 
 
 

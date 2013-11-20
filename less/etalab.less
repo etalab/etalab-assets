@@ -590,7 +590,12 @@ a.thumbnail-link {
 // test for gray header menu bar
 .topmenu {
     background-color: #e5e5e5;
-    height: 30px;
+
+    @media(min-width: @grid-float-breakpoint) {
+        &.navbar-collapse.collapse {
+            height: 30px !important;
+        }
+    }
 
     .navbar-nav > li > a {
         line-height: 16px!important;
