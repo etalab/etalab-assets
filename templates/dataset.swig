@@ -90,30 +90,27 @@
                     {% endfor %}
                 </div>
 
-
                 <div class="row opinion">
-                <div class="col-md-3 col-sm-6 pull-right">
-                    <div class="row">
-                        <div class="col-md-11 col-sm-12">
-                        <a title="Utile" class="btn btn-success btn-sm btn-block icon-left"
-                                    data-toggle="modal" href="#fork-modal"
-                                    rel="tooltip" data-placement="top" data-trigger="hover" data-container="body"
-                                    data-content="Useful" >
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    Utile<span class="counter"> (98)</span>
-                        </a>
-
+                    <div class="btn-toolbar">
+                        <div class="btn-group">
+                            <a title="Utile" class="btn btn-success btn-sm btn-block icon-left"
+                                data-toggle="modal" href="#fork-modal"
+                                rel="tooltip" data-placement="top" data-trigger="hover" data-container="body"
+                                data-content="Useful" >
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                Utile
+                                <span class="counter">(98)</span>
+                            </a>
                         </div>
-                        <div class="col-md-1 col-sm-12">
-                        <a title="Signaler" class="btn btn-danger btn-sm"
-                                    data-toggle="modal" href="#fork-modal"
-                                    rel="tooltip" data-placement="top" data-trigger="hover" data-container="body"
-                                    data-content="Duplicate this dataset and improve it !" >
-                                    <span class="glyphicon glyphicon-warning-sign"></span>
-                        </a>
+                        <div class="btn-group">
+                            <a title="Signaler" class="btn btn-danger btn-sm"
+                                data-toggle="modal" href="#fork-modal"
+                                rel="tooltip" data-placement="top" data-trigger="hover" data-container="body"
+                                data-content="Duplicate this dataset and improve it !" >
+                                <span class="glyphicon glyphicon-warning-sign"></span>
+                            </a>
                         </div>
                     </div>
-                </div>
                 </div>
 
             </div>
@@ -241,16 +238,16 @@
                                     <span class="big_number" title="score" rel="tooltip">{{ dataset.quality.weight }}</span>
                                 </a>
                             {% endif %}
-                            Performance    
+                            Performance
                             </div>
                             <div class="col-lg-3 col-md-4 col-sm-5">
                             <ul id="error-list" class="list-unstyled">
                                 <li>Alertes</li>
                                 <li>Erreurs</li>
-                                <li>Crititques</li>   
+                                <li>Crititques</li>
                             </div>
                             <div class="col-lg-4 col-md-3 col-sm-7">
-                                
+
                                 <div class="progress">
                                   <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
                                     <span class="sr-only">60% Complete (warning)</span>
@@ -271,7 +268,7 @@
                     </div>
 
 
-                        
+
                         <a title="Fork" class="btn btn-primary btn-block btn-sm icon-left"
                                     data-toggle="modal" href="#fork-modal"
                                     rel="popover" data-placement="left" data-trigger="hover" data-container="body"
