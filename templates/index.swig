@@ -120,7 +120,7 @@
                 <ul class="card-list">
                 {% for dataset in datasets %}
                 {# {% include "widgets/dataset-search-result.html" %} #}
-                <div class="col-md-4 col-sm-8">
+                <div class="col-md-4 col-sm-6">
                 <li class="card dataset-result">
                     {% if dataset.organization %}
                         <a class="card-logo" href="/dataset.html">
