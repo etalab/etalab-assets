@@ -242,9 +242,10 @@
                                     <div class="progress">
                                         {% if dataset.quality.warning %}
                                         <div class="progress-bar progress-bar-warning" role="progressbar"
-                                            aria-valuenow="60" aria-valuemin="0" style="width: 60%">
+                                            aria-valuenow="{{ dataset.quality.warning }}" aria-valuemin="0"
+                                            style="width: {{ dataset.quality.warning }}0%">
                                         </div>
-                                        <span>6 avertissements</span>
+                                        <span>{{ dataset.quality.warning }} avertissements</span>
                                         {% else %}
                                         <div class="progress-bar progress-bar-success" role="progressbar"
                                             aria-valuenow="0" aria-valuemin="0" style="width: 100%">
@@ -255,9 +256,10 @@
                                     <div class="progress">
                                         {% if dataset.quality.error %}
                                         <div class="progress-bar progress-bar-danger" role="progressbar"
-                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            aria-valuenow="{{ dataset.quality.error }}" aria-valuemin="0"
+                                            style="width: {{ dataset.quality.error }}0%">
                                         </div>
-                                        <span>8 erreurs</span>
+                                        <span>{{ dataset.quality.error }} erreurs</span>
                                         {% else %}
                                         <div class="progress-bar progress-bar-success" role="progressbar"
                                             aria-valuenow="0" aria-valuemin="0" style="width: 100%">
@@ -268,9 +270,10 @@
                                     <div class="progress">
                                         {% if dataset.quality.criticals %}
                                         <div class="progress-bar progress-bar-info" role="progressbar"
-                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            aria-valuenow="{{ dataset.quality.criticals }}" aria-valuemin="0"
+                                            style="width: {{ dataset.quality.criticals }}0%">
                                         </div>
-                                        <span>2 critiques</span>
+                                        <span>{{ dataset.quality.criticals }} critiques</span>
                                         {% else %}
                                         <div class="progress-bar progress-bar-success" role="progressbar"
                                             aria-valuenow="0" aria-valuemin="0" style="width: 100%">
