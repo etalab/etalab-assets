@@ -349,6 +349,7 @@ aside {
                     font-size: 10px;
                     top: -5px;
                     position: relative;
+                    white-space: nowrap;
                 }
             }
         }
@@ -444,14 +445,27 @@ aside {
 }
 
 .progress {
-    height: 10px;
-    margin-bottom: 9px;
+    height: 15px;
+    margin-bottom: 4px;
     margin-top: 4px;
     border-radius: 0px;
     box-shadow: none;
+    position: relative;
+    background-color: lighten(@gray-light, 20%);
 
     .progress-bar {
         box-shadow: none;
+    }
+
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 10px;
+        line-height: 14px;
     }
 }
 

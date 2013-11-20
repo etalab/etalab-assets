@@ -234,36 +234,28 @@
 
                             {% if dataset.quality %}
                             <a href="{{ dataset.quality.url }}" title="Go to the report page">
-                                <div class="col-md-5 col-sm-8">
+                                <div class="col-sm-6">
                                     <span class="big_number">{{ dataset.quality.weight }}</span>
                                     Performance
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-5">
-                                    <ul id="error-list" class="list-unstyled">
-                                        <li>Alertes</li>
-                                        <li>Erreurs</li>
-                                        <li>Crititques</li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-4 col-md-3 col-sm-7">
-
+                                <div class="col-sm-6">
                                     <div class="progress">
                                         <div class="progress-bar progress-bar-warning" role="progressbar"
                                             aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                            <span class="sr-only">6 avertissements</span>
                                         </div>
+                                        <span>6 avertissements</span>
                                     </div>
                                     <div class="progress">
                                         <div class="progress-bar progress-bar-danger" role="progressbar"
                                             aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                            <span class="sr-only">8 erreurs</span>
                                         </div>
+                                        <span>8 erreurs</span>
                                     </div>
                                     <div class="progress">
                                         <div class="progress-bar progress-bar-info" role="progressbar"
                                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                            <span class="sr-only">2 critiques</span>
                                         </div>
+                                        <span>2 critiques</span>
                                     </div>
                                 </div>
                             </a>
