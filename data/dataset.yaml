@@ -47,9 +47,9 @@ territorial_coverage:
     granularity: Commune
 
 quality:
-    weight: 7.16
-    warnings: 5
-    errors: 1
+    weight: 17.16
+    warning: 5
+    error: 1
     url: http://some.where
 
 tags:

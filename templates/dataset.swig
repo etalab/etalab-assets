@@ -234,28 +234,49 @@
 
                             {% if dataset.quality %}
                             <a href="{{ dataset.quality.url }}" title="Go to the report page">
-                                <div class="col-sm-6">
+                                <div class="col-xs-5 col-sm-12 col-md-6 col-lg-5 text-center">
                                     <span class="big_number">{{ dataset.quality.weight }}</span>
                                     Performance
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-xs-7 col-sm-12 col-md-6 col-lg-7">
                                     <div class="progress">
+                                        {% if dataset.quality.warning %}
                                         <div class="progress-bar progress-bar-warning" role="progressbar"
-                                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            aria-valuenow="60" aria-valuemin="0" style="width: 60%">
                                         </div>
                                         <span>6 avertissements</span>
+                                        {% else %}
+                                        <div class="progress-bar progress-bar-success" role="progressbar"
+                                            aria-valuenow="0" aria-valuemin="0" style="width: 100%">
+                                        </div>
+                                        <span>Aucun avertissement</span>
+                                        {% endif %}
                                     </div>
                                     <div class="progress">
+                                        {% if dataset.quality.error %}
                                         <div class="progress-bar progress-bar-danger" role="progressbar"
                                             aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
                                         </div>
                                         <span>8 erreurs</span>
+                                        {% else %}
+                                        <div class="progress-bar progress-bar-success" role="progressbar"
+                                            aria-valuenow="0" aria-valuemin="0" style="width: 100%">
+                                        </div>
+                                        <span>Aucune erreur</span>
+                                        {% endif %}
                                     </div>
                                     <div class="progress">
+                                        {% if dataset.quality.criticals %}
                                         <div class="progress-bar progress-bar-info" role="progressbar"
                                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
                                         </div>
                                         <span>2 critiques</span>
+                                        {% else %}
+                                        <div class="progress-bar progress-bar-success" role="progressbar"
+                                            aria-valuenow="0" aria-valuemin="0" style="width: 100%">
+                                        </div>
+                                        <span>Aucun critique</span>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </a>
