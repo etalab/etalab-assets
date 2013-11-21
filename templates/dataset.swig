@@ -41,6 +41,10 @@
                             data-content="Cette série ne provient pas d'un service public certifié">Non certifié</small>
                     {% endif %}
 
+                    {% if dataset.private %}
+                    <small class="private">Privé</small>
+                    {% endif %}
+
                 </div>
 
 
