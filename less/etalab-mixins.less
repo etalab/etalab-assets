@@ -1,0 +1,39 @@
+/**
+ * Common site styles and helpers.
+ */
+
+.sidebackground-width(@container-width, @cols) {
+    width: round(1000px + @cols * (@container-width / @grid-columns) - (@grid-gutter-width / 2) + 1px);
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.transition2(...) {
+    @value: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
+
+    -webkit-transition: @value;
+    -moz-transition: @value;
+    -ms-transition: @value;
+    -o-transition: @value;
+    transition: @value;
+}
+
+.scale(@ratio) {
+    -webkit-transform:scale(@ratio);
+       -moz-transform:scale(@ratio);
+        -ms-transform:scale(@ratio);
+         -o-transform:scale(@ratio);
+            transform:scale(@ratio);
+}
+
+.no-decoration {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

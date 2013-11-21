@@ -4,6 +4,7 @@
 @import "bootstrap.less";
 @import "variables.less";
 @import "etalab-icons.less";
+@import "etalab-mixins.less";
 @import "etalab-buttons.less";
 @import "etalab-cards.less";
 @import "etalab-typeahead.less";
@@ -46,11 +47,7 @@ body {
     background: #fc3f3f !important;
 }
 
-.sidebackground-width(@container-width, @cols) {
-    width: round(1000px + @cols * (@container-width / @grid-columns) - (@grid-gutter-width / 2) + 1px);
-}
-
-.sidebackground1,.sidebackground2, .sidebackground3 {
+.sidebackground1, .sidebackground2, .sidebackground3 {
     background-color: rgba(0,0,0,0.25);
     position: absolute;
     left: -1000px;
@@ -90,39 +87,6 @@ body {
 
 .container {
     position: relative;
-    // padding: 0px;
-}
-
-.ellipsis {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.transition2(...) {
-    @value: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
-
-    -webkit-transition: @value;
-    -moz-transition: @value;
-    -ms-transition: @value;
-    -o-transition: @value;
-    transition: @value;
-}
-
-.scale(@ratio) {
-    -webkit-transform:scale(@ratio);
-       -moz-transform:scale(@ratio);
-        -ms-transform:scale(@ratio);
-         -o-transform:scale(@ratio);
-            transform:scale(@ratio);
-}
-
-.no-decoration {
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: none;
-    }
 }
 
 section.default {
@@ -405,18 +369,6 @@ a.thumbnail-link {
     background: none;
 }
 
-.btn-punch {
-
-    @media (min-width: @screen-xs) {
-        .btn-lg();
-        border-radius: 0px;
-        font-size: 14px;
-        font-weight: bold;
-        background-color: @yellow;
-    }
-}
-
-
 /**
  * Sidebar style and fixes
  */
@@ -521,6 +473,7 @@ a.thumbnail-link {
     margin-top: 11px;
     margin-bottom: 8px;
 }
+
 .search_bar {
     padding-left: 0px;
     margin-top: 34px;
