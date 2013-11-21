@@ -234,11 +234,11 @@
 
                             {% if dataset.quality %}
                             <a href="{{ dataset.quality.url }}" title="Go to the report page">
-                                <div class="col-xs-5 col-sm-12 col-md-6 col-lg-5 text-center">
+                                <div class="col-xs-5 col-sm-12 col-md-6 col-lg-6">
                                     <span class="big_number">{{ dataset.quality.weight }}</span>
                                     Performance
                                 </div>
-                                <div class="col-xs-7 col-sm-12 col-md-6 col-lg-7">
+                                <div class="col-xs-7 col-sm-12 col-md-6 col-lg-6">
                                     <div class="progress">
                                         {% if dataset.quality.warning %}
                                         <div class="progress-bar progress-bar-warning" role="progressbar"
