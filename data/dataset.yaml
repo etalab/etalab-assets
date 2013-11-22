@@ -11,7 +11,8 @@ notes: |
     les tableaux récapitulatifs d'attribution de ces subventions depuis l'année 2011
 author: Moi
 author_email: coucou@cmoi.fr
-private: true
+private: false
+is_fork: true
 
 supplier:
     display_name: Supplier

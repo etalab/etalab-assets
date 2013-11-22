@@ -37,12 +37,20 @@
                             {{ dataset.author}}
                             {% endif %}
                         </small>
-                        <small rel="popover" class="not-certified" data-title="Non certifié" data-trigger="hover"
-                            data-content="Cette série ne provient pas d'un service public certifié">Non certifié</small>
                     {% endif %}
 
                     {% if dataset.private %}
                     <small class="private">Privé</small>
+                    {% endif %}
+                    {% if dataset.is_fork %}
+                    <small class="fork" rel="popover"
+                        data-title="Fork" data-trigger="hover" data-placement="top"
+                        data-content="This dataset is a fork of another existing dataset">Fork</small>
+                    {% endif %}
+                    {% if not dataset.organization.certified_public_service %}
+                    <small class="not-certified" rel="popover"
+                        data-title="Non certifié" data-trigger="hover" data-placement="top"
+                        data-content="Cette série ne provient pas d'un service public certifié">Non certifié</small>
                     {% endif %}
 
                 </div>
