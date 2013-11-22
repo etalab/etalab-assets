@@ -190,6 +190,17 @@
             watch: true
         });
 
+        $('.ellipsis-tooltip').dotdotdot({
+            watch: true,
+            callback: function( isTruncated, orgContent ) {
+                if (isTruncated) {
+                    $(this).tooltip({
+                        title: orgContent.text()
+                    });
+                }
+            }
+        });
+
         // Display tooltips and popovers
         $('[rel=tooltip]').tooltip();
         $('[rel=popover]').popover();

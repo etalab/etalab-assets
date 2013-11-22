@@ -83,7 +83,11 @@
                         <a class="list-group-item" href="{{ resource.url }}"
                             {% if resource.format == 'html' %}target="_blank"{% endif %}
                             >
-                            <span class="format-label pull-left" property="dc:format" data-format="{{ resource.format }}">{{ resource.format }}</span>
+                            <div class="format-label pull-left ellipsis-tooltip">
+                                <span property="dc:format"
+                                    data-format="{{ resource.format }}">{{ resource.format }}</span>
+
+                            </div>
                             <h4 class="list-group-item-heading ellipsis {% if not resource.description %}dual{% endif %}">
                                 {{ resource.name }}
                             </h4>

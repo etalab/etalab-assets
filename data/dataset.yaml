@@ -25,6 +25,9 @@ resources:
     -   name: Une autre resource
         description: une autre description de resource
         format: csv
+    -   name: Une resource au long format
+        description: une resource avec un nom de format trop long
+        format: un format bidon qui dépasse du cadre
 
 organization:
     certified_public_service: true
