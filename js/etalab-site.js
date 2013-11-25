@@ -31,7 +31,7 @@
         MAX_QUESTIONS = 2,
 
         DATASET_API_URL = HOME_URL + '/dataset/autocomplete?num='+MAX_DATASETS+'&q=%QUERY',
-        ORGANIZATION_API_URL = HOME_URL + '/api/3/action/organization_list?sort=packages&all_fields=true',
+        ORGANIZATION_API_URL = HOME_URL + '/organization/autocomplete?num='+MAX_ORGANIZATIONS+'&q=%QUERY',
         ASKBOT_API_URL = QUESTIONS_URL + '/api/v1/questions?query=%QUERY',
         WIKI_API_URL = WIKI_API + '?',
         wikiParams = {
@@ -121,7 +121,7 @@
     };
 
     var filter_organization_api = function(response) {
-        return response.result;
+        return response;
     };
 
     var filter_askbot_api = function(response) {
@@ -212,7 +212,7 @@
                     name: 'Organizations',
                     header: headerTmpl({title: HEADERS[LANG].organizations}),
                     limit: MAX_ORGANIZATIONS,
-                    valueKey: 'display_name',
+                    valueKey: 'title',
                     engine: SWIG_ENGINE,
                     template: [
                         '{% if image_url %}',
@@ -220,11 +220,10 @@
                         '<img src="{{image_url}}">',
                         '</div>',
                         '{% endif %}',
-                        '<p>{{display_name}}</p>'
+                        '<p>{{title}}</p>'
                     ].join(''),
-                    prefetch: {
-                        url: ORGANIZATION_API_URL,
-                        filter: filter_organization_api
+                    remote: {
+                        url: ORGANIZATION_API_URL
                     }
                 },
                 {
