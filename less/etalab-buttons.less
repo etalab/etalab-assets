@@ -75,20 +75,10 @@
 
 .icon-left {
 
-    @size: 30px;
+    .glyph-left-square(30px);
 
-    padding-left: @size + 10px;
-    position: relative;
-
-    .glyphicon {
-        color: rgba(255, 255, 255, 0.5);
-        background-color: rgba(0, 0, 0, 0.15);
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: @size;
-        height: @size;
-        line-height: @size - 2;
+    &.btn-punch {
+        .glyph-left-square(37px);    
     }
 }
 
@@ -98,7 +88,7 @@
     @media (min-width: @screen-xs) {
         .btn-lg();
         border-radius: 0px;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: bold;
     }
 }
