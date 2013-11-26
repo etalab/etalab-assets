@@ -354,13 +354,18 @@
     <div class="page-header">
         <div class="container">
             <div class="cover-communaute"></div>
-            <h2>Explorer avec Datagouv</h2>
-            <small>Contributions de la communaté</small>
-            <br class="visible-xs" />
-            <a class="btn btn-primary btn-punch publish-reuse" href="">
-                <span class="glyphicon glyphicon-plus"></span>&nbsp;
-                Publier une reutilisation
-            </a>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-7 col-md-8 col-lg-9">
+                        <h2>Explorer avec Datagouv</h2>
+                        <small>Contributions de la communaté</small>
+                    </div>
+                    <div class="col-xs-6 col-sm-5 col-md-4 col-lg-3">
+                        <a class="btn btn-primary btn-punch btn-block icon-left publish-reuse" href="">
+                            <span class="glyphicon glyphicon-plus"></span>&nbsp;
+                            Publier une reutilisation
+                        </a>
+                    </div>
+            </div>
         </div>
     </div>
 
