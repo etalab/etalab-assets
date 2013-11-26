@@ -1,5 +1,10 @@
 {% extends "templates/base.swig" %}
 
+{% block "extra-head" %}
+<link rel="stylesheet" media="screen" href="bower/bootstrap-select/bootstrap-select.css">
+<link rel="stylesheet" media="screen" href="bower/bootstrap-markdown/css/bootstrap-markdown.min.css">
+{% endblock %}
+
 {% block "content" %}
 
 {% include 'templates/subnav.swig' %}
@@ -28,9 +33,45 @@
                 <label for="password" class="control-label">Password</label>
                 <input id="password" type="password" class="form-control" placeholder="Password" required>
             </div>
+            <div class="form-group">
+                <label for="select" class="control-label">Select</label>
+                <select id="select" class="selectpicker form-control">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Barbecue</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="markdown-editor">Markdown</label>
+                <textarea id="markdown-editor" class="form-control" data-provide="markdown" rows="8"></textarea>
+            </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+
+    <div class="row">
+    </div>
 </div>
 
+{% endblock %}
+
+{% block "extra-js" %}
+<script src="bower/bootstrap-select/bootstrap-select.js"></script>
+<script src="bower/markdown/lib/markdown.js"></script>
+<script src="bower/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+<script>
+    $(function() {
+        // Test form validation
+        $('#demo-form').validate(ETALAB_VALIDATION_RULES);
+
+        // Bootstrap select
+        $('#select').selectpicker();
+
+        // Markdown editor
+        $("#markdown-editor").markdown({
+            autofocus: false,
+            savable: false
+        });
+    });
+</script>
 {% endblock %}

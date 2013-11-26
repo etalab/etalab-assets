@@ -27,6 +27,8 @@
     <script src="bower/modernizr/modernizr.js"></script>
     <script src="bower/respond/respond.min.js"></script>
 
+    {% block "extra-head" %}{% endblock %}
+
 </head>
 <body>
 
@@ -52,12 +54,6 @@
         <script src="bower/swig/index.js"></script>
         <script src="js/etalab-site.js"></script>
 
-    <script>
-        $(function() {
-            // Test form validation
-            $('#demo-form').validate(ETALAB_VALIDATION_RULES);
-        });
-    </script>
     {% block "extra-js" %}{% endblock %}
 
 </body>
