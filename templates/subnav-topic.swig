@@ -1,4 +1,4 @@
-<nav class="navbar navbar-static-top navbar-subnav state">
+<nav class="navbar navbar-static-top navbar-subnav state cover">
 
     <div class="container">
 
@@ -48,9 +48,9 @@
     <nav class="sidebar panel">
     <!-- Groups -->
     <div class="list-group">
-        {% for group in groups %}
-        <a class="list-group-item" href="{{ group.url }}">
-            {{ group.title }}
+        {% for topic in main_topics %}
+        <a class="list-group-item" href="topic.html">
+            {{ topic.title }}
         </a>
         {% endfor %}
     </div>
