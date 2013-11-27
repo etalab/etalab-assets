@@ -90,8 +90,11 @@
                     {% for resource in dataset.resources %}
                         <a class="list-group-item" href="{{ resource.url }}"
                             {% if resource.format == 'html' %}target="_blank"{% endif %}
+                            rel="popover" data-trigger="hover" data-placement="top"
+                            title="{{ resource.name }} [{{ resource.format }}]"
+                            data-content="{{ resource.description }}"
                             >
-                            <div class="format-label pull-left ellipsis-tooltip">
+                            <div class="format-label pull-left ellipsis-dot">
                                 <span property="dc:format"
                                     data-format="{{ resource.format }}">{{ resource.format }}</span>
 
@@ -99,8 +102,8 @@
                             <h4 class="list-group-item-heading ellipsis {% if not resource.description %}dual{% endif %}">
                                 {{ resource.name }}
                             </h4>
-                            <p class="list-group-item-text">
-                            {{ resource.description }}
+                            <p class="list-group-item-text ellipsis">
+                                {{ resource.description }}
                             </p>
                         </a>
                     {% endfor %}
@@ -445,8 +448,3 @@
 
 
 {% endblock %}
-
-{% block extra_js %}
-
-{% endblock %}
-

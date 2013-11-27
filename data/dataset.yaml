@@ -23,8 +23,10 @@ resources:
     -   name: Une resource
         description: Descrption de la resource
         format: html
-    -   name: Une autre resource
-        description: une autre description de resource
+    -   name: Une resource sans description
+        format: shp
+    -   name: Une resource avec un nom long
+        description: une autre description de resource mais beaucoup trop longue de façon à ce qu'elle dépasse largement du cadre. C'est juste pour tester l'ellipse avec le tooltip.
         format: csv
     -   name: Une resource au long format
         description: une resource avec un nom de format trop long
