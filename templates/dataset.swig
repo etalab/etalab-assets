@@ -112,7 +112,7 @@
                 <div class="row opinion">
                     <div class="btn-toolbar">
                         <div class="btn-group">
-                            <a title="Utile" class="btn btn-success btn-sm btn-block icon-left"
+                            <a title="Utile" class="btn btn-success btn-punch btn-block icon-left"
                                 data-toggle="modal" href="#fork-modal"
                                 rel="tooltip" data-placement="top" data-trigger="hover" data-container="body"
                                 data-content="Useful" >
@@ -122,7 +122,7 @@
                             </a>
                         </div>
                         <div class="btn-group">
-                            <a title="Signaler" class="btn btn-danger btn-sm"
+                            <a title="Signaler" class="btn btn-danger btn-punch "
                                 data-toggle="modal" href="#fork-modal"
                                 rel="tooltip" data-placement="top" data-trigger="hover" data-container="body"
                                 data-content="Duplicate this dataset and improve it !" >
@@ -363,7 +363,7 @@
                         <small>Contributions de la communaté</small>
                     </div>
                     <div class="col-xs-6 col-sm-5 col-md-4 col-lg-3">
-                        <a class="btn btn-primary btn-punch btn-block icon-left publish-reuse" href="">
+                        <a class="btn btn-primary btn-yellow btn-punch btn-block icon-left publish-reuse" href="">
                             <span class="glyphicon glyphicon-plus"></span>&nbsp;
                             Publier une reutilisation
                         </a>
