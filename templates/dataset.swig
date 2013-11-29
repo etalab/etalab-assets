@@ -122,7 +122,7 @@
                             </a>
                         </div>
                         <div class="btn-group">
-                            <a title="Signaler" class="btn btn-danger btn-punch "
+                            <a title="Signaler" class="btn btn-danger btn-report btn-punch "
                                 data-toggle="modal" href="#fork-modal"
                                 rel="tooltip" data-placement="top" data-trigger="hover" data-container="body"
                                 data-content="Duplicate this dataset and improve it !" >
