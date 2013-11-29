@@ -21,7 +21,6 @@
         HOME_URL = $('link[rel="home"]').attr('href'),
         WIKI_URL = $('link[rel="wiki"]').attr('href'),
         WIKI_API = $('link[rel="wiki-api"]').attr('href'),
-        QUESTIONS_URL = $('link[rel="questions"]').attr('href'),
 
         ORIGIN = window.location.origin || window.location.protocol + "//" + window.location.hostname,
 
@@ -32,7 +31,6 @@
 
         DATASET_API_URL = HOME_URL + '/dataset/autocomplete?num='+MAX_DATASETS+'&q=%QUERY',
         ORGANIZATION_API_URL = HOME_URL + '/organization/autocomplete?num='+MAX_ORGANIZATIONS+'&q=%QUERY',
-        ASKBOT_API_URL = QUESTIONS_URL + '/api/v1/questions?query=%QUERY',
         WIKI_API_URL = WIKI_API + '?',
         wikiParams = {
             format: 'json',
@@ -68,19 +66,16 @@
         HEADERS = {
             'fr': {
                 'topics': 'Thématiques',
-                'questions': 'Questions',
                 'organizations': 'Organisations',
                 'datasets': 'Jeux de données'
             },
             'en': {
                 'topics': 'Topics',
-                'questions': 'Questions',
                 'organizations': 'Organizations',
                 'datasets': 'Datasets'
             },
             'de': {
                 'topics': 'Themen',
-                'questions': 'Fragen',
                 'organizations': 'Organisationen',
                 'datasets': 'Datensätze'
             }
@@ -122,10 +117,6 @@
 
     var filter_organization_api = function(response) {
         return response;
-    };
-
-    var filter_askbot_api = function(response) {
-        return response.questions;
     };
 
     /**
@@ -261,23 +252,6 @@
                         wildcard: '__QUERY',
                         filter: filter_mediawiki_api
                     }
-                },
-                {
-                    name: 'Questions',
-                    header: headerTmpl({title: HEADERS[LANG].questions}),
-                    limit: MAX_QUESTIONS,
-                    valueKey: 'title',
-                    engine: SWIG_ENGINE,
-                    template: [
-                        '<p>',
-                        '<span class="glyphicon glyphicon-question-sign"></span>',
-                        '&nbsp;{{title}}',
-                        '</p>'
-                    ].join(''),
-                    remote: {
-                        url: ASKBOT_API_URL,
-                        filter: filter_askbot_api
-                    }
                 }
             ])
             .on('typeahead:selected typeahead:autocompleted', function(e, data, dataset) {
@@ -290,9 +264,6 @@
                         break;
                     case 'Organizations':
                         window.location = HOME_URL + '/' + LANG + '/organization/' + data.name;
-                        break;
-                    case 'Questions':
-                        window.location = QUESTIONS_URL + '/question/' + data.id + '/' + data.title;
                         break;
                 }
             });
