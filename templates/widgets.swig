@@ -50,6 +50,147 @@
     </div>
 
     <div class="row">
+        <div class="col-md-2">
+            <div class="publisher-avatar-150">
+                <div class="frame">
+                    <a href="" title="As user">
+                        <img alt="As user" src="images/avatar-axel.jpg" class="centered">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="publisher-avatar-150">
+                <div class="frame">
+                    <a class="organization" href="" title="Organization">
+                        <img alt="WWF" src="images/wwf.jpg">
+                    </a>
+                    <a class="user" href="" title="User">
+                        <img alt="As user" src="images/avatar-axel.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="publisher-avatar-150">
+                <div class="frame">
+                    <a class="organization" href="" title="Organization">
+                        <img alt="WWF" src="images/Ministere-de-l-Ecologie-du-Developpement-Durable-et-de-l-Energie_resultat.png">
+                    </a>
+                    <a class="user" href="" title="User">
+                        <img alt="As user" src="images/avatar-angelo.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <div class="publisher-avatar-100">
+                <div class="frame">
+                    <a href="" title="As user">
+                        <img alt="As user" src="images/avatar-axel.jpg"  class="centered">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="publisher-avatar-100">
+                <div class="frame">
+                    <a class="organization" href="" title="Organization">
+                        <img alt="WWF" src="images/wwf.jpg">
+                    </a>
+                    <a class="user" href="" title="User">
+                        <img alt="As user" src="images/avatar-axel.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="publisher-avatar-100">
+                <div class="frame">
+                    <a class="organization" href="" title="Organization">
+                        <img alt="WWF" src="images/Ministere-de-l-Ecologie-du-Developpement-Durable-et-de-l-Energie_resultat.png">
+                    </a>
+                    <a class="user" href="" title="User">
+                        <img alt="As user" src="images/avatar-angelo.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <div class="publisher-avatar-80">
+                <div class="frame">
+                    <a href="" title="As user">
+                        <img alt="As user" src="images/avatar-axel.jpg"  class="centered">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="publisher-avatar-80">
+                <div class="frame">
+                    <a class="organization" href="" title="Organization">
+                        <img alt="WWF" src="images/wwf.jpg">
+                    </a>
+                    <a class="user" href="" title="User">
+                        <img alt="As user" src="images/avatar-axel.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="publisher-avatar-80">
+                <div class="frame">
+                    <a class="organization" href="" title="Organization">
+                        <img alt="WWF" src="images/Ministere-de-l-Ecologie-du-Developpement-Durable-et-de-l-Energie_resultat.png">
+                    </a>
+                    <a class="user" href="" title="User">
+                        <img alt="As user" src="images/avatar-angelo.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <div class="publisher-avatar-50">
+                <div class="frame">
+                    <a href="" title="As user">
+                        <img alt="As user" src="images/avatar-axel.jpg"  class="centered">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="publisher-avatar-50">
+                <div class="frame">
+                    <a class="organization" href="" title="Organization">
+                        <img alt="WWF" src="images/wwf.jpg">
+                    </a>
+                    <a class="user" href="" title="User">
+                        <img alt="As user" src="images/avatar-axel.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="publisher-avatar-50">
+                <div class="frame">
+                    <a class="organization" href="" title="Organization">
+                        <img alt="WWF" src="images/Ministere-de-l-Ecologie-du-Developpement-Durable-et-de-l-Energie_resultat.png">
+                    </a>
+                    <a class="user" href="" title="User">
+                        <img alt="As user" src="images/avatar-angelo.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

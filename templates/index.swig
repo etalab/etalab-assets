@@ -59,19 +59,21 @@
                     <div class="item {% if loop.first %}active{% endif %}">
                         <img src="{{ reuse.image_url }}" alt="{{ reuse.title }}">
                         <div class="carousel-caption">
-                            <div class="slide-logo pull-left">
-                                {% if not reuse.organization %}
-                                <a class="slide-logo-big" href="" title="{{ reuse.owner.name }}">
-                                    <img alt="{{ reuse.owner.name }}" src="{{ reuse.owner.avatar }}">
-                                </a>
-                                {% else %}
-                                <a class="slide-logo-big" href="" title="{{ reuse.organization.title }}">
-                                    <img alt="{{ reuse.organization.title }}" src="{{ reuse.organization.image_url }}">
-                                </a>
-                                <a class="slide-logo-min" href="" title="{{ reuse.owner.name }}">
-                                    <img alt="{{ reuse.owner.name }}" src="{{ reuse.owner.avatar }}">
-                                </a>
-                                {% endif %}
+                            <div class="slide-logo pull-left publisher-avatar-80">
+                                <div class="frame">
+                                    {% if not reuse.organization %}
+                                    <a href="" title="{{ reuse.owner.name }}">
+                                        <img alt="{{ reuse.owner.name }}" src="{{ reuse.owner.avatar }}">
+                                    </a>
+                                    {% else %}
+                                    <a class="organization" href="" title="{{ reuse.organization.title }}">
+                                        <img alt="{{ reuse.organization.title }}" src="{{ reuse.organization.image_url }}">
+                                    </a>
+                                    <a class="user" href="" title="{{ reuse.owner.name }}">
+                                        <img alt="{{ reuse.owner.name }}" src="{{ reuse.owner.avatar }}">
+                                    </a>
+                                    {% endif %}
+                                </div>
                             </div>
                             <h4 class="title ellipsis-dot">
                                 <a href="" title="{{reuse.title}}">

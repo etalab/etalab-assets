@@ -51,8 +51,7 @@
 }
 
 .glyph-left-square(@size) {
-
-padding-left: @size + 10px;
+    padding-left: @size + 10px;
     position: relative;
 
     .glyphicon {
@@ -66,4 +65,57 @@ padding-left: @size + 10px;
         line-height: @size - 2;
     }
 
+}
+
+
+.publisher-avatar(@size, @user-size) {
+    border: 1px solid @gray-lighter;
+    background: white;
+    width: @size;
+    height: @size;
+    padding: 4px;
+
+    .frame {
+        .text-center();
+        vertical-align: middle;
+        background: @gray-lighter;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        &:hover, &:active, &:focus {
+            background: darken(@gray-lighter, 5%);
+        }
+
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    a:first-child img {
+        margin: auto;
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+    }
+
+    .user {
+        .text-right();
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border: 1px solid @gray-lighter;
+        max-width: @user-size;
+        max-heigth: @user-size;
+
+        .transition2(width .5s ease, height .5s ease);
+
+        &:hover, &:active, &:focus {
+            max-width: 100%;
+            max-height: 100%;
+            border: none;
+            opacity: 0.9;
+        }
+    }
 }
