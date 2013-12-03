@@ -1,18 +1,18 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2013-10-2: Created.
+2013-12-3: Created.
 -->
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Wed Oct  2 16:55:06 2013
+Created by FontForge 20120731 at Tue Dec  3 11:51:34 2013
  By Axel Haustant
 Created by Axel Haustant with FontForge 2.0 (http://fontforge.sf.net)
 </metadata>
 <defs>
-<font id="etalab-icons" horiz-adv-x="512" >
+<font id="icons" horiz-adv-x="512" >
   <font-face 
-    font-family="etalab-icons"
+    font-family="icons"
     font-weight="500"
     font-stretch="normal"
     units-per-em="512"

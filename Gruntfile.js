@@ -9,11 +9,11 @@ module.exports = function(grunt) {
             icons: {
                 src: 'icons/*.{svg,eps}',
                 dest: 'fonts',
-                destCss: 'less',
+                destCss: 'less/etalab',
                 options: {
                     stylesheet: 'less',
-                    relativeFontPath: '../fonts',
-                    font: 'etalab-icons',
+                    relativeFontPath: '../../fonts',
+                    // font: 'etalab-icons',
                     hashes: false
                 }
             }
