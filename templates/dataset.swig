@@ -359,15 +359,15 @@
             <div class="cover-communaute"></div>
                 <div class="row">
                     <div class="col-xs-6 col-sm-7 col-md-8 col-lg-9">
-                        <h2>Explorer avec Datagouv</h2>
-                        <small>Contributions de la communaté</small>
+                        <h2>Contributions de la communaté</h2>
+                        <small>Explorer avec Datagouv</small>
                     </div>
-                    <div class="col-xs-6 col-sm-5 col-md-4 col-lg-3">
+                    <!-- <div class="col-xs-6 col-sm-5 col-md-4 col-lg-3">
                         <a class="btn btn-primary btn-yellow btn-punch btn-block icon-left publish-reuse" href="">
                             <span class="glyphicon glyphicon-plus"></span>&nbsp;
                             Publier une reutilisation
                         </a>
-                    </div>
+                    </div> -->
             </div>
         </div>
     </div>
@@ -375,58 +375,118 @@
 
     <div class="container">
 
-        <h3 class="panel-title">Réutilisations</h3>
         <div class="row">
             <div class="col-md-9 col-sm-9 smaller">
-                {% if dataset.related %}
+
                 <div class="row">
-                    {% for related in dataset.related %}
-                    <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail reuse">
-                            <a class="preview" href="{{ related.url }}" target="_blank">
-                                <img class="media-object img-responsive" alt="{{ related.title }}"
-                                    src="{{ related.image_url }}">
-                            </a>
-                            <div class="caption">
-                                <h4 class="ellipsis-dot">
-                                    <a href="{{ related.url }}" target="_blank" title="{{ related.title }}">
-                                    {{ related.title }}
-                                    </a>
-                                </h4>
-                                <div class="author">
-                                    <a href title="{{related.user}}">
-                                    <img src="{{related.avatar}}" alt="{{related.user}} avatar">
-                                    </a>
-                                    <a class="user" href title="{{related.user}}">{{related.user}}</a>
-                                    <span class="date">{{related.date}}</span>
+                    <div class="col-sm-12 list-group resources-list">
+                        <h3>Ressources</h3>
+                        {% for resource in dataset.resources %}
+                            <a class="list-group-item" href="{{ resource.url }}"
+                                {% if resource.format == 'html' %}target="_blank"{% endif %}
+                                rel="popover" data-trigger="hover" data-placement="top"
+                                title="{{ resource.name }} [{{ resource.format }}]"
+                                data-content="{{ resource.description }}"
+                                >
+                                <div class="format-label pull-left ellipsis-dot">
+                                    <span property="dc:format"
+                                        data-format="{{ resource.format }}">{{ resource.format }}</span>
+
                                 </div>
-                            </div>
-                            <a class="rollover fade in" href="{{related.url}}" target="_blank">
-                                {{ related.description }}
+                                <h4 class="list-group-item-heading ellipsis {% if not resource.description %}dual{% endif %}">
+                                    {{ resource.name }}
+                                </h4>
+                                <p class="list-group-item-text ellipsis">
+                                    {{ resource.description }}
+                                </p>
                             </a>
-                            <div class="btn-group btn-group-xs">
-                                <a class="btn btn-default" rel="tooltip" title="Edit">
-                                    <span class="glyphicon glyphicon-edit"></span>
-                                </a>
-                                {% if related.featured_button %}
-                                <a class="btn btn-default featured" rel="tooltip" title="Mark as featured">
-                                    <span class="glyphicon glyphicon-pushpin"></span>
-                                </a>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
+                        {% endfor %}
+                            <a class="list-group-item add" href="{{ resource.url }}"
+                                {% if resource.format == 'html' %}target="_blank"{% endif %}
+                                rel="popover" data-trigger="hover" data-placement="top"
+                                title="{{ resource.name }} [{{ resource.format }}]"
+                                data-content="{{ resource.description }}"
+                                >
+                                <div class="format-label pull-left ellipsis-dot">
+                                    +
+
+                                </div>
+                                <h4 class="list-group-item-heading">
+                                    Ajouter une ressource
+                                </h4>
+                                
+                            </a>
+                    </div> 
                 </div>
-                <br/>
-                {% endif %}
-            </div>
+                <div class="row">
+                    <div class="col-sm-12 reuses-list">
+                        <h3 class="panel-title">Réutilisations</h3>
+                        {% if dataset.related %}
+                        <div class="row">
+                            {% for related in dataset.related %}
+                            <div class="col-sm-6 col-md-4">
+                                <div class="thumbnail reuse">
+                                    <a class="preview" href="{{ related.url }}" target="_blank">
+                                        <img class="media-object img-responsive" alt="{{ related.title }}"
+                                            src="{{ related.image_url }}">
+                                    </a>
+                                    <div class="caption">
+                                        <h4 class="ellipsis-dot">
+                                            <a href="{{ related.url }}" target="_blank" title="{{ related.title }}">
+                                            {{ related.title }}
+                                            </a>
+                                        </h4>
+                                        <div class="author">
+                                            <a href title="{{related.user}}">
+                                            <img src="{{related.avatar}}" alt="{{related.user}} avatar">
+                                            </a>
+                                            <a class="user" href title="{{related.user}}">{{related.user}}</a>
+                                            <span class="date">{{related.date}}</span>
+                                        </div>
+                                    </div>
+                                    <a class="rollover fade in" href="{{related.url}}" target="_blank">
+                                        {{ related.description }}
+                                    </a>
+                                    <div class="btn-group btn-group-xs">
+                                        <a class="btn btn-default" rel="tooltip" title="Edit">
+                                            <span class="glyphicon glyphicon-edit"></span>
+                                        </a>
+                                        {% if related.featured_button %}
+                                        <a class="btn btn-default featured" rel="tooltip" title="Mark as featured">
+                                            <span class="glyphicon glyphicon-pushpin"></span>
+                                        </a>
+                                        {% endif %}
+                                        </div>
+                                    </div>
+                            </div>
+                            {% endfor %}
+                            <div class="col-sm-6 col-md-4">
+                                <div class="thumbnail reuse add">
+                                    <a class="preview" href="{{ related.url }}" target="_blank">
+                                        +
+                                    </a>
+                                    <div class="caption">
+                                        <h4 class="ellipsis-dot">
+                                            Ajouter<br>une reutilisation
+                                        </h4>
+                                    </div>
+                                    
+                            </div>
 
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div> 
+            </div>  
+            
+             
             <div class="col-md-3 col-sm-3 note">
-            <p>Vous avez réutilisé ces données et publié un article, une infographie, ou une application ? C'est le moment de vous faire connaître ! Référencez votre travail en quelques clics et augmentez votre visibilité. </p>
+                <p>Vous avez réutilisé ces données et publié un article, une infographie, ou une application ? C'est le moment de vous faire connaître ! Référencez votre travail en quelques clics et augmentez votre visibilité.</p>
             </div>
-
         </div>
+
+    </div>
 
         {# <div class="comments">
             <h3>Commentaires</h3>
