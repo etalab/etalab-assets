@@ -401,16 +401,8 @@
                                 </p>
                             </a>
                         {% endfor %}
-                            <a class="list-group-item add" href="{{ resource.url }}"
-                                {% if resource.format == 'html' %}target="_blank"{% endif %}
-                                rel="popover" data-trigger="hover" data-placement="top"
-                                title="{{ resource.name }} [{{ resource.format }}]"
-                                data-content="{{ resource.description }}"
-                                >
-                                <div class="format-label pull-left ellipsis-dot">
-                                    +
-
-                                </div>
+                            <a class="list-group-item add" href>
+                                <div class="format-label pull-left">+</div>
                                 <h4 class="list-group-item-heading">
                                     Ajouter une ressource
                                 </h4>
