@@ -466,8 +466,6 @@
                     </div>
                 </div>
             </div>
-            </div>
-
 
             <div class="col-md-3 col-sm-3 note">
                 <p>Vous avez réutilisé ces données et publié un article, une infographie, ou une application ? C'est le moment de vous faire connaître ! Référencez votre travail en quelques clics et augmentez votre visibilité.</p>
