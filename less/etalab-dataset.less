@@ -284,7 +284,7 @@ aside {
 
     }
 
-    
+
     .resources-list {
         margin-top: -10px;
         margin-bottom: 40px;
@@ -296,7 +296,7 @@ aside {
             background-color: #e9e9e9;
             }
 
-        }   
+        }
 
         .add {
             margin-top: 13px;
@@ -362,7 +362,7 @@ aside {
                     overflow: hidden;
 
                     img {
-                        min-height: 110px;
+                        min-height: @preview-height;
                         min-width: 100%;
 
                     }
@@ -405,8 +405,9 @@ aside {
                 }
 
                 &.add {
+                    @border-size: 2px;
                     background: none;
-                    border: 2px dashed #7d8489;
+                    border: @border-size dashed #7d8489;
 
                     h4 {
                         text-align: center;
@@ -423,10 +424,12 @@ aside {
                         font-size: 36px;
                         font-weight: bold;
                         line-height: 100px;
+                        height: @preview-height - @border-size;
                     }
 
                     &:hover {
                         background-color: rgba(255,255,255,0.04);
+                        text-decoration: none;
                     }
                 }
 

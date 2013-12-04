@@ -414,9 +414,9 @@
                                 <h4 class="list-group-item-heading">
                                     Ajouter une ressource
                                 </h4>
-                                
+
                             </a>
-                    </div> 
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12 reuses-list">
@@ -461,26 +461,22 @@
                             </div>
                             {% endfor %}
                             <div class="col-sm-6 col-md-4">
-                                <div class="thumbnail reuse add">
-                                    <a class="preview" href="{{ related.url }}" target="_blank">
-                                        +
-                                    </a>
+                                <a class="thumbnail reuse add" href>
+                                    <div class="preview">+</div>
                                     <div class="caption">
-                                        <h4 class="ellipsis-dot">
-                                            Ajouter<br>une reutilisation
-                                        </h4>
+                                        <h4>Ajouter une reutilisation</h4>
                                     </div>
-                                    
+                                </a>
                             </div>
 
                         </div>
                         {% endif %}
                     </div>
                 </div>
-            </div> 
-            </div>  
-            
-             
+            </div>
+            </div>
+
+
             <div class="col-md-3 col-sm-3 note">
                 <p>Vous avez réutilisé ces données et publié un article, une infographie, ou une application ? C'est le moment de vous faire connaître ! Référencez votre travail en quelques clics et augmentez votre visibilité.</p>
             </div>
