@@ -94,6 +94,13 @@ related:
         image_url: images/toute-la-verite-sur-la-reserve-parlementaire-des-elus_article_main.jpg
         description: Article de La Croix et graphique interprétatif
         featured_button: true
+        organization:
+            name: wwf
+            title: WWF
+            display_name: WWF
+            description: Le WWF est la première organisation mondiale de protection de la nature. Une organisation indépendante. Le WWF compte plus de 5 millions de donateurs à travers le...
+            image_url: images/wwf.jpg
+            certified_public_service: false
     -
         title: Le moteur de recherche du Monde
         user: Pierre Pezziardi

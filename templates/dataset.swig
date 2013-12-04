@@ -429,10 +429,20 @@
                                             </a>
                                         </h4>
                                         <div class="author">
-                                            <a href title="{{related.user}}">
-                                            <img src="{{related.avatar}}" alt="{{related.user}} avatar">
+                                            {% if related.organization %}
+                                            <a class="avatar" href title="{{related.organization.display_name}}">
+                                                <img src="{{related.organization.image_url}}"
+                                                    alt="{{related.organization.display_name}} logo">
+                                            </a>
+                                            <a class="user" href title="{{related.organization.display_name}}">
+                                                {{related.organization.display_name}}
+                                            </a>
+                                            {% else %}
+                                            <a class="avatar" href title="{{related.user}}">
+                                                <img src="{{related.avatar}}" alt="{{related.user}} avatar">
                                             </a>
                                             <a class="user" href title="{{related.user}}">{{related.user}}</a>
+                                            {% endif %}
                                             <span class="date">{{related.date}}</span>
                                         </div>
                                     </div>

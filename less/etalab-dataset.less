@@ -375,12 +375,20 @@ aside {
                         position: absolute;
                         bottom: 8px;
 
-                        img {
-                            width: 25px;
-                            border: 1px solid #7e7e7e;
+                        .avatar {
+                            .text-center();
                             float: left;
+                            width: 25px;
+                            height: 25px;
+                            border: 1px solid #7e7e7e;
                             margin-right: 10px;
+
+                            img {
+                                max-width: 100%;
+                                max-height: 100%;
+                            }
                         }
+
                         .user {
                             font-size: 13px;
                             color: #3a3b3d;
