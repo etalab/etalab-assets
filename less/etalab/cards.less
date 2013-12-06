@@ -66,26 +66,46 @@ ul.card-list {
             height: @card-height - 2 * @card-padding - @card-footer-size;
         }
 
-        ul.card-footer {
-            .list-inline();
-            // z-index: 900; // High but lower that popup menus (z-index = 1000)
-            display: block;
+        footer {
+            height: @card-footer-size;
+            width: 100%;
             position: absolute;
             bottom: 0px;
             left: 0px;
-            width: 100%;
-            background-color: @bg-gray;
-            height: @card-footer-size;
-            line-height: 25px;
-            font-weight: bold;
-            font-size: @card-font-size - 1px;
-            color: #6a6a6a;
 
-            .btn {
-                background: none !important;
-                color: #bababa;
+            ul {
+                .list-inline();
+                height: 100%;
+                max-width: 100%;
+                background-color: @bg-gray;
+                line-height: 25px;
+                font-weight: bold;
+                font-size: @card-font-size - 1px;
+                color: #6a6a6a;
+
+                .btn {
+                    background: none !important;
+                    color: #bababa;
+                }
+
+                &.corner {
+                    .text-center();
+                    padding: 0;
+                    color: white;
+                    background-color: darken(@bg-gray, 25%);
+
+                    .btn {
+                        color: @bg-gray;
+                    }
+
+                    li {
+                        padding: 0 5px;
+                    }
+                }
             }
+
         }
+
 
         .card-text-mask {
             display: block;
