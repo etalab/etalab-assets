@@ -62,12 +62,9 @@
 </div>
 
 
-
-
-
-<div class="call-to-action">
-    <h2>Partager, améliorer et valoriser </br> l'information publique</h2>
-    <div class="navbar-left col-sm-4 col-md-3 col-xs-12 collapse subnav-collapse">
+<div class="call-to-action col-sm-7 col-md-8 col-lg-7 col-xs-12">
+    <h2>Partager, améliorer et valoriser l'information publique</h2>
+    <div class="collapse subnav-collapse">
         <a class="btn btn-primary btn-big btn-dark"
                 title="Publish a dataset !"
                 href>
@@ -75,10 +72,7 @@
             Publier une serie de Données
         </a>
     </div>
-
-
 </div>
-
 
 
 

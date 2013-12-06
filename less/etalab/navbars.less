@@ -323,23 +323,30 @@
 
 // big banner call to action
 .call-to-action {
-    @media (min-width: @grid-float-breakpoint) {
+    margin-bottom: 10px;
+
+    @media (min-width: @screen-sm-min) {
         position: relative;
-        top: 65px;
-        left: 50px;
+        top: 30px;
+
+        @media (min-width: @screen-md-min) {
+            top: 65px;
+            left: 50px;
+        }
     }
 
 
     h2 {
         color: white;
         font-style: italic;
-        font-size: 20px;
         font-family: @title-font;
-        line-height: 1em;
+        font-size: 36px;
+        line-height: 1.2em;
 
-        @media (min-width: @grid-float-breakpoint) {
-            font-size: 36px;
-            line-height: 1.2em;
+        @media (max-width: @grid-float-breakpoint) {
+            font-size: 18px;
+            line-height: 1em;
+            margin: 10px 0;
         }
     }
 }
