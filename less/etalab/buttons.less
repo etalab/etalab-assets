@@ -78,10 +78,12 @@
 
 .icon-left {
 
-    .glyph-left-square(30px);
+    .glyph-left-square(32px);
 
     &.btn-punch {
-        .glyph-left-square(37px);    
+        @media (min-width: @screen-xs) {
+            .glyph-left-square(37px);
+        }
     }
 }
 

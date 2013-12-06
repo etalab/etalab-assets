@@ -52,7 +52,9 @@
 }
 
 .glyph-left-square(@size) {
-    padding-left: @size + 10px;
+    @base-padding: 15px;
+    padding-left: @size + @base-padding;
+    padding-right: @base-padding;
     position: relative;
 
     .glyphicon {
