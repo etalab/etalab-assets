@@ -99,7 +99,7 @@ module.exports = function(grunt) {
                 port: 9000,
                 open: true,
                 livereload: true,
-                base: ['.', 'demo', 'bower/bootstrap']
+                base: ['.', 'demo', 'bower/bootstrap', 'bower/bootstrap/dist']
             },
             server: {}
         },

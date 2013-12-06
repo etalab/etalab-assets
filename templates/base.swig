@@ -25,7 +25,7 @@
     <link rel="stylesheet" media="screen" href="css/{{style}}.css">
 
     <script src="bower/modernizr/modernizr.js"></script>
-    <script src="bower/respond/respond.min.js"></script>
+    <script src="bower/respond/dest/respond.min.js"></script>
 
     {% block "extra-head" %}{% endblock %}
 
