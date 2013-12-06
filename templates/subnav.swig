@@ -3,9 +3,12 @@
     <div class="container">
 
 
-<div class="sidebackground1"></div>
-<div class="sidebackground2"></div>
-<div class="sidebackground3"></div>
+<div class="side-bgs">
+    <div class="bg"></div>
+    <div class="bg collapse sidebg-collapse"></div>
+    <div class="bg"></div>
+</div>
+
 <div class="search_sidebar col-sm-5 col-md-4 col-xs-12">
 
 
@@ -23,13 +26,12 @@
 
     </nav>
 
-
-    <nav  class="sidebar panel">
+    <nav class="sidebar panel collapse subnav-collapse">
 
 
         <form class="navbar-form form-inline" role="search">
 
-            <div class="collapse subnav-collapse">
+            {# <div class="collapse subnav-collapse"> #}
                 <div id="where-group" class="input-group">
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-globe"></span>
@@ -38,7 +40,7 @@
                             autocomplete="off" placeholder="Where">
                     <input id="ext_territory" name="ext_territory" type="hidden" />
                 </div>
-            </div>
+            {# </div> #}
         </form>
 
     </nav>

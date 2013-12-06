@@ -16,10 +16,11 @@
     background: url('../img/marianne_cover.png') no-repeat;
 }
 
-.sidebackground1, .sidebackground2, .sidebackground3 {
-    background-color: rgba(0,0,0,0.25);
+.side-bgs {
     position: absolute;
     left: -1000px;
+    top: 12px;
+    height: 100%;
     z-index: -10;
     .sidebackground-width(@container-lg, 4);
 
@@ -30,21 +31,42 @@
     @media (max-width: @screen-sm-max) {
         .sidebackground-width(@container-sm, 5);
     }
-}
 
-.sidebackground1 {
-    height: 34px;
-    top: 12px;
-}
+    @media (max-width: @screen-xs-max) {
+        .sidebackground-width(@container-md, 6);
+    }
 
-.sidebackground2 {
-    height: 34px;
-    top: 50px;
-}
+    @media (max-width: @screen-xs-min) {
+        .sidebackground-width(@container-sm, 5);
+    }
 
-.sidebackground3 {
-    height: 218px;
-    top: 88px;
+    .bg {
+        background-color: rgba(0,0,0,0.25);
+        width: 100%;
+        margin-bottom: 4px;
+
+        @media (max-width: @grid-float-breakpoint) {
+            margin-bottom: 5px;
+        }
+
+        &:first-child, &:nth-child(2) {
+            height: 34px !important;
+        }
+
+        &:nth-child(3) {
+            height: 218px;
+        }
+
+        &.sidebg-collapse { // Copied from bootstrap navbar-collapse
+            &.in {
+                display: block;
+            }
+
+            @media (min-width: @grid-float-breakpoint) {
+                display: block;
+            }
+        }
+    }
 }
 
 .full-container {
@@ -155,12 +177,7 @@
 
     .navbar-form {
         margin: 0px;
-    }
-
-    @media (min-width: @grid-float-breakpoint) {
-        .navbar-form {
-            padding: 0;
-        }
+        padding: 0;
     }
 
     .subnav-collapse { // Copied from bootstrap navbar-collapse
@@ -236,11 +253,6 @@
             color: #999;
             border: 1px solid white;
         }
-
-
-        @media (max-width: @screen-sm) {
-            margin: 5px;
-        }
     }
 }
 
@@ -276,54 +288,12 @@
     border-radius: 0px;
     color: white;
     max-width: 400px;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
+    .box-shadow(none);
 
     a {
         color: white;
         text-decoration: none;
-    }
-
-    .panel {
-        margin-bottom: 3px !important;
-        background: none;
-    }
-
-    .panel-heading {
-        background-color: transparent;
-        border-bottom: none;
-        padding: 0;
-        a {
-            padding: 10px 15px;
-            display: block;
-            .transition2(padding .2s ease, background .2s ease);
-
-            &:hover, &:focus {
-                padding-left: 15px;
-                background-color: @highlight-dark;
-            }
-        }
-    }
-
-    .panel-title {
-        padding: 10px;
-    }
-
-    .panel-body {
-        background-color: @bg-dark;
-
-        ul.list-unstyled {
-            margin: 0;
-            li{
-                padding: 5px;
-                border-radius:4px;
-                .transition2(padding .2s ease, background .2s ease);
-
-                &:hover, &:focus {
-                    padding-left: 15px;
-                    background-color: lighten(@bg-dark, 10%);
-                }
-            }
-        }
     }
 
     .list-group {
@@ -353,17 +323,24 @@
 
 // big banner call to action
 .call-to-action {
-    position: relative;
-    top: 65px;
-    left: 50px;
+    @media (min-width: @grid-float-breakpoint) {
+        position: relative;
+        top: 65px;
+        left: 50px;
+    }
 
 
     h2 {
         color: white;
         font-style: italic;
-        font-size: 36px;
+        font-size: 20px;
         font-family: @title-font;
-        line-height: 1.2em;
+        line-height: 1em;
+
+        @media (min-width: @grid-float-breakpoint) {
+            font-size: 36px;
+            line-height: 1.2em;
+        }
     }
 }
 
