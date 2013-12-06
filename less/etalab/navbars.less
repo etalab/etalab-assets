@@ -110,7 +110,6 @@
     .navbar-brand   {
         margin: 10px 0px;
         display: block;
-        width: 420px;
         min-height: 48px;
         padding: 0px;
         padding-left: 96px;
@@ -139,7 +138,14 @@
     color: #5f5f5f !important;
     font-size: 16px;
     font-family: @title-font;
-    padding-top: 9px;
+
+    @media (min-width: @grid-float-breakpoint) {
+        padding-top: 9px;
+    }
+
+    @media (max-width: @grid-float-breakpoint) {
+        margin: 5px 10px;
+    }
 }
 
 .navbar-subnav {
