@@ -2,10 +2,12 @@
 
     <div class="container">
 
+<div class="side-bgs">
+    <div class="bg"></div>
+    <div class="bg collapse sidebg-collapse"></div>
+    <div class="bg"></div>
+</div>
 
-<div class="sidebackground1"></div>
-<div class="sidebackground2"></div>
-<div class="sidebackground3"></div>
 <div class="search_sidebar col-sm-5 col-md-4 col-xs-12">
 
 
@@ -24,20 +26,17 @@
     </nav>
 
 
-    <nav  class="sidebar panel">
+    <nav  class="sidebar panel  collapse subnav-collapse">
 
 
         <form class="navbar-form form-inline" role="search">
-
-            <div class="collapse subnav-collapse">
-                <div id="where-group" class="input-group">
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-globe"></span>
-                    </span>
-                    <input id="where-input" type="search" class="form-control"
-                            autocomplete="off" placeholder="Where">
-                    <input id="ext_territory" name="ext_territory" type="hidden" />
-                </div>
+            <div id="where-group" class="input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-globe"></span>
+                </span>
+                <input id="where-input" type="search" class="form-control"
+                        autocomplete="off" placeholder="Where">
+                <input id="ext_territory" name="ext_territory" type="hidden" />
             </div>
         </form>
 
@@ -63,7 +62,7 @@
 
 
 
-<div class="topic-excerpt col-sm-8 col-md-8 col-xs-10">
+<div class="topic-excerpt col-sm-7 col-md-8 col-xs-12">
     <h3>Territoire</h3>
     Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui.
 

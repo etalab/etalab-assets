@@ -7,7 +7,7 @@
 
 {% block "content" %}
 
-{% include 'templates/subnav.swig' %}
+{% include 'templates/subnav-s.swig' %}
 
 <div class="container">
     <div class="page-header">

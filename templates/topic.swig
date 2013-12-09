@@ -2,7 +2,7 @@
 {% set basename = 'topic' %}
 {% set style = 'etalab-topic' %}
 
-{% block "title" %}Home{% endblock %}
+{% block "title" %}Topic{% endblock %}
 
 {% block "content" %}
 

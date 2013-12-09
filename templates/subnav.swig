@@ -30,17 +30,14 @@
 
 
         <form class="navbar-form form-inline" role="search">
-
-            {# <div class="collapse subnav-collapse"> #}
-                <div id="where-group" class="input-group">
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-globe"></span>
-                    </span>
-                    <input id="where-input" type="search" class="form-control"
-                            autocomplete="off" placeholder="Where">
-                    <input id="ext_territory" name="ext_territory" type="hidden" />
-                </div>
-            {# </div> #}
+            <div id="where-group" class="input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-globe"></span>
+                </span>
+                <input id="where-input" type="search" class="form-control"
+                        autocomplete="off" placeholder="Where">
+                <input id="ext_territory" name="ext_territory" type="hidden" />
+            </div>
         </form>
 
     </nav>
