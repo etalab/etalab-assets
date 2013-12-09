@@ -260,25 +260,31 @@
     display: none;
 }
 
-.nav-pills > li > a {
+.nav-pills {
     margin-top: 40px;
-    font-family: @title-font;
-    text-transform: uppercase;
-    color: @gray-lighter;
-    font-weight: bold;
-    padding: 0px;
-    margin-right: 15px;
 
-    &:hover {
-        color: #999;
+    & > li > a {
+        font-family: @title-font;
+        text-transform: uppercase;
+        color: @gray-lighter;
+        font-weight: bold;
+        padding: 0px;
+        margin-right: 15px;
+
+        &:hover {
+            color: #999;
+            background: none;
+        }
+
+    }
+
+    & > li.active > a, & > li.active > a:hover, & > li.active > a:focus {
+        color: @dark_text;
         background: none;
     }
+
 }
 
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-    color: @dark_text;
-    background: none;
-}
 
 /**
  * Sidebar style and fixes
