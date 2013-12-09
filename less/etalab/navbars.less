@@ -107,10 +107,17 @@
 .navbar-static-top {
 
     .navbar-right .dropdown {
+        display: inline-block;
+        vertical-align: top;
+
         .caret {
             color: white;
             border-top-color: white;
             border-bottom-color: white;
+        }
+
+        .dropdown-menu {
+            min-width: 150px;
         }
     }
 
@@ -119,10 +126,6 @@
         border: 0;
         padding-top: 6px;
         vertical-align: bottom;
-    }
-
-    .language {
-        // right: -10px;
     }
 }
 
