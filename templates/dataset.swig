@@ -354,23 +354,17 @@
 </div>
 
 <section class="community_container">
-    <div class="page-header">
+    <header>
         <div class="container">
-            <div class="cover-communaute"></div>
-                <div class="row">
-                    <div class="col-xs-6 col-sm-7 col-md-8 col-lg-9">
-                        <h2>Contributions de la communaté</h2>
-                        <small>Explorer avec Datagouv</small>
-                    </div>
-                    <!-- <div class="col-xs-6 col-sm-5 col-md-4 col-lg-3">
-                        <a class="btn btn-primary btn-yellow btn-punch btn-block icon-left publish-reuse" href="">
-                            <span class="glyphicon glyphicon-plus"></span>&nbsp;
-                            Publier une reutilisation
-                        </a>
-                    </div> -->
-            </div>
+            {# <div class="page-header"> #}
+                <div class="cover-communaute"></div>
+                <div class="page-header">
+                    <h2>Contributions de la communauté</h2>
+                    <small>Explorer avec Datagouv</small>
+                </div>
+            {# </div> #}
         </div>
-    </div>
+    </header>
 
 
     <div class="container">
@@ -410,13 +404,14 @@
                             </a>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-sm-12 reuses-list">
                         <h3 class="panel-title">Réutilisations</h3>
                         {% if dataset.related %}
                         <div class="row">
                             {% for related in dataset.related %}
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-6 col-lg-4">
                                 <div class="thumbnail reuse">
                                     <a class="preview" href="{{ related.url }}" target="_blank">
                                         <img class="media-object img-responsive" alt="{{ related.title }}"
