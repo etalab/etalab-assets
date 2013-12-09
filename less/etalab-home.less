@@ -17,140 +17,38 @@ h3 {
     color: @dark_text;
 }
 
-// News carousel
-#news-carousel {
-    border: 1px solid #d9d9d7;
-
-    @media (min-width: @screen-sm) {
-        height: 300px;
-        overflow: hidden;
-    }
-
-    .carousel-inner > .item {
-
-        img {
-            margin: 0 auto;
-        }
-
-        @media (min-width: @screen-sm) {
-            height: 300px;
-
-            img.slide {
-                min-height: 200px;
-                position: absolute;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-left: -50%;
-                margin-top: -48%;
-                min-width: 100%;
-            }
-        }
-    }
-
-    .carousel-caption {
-        height: 100px;
-        z-index: 10;
-        width: 100%;
-        color: #3e3e3e;
-        background-color: @bg-gray;
-        padding: 5px;
-        bottom: 0px;
-        left: 0px;
-        text-shadow: none;
-        text-align: left;
-        text-transform: uppercase;
-        font-family: @title-font;
-        padding: 10px;
-
-        .slide-logo {
-            display: block;
-            width: 80px;
-            height: 80px;
-            border: 1px solid @gray-lighter;
-            position: absolute;
-            margin-right: 20px;
-            background: white;
-
-
-            img {
-                max-width: 70px;
-                max-height: 70px;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                margin-left: -40px;
-                margin-top: -40px;
-            }
-        }
-
-        label {
-            font-size: 12px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-        }
-
-        .title  {
-            margin-top: 0px;
-        }
-
-        a {
-            color: #3e3e3e;
-            display: block;
-            font-size: 17px;
-            line-height: 20px;
-            font-weight: bold;
-            padding-right: 18px;
-            height: 60px;
-            overflow: hidden;
-            font-family: @title-font;
-
-        }
-    }
-}
-
-
 // Main Carsoussel
-#home-carousel {
+.carousel {
     border: 1px solid #d9d9d7;
-
-    height: 200px;
+    height: 250px;
 
     @media (min-width: @screen-sm-min) {
         height: 300px;
         overflow: hidden;
     }
 
-    .carousel-inner > .item {
+    .carousel-inner {
+        height: 100%;
 
-        img {
-            margin: 0 auto;
-        }
+        .item {
+            height: 100%;
 
-        height: 240px;
-
-        img.slide {
-            min-height: 200px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            min-width: 100%;
-        }
-
-        @media (min-width: @screen-sm-min) {
-            height: 340px;
+            img {
+                margin: 0 auto;
+            }
 
             img.slide {
-                min-height: 300px;
+                min-height: 148px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                min-width: 100%;
             }
         }
     }
 
     .carousel-caption {
         bottom: 0;
-        @media (min-width: @screen-sm-min) {
-            bottom: 40px;
-        }
         height: 100px;
         z-index: 10;
         width: 100%;
@@ -164,15 +62,9 @@ h3 {
         font-family: @title-font;
         padding: 10px;
 
-        .slide-logo {
-            margin-right: 10px;
-        }
-
         .title  {
             margin-top: 0px;
             margin-bottom: 0;
-            height: 80px;
-
 
             a {
                 color: #3e3e3e;
@@ -180,11 +72,7 @@ h3 {
                 font-size: 20px;
                 line-height: 22px;
                 font-weight: bold;
-                padding-right: 10px;
-                height: 22px;
-                overflow: hidden;
                 font-family: @title-font;
-                .ellipsis();
             }
 
             label {
@@ -196,16 +84,66 @@ h3 {
             }
 
             @media (min-width: @screen-xs-min) {
-
                 a {
                     font-size: 28px;
                     line-height: 30px;
-                    height: 30px;
                 }
 
                 label {
                     font-size: 12px;
                     line-height: 12px;
+                }
+            }
+        }
+    }
+}
+
+// News carousel
+#news-carousel {
+    .carousel-caption {
+        label {
+            font-size: 12px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .title  {
+            height: 60px;
+
+            a {
+                font-size: 15px;
+                line-height: 17px;
+
+                @media (min-width: @screen-xs-min) {
+                    font-size: 17px;
+                    line-height: 20px;
+                }
+            }
+        }
+
+    }
+}
+
+// Main Carsoussel
+#home-carousel {
+    .carousel-caption {
+        .slide-logo {
+            margin-right: 10px;
+        }
+
+        .title  {
+            height: 80px;
+
+            a {
+                font-size: 20px;
+                line-height: 22px;
+                height: 22px;
+                .ellipsis();
+            }
+
+            @media (min-width: @screen-xs-min) {
+                a {
+                    height: 30px;
                 }
             }
         }

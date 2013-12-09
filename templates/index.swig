@@ -27,7 +27,7 @@
                           <div class="carousel-caption">
 
                             <label>Thématique de discussion</label>
-                            <h4 class="title">
+                            <h4 class="title ellipsis-dot">
                             <a href="" title="{{dataset.title}}">
                             {{ dataset.title }}
                             </a>
@@ -320,7 +320,7 @@
 
 {% block "extra-js" %}
 <script type="text/javascript">
-    $('#home-carousel .title').on('slide.bs.carousel', function() {
+    $('.carousel .title').on('slide.bs.carousel', function() {
         $(this).trigger('update');
     });
 </script>
