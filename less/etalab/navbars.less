@@ -261,7 +261,11 @@
 }
 
 .nav-pills {
-    margin-top: 40px;
+    margin-top: 20px;
+
+    @media (min-width: @screen-sm-min) {
+        margin-top: 40px;
+    }
 
     & > li > a {
         font-family: @title-font;
@@ -269,7 +273,11 @@
         color: @gray-lighter;
         font-weight: bold;
         padding: 0px;
-        margin-right: 15px;
+        margin-right: 5px;
+
+        @media (min-width: @screen-sm-min) {
+            margin-right: 15px;
+        }
 
         &:hover {
             color: #999;
