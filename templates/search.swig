@@ -6,7 +6,7 @@
 
 {% block "content" %}
 
-{% include 'templates/subnav.swig' %}
+{% include 'templates/subnav-s.swig' %}
 
 <section class="default">
 

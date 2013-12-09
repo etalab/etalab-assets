@@ -28,30 +28,26 @@
                         <input id="ext_territory" name="ext_territory" type="hidden" />
                     </div>
                 </div>
-
-                <span></span>
             </form>
 
 
             <div class="form-group col-sm-2 col-md-2 col-lg-3 col-xs-12">
-                {# <div class="input-group"> #}
-                    <button class="dropdown-toggle btn-block btn-light" data-toggle="dropdown">
-                        Thematiques
-                        <span class="glyphicon glyphicon-chevron-down pull-right hidden-sm"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="topics">
-                        {% for topic in main_topics %}
-                        <li role="presentation">
-                            <a role="menuitem" tabindex="-1" href="topic.html">
-                            {{ topic.title }}
-                            </a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                {# </div> #}
+                <button class="dropdown-toggle btn-block btn-light" data-toggle="dropdown">
+                    Thematiques
+                    <span class="glyphicon glyphicon-chevron-down pull-right hidden-sm"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="topics">
+                    {% for topic in main_topics %}
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="topic.html">
+                        {{ topic.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
 
-            <div class="col-sm-4 col-md-4 col-lg-3 col-xs-12 hidden-xs">
+            <div class="col-sm-4 col-md-4 col-lg-3 col-xs-12 collapse subnav-collapse">
                 <a class="btn btn-primary btn-dark btn-block"
                     title="Publish a dataset !"
                     href>

@@ -178,6 +178,12 @@
     z-index: 800;
     min-height: 80px;
 
+    @media (max-width: @grid-float-breakpoint) {
+        .container {
+            padding: 10px;
+        }
+    }
+
     .navbar-form {
         margin: 0px;
         padding: 0;
@@ -380,7 +386,18 @@
     margin-top: 34px;
 
     @media (max-width: @grid-float-breakpoint) {
-        margin-top: 10px;
+        margin-top: 0;
+
+        > .form-group {
+            margin-bottom: 0;
+            .btn-block {
+                margin-top: 0;
+            }
+        }
+
+        .btn-block {
+            margin-top: 5px;
+        }
     }
 
     .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6,
@@ -397,12 +414,7 @@
         @media (max-width: @grid-float-breakpoint) {
             padding-right: 0;
         }
-
-        &:last-child {
-            padding-right: 0px;
-        }
     }
-
 }
 
 
