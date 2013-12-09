@@ -3,8 +3,8 @@
  */
 
 .sidebackground-width(@container-width, @cols) {
-    width: round(1000px + @cols * (@container-width / @grid-columns) - (@grid-gutter-width / 2) + 1px);
-    max-width: 1407px;
+    width: floor(1000px + @cols * (@container-width / @grid-columns) - (@grid-gutter-width / 2) + 1px);
+    max-width: 1000px + 400px + round(@grid-gutter-width / 2);
 }
 
 .ellipsis {
