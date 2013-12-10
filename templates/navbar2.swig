@@ -21,13 +21,19 @@
 <div class="container">
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
 
-    {# <div class="collapse navbar-collapse"> #}
         <ul class="nav navbar-nav links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/search.html">Search</a></li>
-          <li><a href="/topic.html">Topic</a></li>
-          <li><a href="/dataset.html">Dataset</a></li>
-          <li><a href="/widgets.html">Widgets</a></li>
+            <li><a href="/" title="Accueil"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li><a href="/search.html">Search</a></li>
+            <li><a href="/topic.html">Topic</a></li>
+            <li><a href="/dataset.html">Dataset</a></li>
+            <li><a href="/widgets.html">Widgets</a></li>
+            <li>
+                <a href="http://www.etalab.gouv.fr/pages/licence-ouverte-open-licence-5899923.html">
+                    Open license
+                </a>
+            </li>
+            <li><a href="http://pfee.leaftr.com">Activiz</a></li>
+            <li><a href="http://www.etalab.gouv.fr/">Etalab</a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
