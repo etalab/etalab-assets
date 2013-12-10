@@ -224,11 +224,11 @@
             watch: true,
             after: 'a.btn',
             callback: function( isTruncated, $content ) {
-                var $button = $('a.more');
+                var $more = $('.more');
                 if (isTruncated) {
-                    $button.removeClass('hide');
+                    $more.removeClass('hide');
                 } else {
-                    $button.addClass('hide');
+                    $more.addClass('hide');
                 }
             }
         });

@@ -69,10 +69,20 @@
 
 <p>Sunt commodo mollitia consequat adipiscing maiores. Aute! Quas iure non condimentum dis quisque sint? Numquam aenean, nostrum sem, ac hic tempore quis, leo proident numquam consectetuer tempora donec itaque accusantium, officiis nemo vivamus dolor sagittis gravida, donec. Magni sociis, rutrum? Amet, officiis! Recusandae turpis placeat tempora sapiente quo, rem turpis, quas? Dis harum dignissim possimus, commodi euismod ipsa cupiditate officia? Nunc mollitia tortor veniam inventore eros cum culpa, nam ridiculus corrupti praesentium aliqua habitasse fames rerum tortor porta varius quaerat aliquid. Nemo eligendi numquam ac soluta maecenas autem, pede fames, ipsam numquam cupidatat, necessitatibus aut quam, duis mus sapiente nascetur.</p>
 </div>
-<a href class="more btn btn-default btn-sm pull-right" data-toggle="modal" data-target="#topic-modal">
-  Lire plus
-</a>
 
+<div class="topic-toolbar btn-toolbar pull-right">
+    <div class="btn-group btn-group-sm more">
+        <a href class="more btn btn-default" data-toggle="modal" data-target="#topic-modal">
+          Lire plus
+        </a>
+    </div>
+    <div class="btn-group btn-group-sm">
+        <a class="btn btn-default" title="Edit" href>
+            <span class="glyphicon glyphicon-edit" ></span>
+            Edit
+        </a>
+    </div>
+</div>
 
 </nav>
 
