@@ -59,22 +59,19 @@
 </div>
 
 
-
-
-
 <div class="topic-excerpt col-sm-7 col-md-8 col-xs-12">
     <h3>Territoire</h3>
-    Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui.
+    <p>Cursus sem, laoreet voluptas, perferendis maecenas, maxime odit fuga tempora felis! Adipiscing. Veritatis condimentum. Phasellus etiam at cum, aliquet temporibus, venenatis morbi vero. Facilisis leo? Explicabo morbi nostrum illum. Nobis ex quod nullam, potenti? Blandit, class? Officia netus elit doloribus, atque, vulputate! Proin adipiscing optio, dictum cursus, quibusdam! Voluptatum eros vulputate condimentum occaecati convallis itaque. Libero lectus! Commodo pharetra nesciunt, sagittis asperiores, elit, natus fugiat! Excepturi corrupti voluptatum praesent nemo pellentesque per aspernatur quaerat fusce culpa ullam, torquent ducimus voluptatibus? Magnis exercitation, pariatur facilis, pulvinar nonummy magna dolorem molestias mattis. Fringilla vivamus deserunt fuga, rutrum molestias, similique urna egestas. Harum.</p>
 
-Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+<p>Totam gravida vivamus ut sint odio magna nisl augue. Inceptos eaque phasellus, incididunt pulvinar numquam! Cum beatae esse? Cumque taciti unde sapien illo metus, eiusmod tempus. Rutrum fuga! Litora per id consequatur ipsa eaque proident eget tellus dictumst integer cillum auctor! Pulvinar, lacinia laboris et viverra unde voluptatum, quae dictum tortor, ultrices suspendisse viverra inceptos minim eiusmod aliquam modi mollit, distinctio rhoncus ante laborum vestibulum, neque irure inventore? Id felis duis tempus. Rerum tristique! Proin inventore mi minim tortor soluta maiores cursus phasellus vivamus, lectus donec fuga. Deleniti! Porro laudantium, viverra sociis dolores optio pharetra! Fermentum phasellus viverra. Neque ut.</p>
+
+<p>Convallis tellus aperiam ullam amet condimentum reiciendis doloribus! Nesciunt nostrum? Incididunt eiusmod proident tellus nihil orci incididunt quam ab autem quo, dignissim velit massa fuga lobortis tempor, at pharetra distinctio minus varius! Architecto, hic! Torquent! Facilisis nihil eaque, dis ligula, wisi magna quos minus facilisis mollit inventore quae dapibus venenatis hendrerit praesentium nisl, egestas? Accumsan necessitatibus, commodi repellat voluptate necessitatibus? Quae mollit ultrices deleniti, fugiat, volutpat. Laboriosam fames fringilla doloremque. Blandit, ullamco molestie sollicitudin est fames eros mollit accusantium! Perspiciatis! Risus laborum sollicitudin placeat aut voluptatum ullamcorper aliqua. Do id, purus, eligendi. Suspendisse iure, sed, faucibus, consectetur habitant eveniet quia.</p>
+
+<p>Sunt commodo mollitia consequat adipiscing maiores. Aute! Quas iure non condimentum dis quisque sint? Numquam aenean, nostrum sem, ac hic tempore quis, leo proident numquam consectetuer tempora donec itaque accusantium, officiis nemo vivamus dolor sagittis gravida, donec. Magni sociis, rutrum? Amet, officiis! Recusandae turpis placeat tempora sapiente quo, rem turpis, quas? Dis harum dignissim possimus, commodi euismod ipsa cupiditate officia? Nunc mollitia tortor veniam inventore eros cum culpa, nam ridiculus corrupti praesentium aliqua habitasse fames rerum tortor porta varius quaerat aliquid. Nemo eligendi numquam ac soluta maecenas autem, pede fames, ipsam numquam cupidatat, necessitatibus aut quam, duis mus sapiente nascetur.</p>
 </div>
-<a class="btn btn-default btn-sm pull-right"
-                title="Lire plus"
-                href>Lire plus
-        </a>
-
-
+<a href class="more btn btn-default btn-sm pull-right" data-toggle="modal" data-target="#topic-modal">
+  Lire plus
+</a>
 
 
 </nav>

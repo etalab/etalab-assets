@@ -55,6 +55,7 @@
         <script src="js/etalab-site.js"></script>
 
     {% block "extra-js" %}{% endblock %}
+    {% block "hiddens" %}{% endblock %}
 
 </body>
 </html>
