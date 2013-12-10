@@ -2,9 +2,10 @@
     { "title": "Culture", "url": "{group}/culture" },
     { "title": "Economie & Travail", "url": "{group}/economie-travail" },
     { "title": "Éducation & Recherche", "url": "{group}/education-et-recherche" },
-    { "title": "État, Europe & International", "url": "{group}/etat-europe-et-international" },
-    { "title": "Habitat & Écologie", "url": "{group}/habitat-ecologie" },
+    { "title": "International et Europe", "url": "{group}/international-et-europe" },
+    { "title": "Logement, Développement Durable et Énergie", "url": "{group}/logement-developpement-durable-et-energie" },
     { "title": "Santé & Social", "url": "{group}/sante-social" },
     { "title": "Société", "url": "{group}/societe" },
-    { "title": "Territoires", "url": "{wiki}/Territoires" }
+    { "title": "Territoires", "url": "{wiki}/Territoires" },
+    { "title": "Agriculture et Alimentation", "url": "{group}/agriculture-et-alimentation" }
 ]
