@@ -389,7 +389,7 @@
     margin-bottom: 0px;
     margin-top: 34px;
 
-    @media (max-width: @grid-float-breakpoint) {
+    @media (max-width: @screen-xs-max) {
         margin-top: 0;
 
         > .form-group {
@@ -401,6 +401,14 @@
 
         .btn-block {
             margin-top: 5px;
+        }
+
+        @media (min-width: @grid-float-breakpoint) {
+            margin-top: 10px;
+
+            .btn-block {
+                margin-bottom: 10px;
+            }
         }
     }
 
