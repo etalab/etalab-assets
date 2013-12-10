@@ -66,7 +66,7 @@
                 title="Publish a dataset !"
                 href>
             <span class="glyphicon glyphicon-plus"></span>
-            Publier une serie de Données
+            Publiez une serie de Données
         </a>
     </div>
 </div>

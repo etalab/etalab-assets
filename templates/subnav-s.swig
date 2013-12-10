@@ -18,7 +18,7 @@
                     </div>
                 </div>
 
-                <div class="form-group col-sm-2 col-md-2 col-lg-3 col-xs-12 collapse subnav-collapse">
+                <div class="form-group col-sm-3 col-md-2 col-lg-3 col-xs-12 collapse subnav-collapse">
                     <div id="where-group" class="input-group">
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-globe"></span>
@@ -31,7 +31,7 @@
             </form>
 
 
-            <div class="form-group col-sm-2 col-md-2 col-lg-3 col-xs-12">
+            <div class="form-group col-sm-3 col-md-2 col-lg-3 col-xs-12">
                 <button class="dropdown-toggle btn-block btn-light" data-toggle="dropdown">
                     Thematiques
                     <span class="glyphicon glyphicon-chevron-down pull-right hidden-sm"></span>
@@ -47,12 +47,18 @@
                 </ul>
             </div>
 
-            <div class="col-sm-4 col-md-4 col-lg-3 col-xs-12 collapse subnav-collapse">
-                <a class="btn btn-primary btn-dark btn-block"
+            <div class="col-sm-2 col-md-4 col-lg-3 col-xs-12 collapse subnav-collapse">
+                <a class="btn btn-primary btn-dark btn-block hidden-sm"
                     title="Publish a dataset !"
                     href>
                     <span class="glyphicon glyphicon-plus"></span>
-                    Publier une serie de Données !
+                    Publiez une serie de données !
+                </a>
+                <a class="btn btn-primary btn-dark btn-block hidden-xs hidden-md hidden-lg"
+                    title="Publish a dataset !"
+                    href>
+                    <span class="glyphicon glyphicon-plus"></span>
+                    Publiez !
                 </a>
             </div>
         </div>

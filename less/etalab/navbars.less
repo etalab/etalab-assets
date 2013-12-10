@@ -409,6 +409,16 @@
             .btn-block {
                 margin-bottom: 10px;
             }
+
+            .btn-block + .btn-block {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @media (max-width: @screen-md-min) and (max-width: @screen-md-max) {
+        .btn-block + .btn-block {
+            margin-top: 0;
         }
     }
 
