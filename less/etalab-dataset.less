@@ -221,6 +221,11 @@
         height: 600px;
         border: 1px solid @panel-inner-border;
     }
+
+    .popover {
+        width: 70%;
+        max-width: 70%;
+    }
 }
 
 aside {
@@ -340,10 +345,9 @@ aside {
                 background-color: rgba(255,255,255,0.04);
             }
         }
-
     }
 
-    h3 {
+    h3:not(.popover-title) {
         color: white;
         margin-bottom: 10px;
         font-family: @title-font;
