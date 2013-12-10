@@ -1,11 +1,11 @@
 [
+    { "title": "Agriculture & Alimentation", "url": "{group}/agriculture-et-alimentation" },
     { "title": "Culture", "url": "{group}/culture" },
     { "title": "Economie & Travail", "url": "{group}/economie-travail" },
     { "title": "Éducation & Recherche", "url": "{group}/education-et-recherche" },
     { "title": "International et Europe", "url": "{group}/international-et-europe" },
-    { "title": "Logement, Développement Durable et Énergie", "url": "{group}/logement-developpement-durable-et-energie" },
+    { "title": "Logement, Développement Durable & Énergie", "url": "{group}/logement-developpement-durable-et-energie" },
     { "title": "Santé & Social", "url": "{group}/sante-social" },
     { "title": "Société", "url": "{group}/societe" },
-    { "title": "Territoires", "url": "{group}/territoires" },
-    { "title": "Agriculture et Alimentation", "url": "{group}/agriculture-et-alimentation" }
+    { "title": "Territoires", "url": "{group}/territoires" }
 ]
