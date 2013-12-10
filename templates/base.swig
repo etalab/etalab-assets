@@ -50,7 +50,7 @@
         <script src="bower/typeahead.js/dist/typeahead.js"></script>
         <script src="bower/jquery.cookie/jquery.cookie.js"></script>
         <script src="bower/jquery.validation/jquery.validate.js"></script>
-        <script src="bower/jquery.dotdotdot/jquery.dotdotdot.js"></script>
+        <script src="bower/jquery.dotdotdot/src/js/jquery.dotdotdot.js"></script>
         <script src="bower/swig/index.js"></script>
         <script src="js/etalab-site.js"></script>
 
