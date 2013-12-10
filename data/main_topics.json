@@ -6,6 +6,6 @@
     { "title": "Logement, Développement Durable et Énergie", "url": "{group}/logement-developpement-durable-et-energie" },
     { "title": "Santé & Social", "url": "{group}/sante-social" },
     { "title": "Société", "url": "{group}/societe" },
-    { "title": "Territoires", "url": "{wiki}/Territoires" },
+    { "title": "Territoires", "url": "{group}/territoires" },
     { "title": "Agriculture et Alimentation", "url": "{group}/agriculture-et-alimentation" }
 ]
