@@ -350,10 +350,9 @@
 
     @media (min-width: @screen-sm-min) {
         position: relative;
-        top: 30px;
+        top: 77px;
 
         @media (min-width: @screen-md-min) {
-            top: 77px;
             left: 50px;
         }
     }
@@ -363,17 +362,23 @@
         color: white;
         font-style: italic;
         font-family: @title-font;
-        font-size: 36px;
-        line-height: 1.2em;
+        font-size: 26px;
+        line-height: 1.1em;
+
+        @media (min-width: @grid-float-breakpoint) {
+            max-width: 390px;
+        }
 
         @media (min-width: @screen-md-min) {
             max-width: 570px;
+            font-size: 36px;
+            line-height: 1.2em;
         }
 
         @media (max-width: @grid-float-breakpoint) {
             font-size: 18px;
-            line-height: 1em;
             margin: 10px 0;
+            max-width: 280px;
         }
     }
 }
