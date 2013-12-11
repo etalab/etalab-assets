@@ -376,7 +376,8 @@
                     <div class="col-sm-12 list-group resources-list">
                         <h3>Ressources</h3>
                         {% for resource in dataset.resources %}
-                            <a class="list-group-item" href="{{ resource.url }}"
+                            <div class="list-group-item" href="{{ resource.url }}"
+                                data-url="http://fake"
                                 {% if resource.format == 'html' %}target="_blank"{% endif %}
                                 rel="popover" data-trigger="hover" data-placement="top"
                                 title="{{ resource.name }} [{{ resource.format }}]"
@@ -393,7 +394,14 @@
                                 <p class="list-group-item-text ellipsis">
                                     {{ resource.description }}
                                 </p>
-                            </a>
+                                {% if loop.first %}
+                                <div class="btn-group btn-group-xs tools">
+                                    <a class="btn btn-default" rel="tooltip" title="Edit">
+                                        <span class="glyphicon glyphicon-edit"></span>
+                                    </a>
+                                </div>
+                                {% endif %}
+                            </div>
                         {% endfor %}
                             <a class="list-group-item add" href>
                                 <div class="format-label pull-left">+</div>
@@ -498,4 +506,16 @@
 </section>
 
 
+{% endblock %}
+
+{% block "extra-js" %}
+<script type="text/javascript">
+    $(function() {
+        $('.resources-list div.list-group-item').click(function(e) {
+            if (!$(e.target).is('.glyphicon')) {
+                window.open($(this).data('url'));
+            }
+        });
+    });
+</script>
 {% endblock %}
