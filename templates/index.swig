@@ -134,7 +134,7 @@
                                     class="certified" rel="popover"
                                     data-title="Certified public service"
                                     data-content="This organization and its datasets are certified by data.gouv.fr"
-                                    data-container="body" data-placement="left" data-trigger="hover"/>
+                                    data-container="body" data-trigger="hover"/>
                                 {% endif %}
                             {% endif %}
                             <div class="card-body ellipsis-dot">
