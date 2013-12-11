@@ -1,7 +1,7 @@
 [
     { "title": "Agriculture & Alimentation", "url": "{group}/agriculture-et-alimentation" },
     { "title": "Culture", "url": "{group}/culture" },
-    { "title": "Economie & Travail", "url": "{group}/economie-et-travail" },
+    { "title": "Économie & Emploi", "url": "{group}/economie-et-emploi" },
     { "title": "Éducation & Recherche", "url": "{group}/education-et-recherche" },
     { "title": "International & Europe", "url": "{group}/international-et-europe" },
     { "title": "Logement, Développement Durable & Énergie", "url": "{group}/logement-developpement-durable-et-energie" },
