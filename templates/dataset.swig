@@ -377,8 +377,7 @@
                         <h3>Ressources</h3>
                         {% for resource in dataset.resources %}
                             <div class="list-group-item" href="{{ resource.url }}"
-                                data-url="http://fake"
-                                {% if resource.format == 'html' %}target="_blank"{% endif %}
+                                data-url="http://fake" data-format="{{ resource.format }}"
                                 rel="popover" data-trigger="hover" data-placement="top"
                                 title="{{ resource.name }} [{{ resource.format }}]"
                                 data-content="{{ resource.description }}"
@@ -513,7 +512,11 @@
     $(function() {
         $('.resources-list div.list-group-item').click(function(e) {
             if (!$(e.target).is('.glyphicon')) {
-                window.open($(this).data('url'));
+                if ($(this).data('format') == 'html') {
+                    window.open($(this).data('url'));
+                } else {
+                    window.location = $(this).data('url');
+                }
             }
         });
     });
