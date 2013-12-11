@@ -60,13 +60,25 @@ img.scalable {
 
 // Custom modal style
 .modal {
+    @media(min-width: @screen-lg-min) {
+        .modal-dialog {
+            width: 700px;
+        }
+    }
+
     .modal-header, .modal-footer {
-        background-color: lighten(@bg-light, 45%);
+        padding: 12px;
     }
 
     .modal-footer {
         margin-top: 0;
         text-align: center;
+    }
+
+    .modal-body {
+        img {
+            max-width: 100%;
+        }
     }
 }
 
