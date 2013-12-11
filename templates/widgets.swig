@@ -41,6 +41,11 @@
                     <option>Barbecue</option>
                 </select>
             </div>
+            <div class="input-group">
+                <label for="autocomplete" class="control-label">Autocomplete</label>
+                <input id="autocomplete" type="search" class="form-control"
+                    autocomplete="off" placeholder="Autocomplete">
+            </div>
             <div class="form-group">
                 <label for="markdown-editor">Markdown</label>
                 <textarea id="markdown-editor" class="form-control" data-provide="markdown" rows="8"></textarea>
@@ -49,9 +54,10 @@
         </form>
     </div>
 
+    {% for size in [150, 100, 80, 50] %}
     <div class="row">
         <div class="col-md-2">
-            <div class="publisher-avatar-150">
+            <div class="publisher-avatar-{{size}}">
                 <div class="frame">
                     <a href="" title="As user">
                         <img alt="As user" src="images/avatar-axel.jpg" class="centered">
@@ -60,7 +66,7 @@
             </div>
         </div>
         <div class="col-md-2">
-            <div class="publisher-avatar-150">
+            <div class="publisher-avatar-{{size}}">
                 <div class="frame">
                     <a class="organization" href="" title="Organization">
                         <img alt="WWF" src="images/wwf.jpg">
@@ -72,7 +78,7 @@
             </div>
         </div>
         <div class="col-md-2">
-            <div class="publisher-avatar-150">
+            <div class="publisher-avatar-{{size}}">
                 <div class="frame">
                     <a class="organization" href="" title="Organization">
                         <img alt="WWF" src="images/Ministere-de-l-Ecologie-du-Developpement-Durable-et-de-l-Energie_resultat.png">
@@ -84,116 +90,9 @@
             </div>
         </div>
     </div>
+    {% endfor %}
 
-    <div class="row">
-        <div class="col-md-2">
-            <div class="publisher-avatar-100">
-                <div class="frame">
-                    <a href="" title="As user">
-                        <img alt="As user" src="images/avatar-axel.jpg"  class="centered">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="publisher-avatar-100">
-                <div class="frame">
-                    <a class="organization" href="" title="Organization">
-                        <img alt="WWF" src="images/wwf.jpg">
-                    </a>
-                    <a class="user" href="" title="User">
-                        <img alt="As user" src="images/avatar-axel.jpg">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="publisher-avatar-100">
-                <div class="frame">
-                    <a class="organization" href="" title="Organization">
-                        <img alt="WWF" src="images/Ministere-de-l-Ecologie-du-Developpement-Durable-et-de-l-Energie_resultat.png">
-                    </a>
-                    <a class="user" href="" title="User">
-                        <img alt="As user" src="images/avatar-angelo.jpg">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-2">
-            <div class="publisher-avatar-80">
-                <div class="frame">
-                    <a href="" title="As user">
-                        <img alt="As user" src="images/avatar-axel.jpg"  class="centered">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="publisher-avatar-80">
-                <div class="frame">
-                    <a class="organization" href="" title="Organization">
-                        <img alt="WWF" src="images/wwf.jpg">
-                    </a>
-                    <a class="user" href="" title="User">
-                        <img alt="As user" src="images/avatar-axel.jpg">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="publisher-avatar-80">
-                <div class="frame">
-                    <a class="organization" href="" title="Organization">
-                        <img alt="WWF" src="images/Ministere-de-l-Ecologie-du-Developpement-Durable-et-de-l-Energie_resultat.png">
-                    </a>
-                    <a class="user" href="" title="User">
-                        <img alt="As user" src="images/avatar-angelo.jpg">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-2">
-            <div class="publisher-avatar-50">
-                <div class="frame">
-                    <a href="" title="As user">
-                        <img alt="As user" src="images/avatar-axel.jpg"  class="centered">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="publisher-avatar-50">
-                <div class="frame">
-                    <a class="organization" href="" title="Organization">
-                        <img alt="WWF" src="images/wwf.jpg">
-                    </a>
-                    <a class="user" href="" title="User">
-                        <img alt="As user" src="images/avatar-axel.jpg">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="publisher-avatar-50">
-                <div class="frame">
-                    <a class="organization" href="" title="Organization">
-                        <img alt="WWF" src="images/Ministere-de-l-Ecologie-du-Developpement-Durable-et-de-l-Energie_resultat.png">
-                    </a>
-                    <a class="user" href="" title="User">
-                        <img alt="As user" src="images/avatar-angelo.jpg">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-
 {% endblock %}
 
 {% block "extra-js" %}
@@ -207,6 +106,13 @@
 
         // Bootstrap select
         $('#select').selectpicker();
+
+        // Autocomplete
+        // multiple datasets
+        $('#autocomplete').typeahead({
+            name: 'team',
+            local: ['Alexandre', 'Angelo', 'Axel', 'Emmanuel', 'Henri', 'Laure', 'Pierre', 'Romain', 'Suzanne']
+        });
 
         // Markdown editor
         $("#markdown-editor").markdown({

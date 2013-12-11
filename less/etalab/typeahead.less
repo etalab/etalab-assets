@@ -18,7 +18,7 @@
         width: 100%;
         background-color: fadeout(@bg-darker, 8%);
         margin-top: -1px;
-        padding: 10px 0;
+        padding: 2px 0;
         border: 1px solid #ccc;
         border: 1px solid rgba(0,0,0,.2);
         *border-right-width: 2px;
@@ -34,21 +34,21 @@
             margin-top: 8px;
             opacity: 0.5;
             margin: 0;
-            background-color: none;
-            border-radius: 4px;
         }
     }
 
     .tt-suggestion {
         @max-lines: 2;
-        @max-height: @max-lines * @line-height-computed;
-        display: block;
-        padding: 0px 6px;
+        @line-height: 15px;
+        @padding: 2px;
+        @max-height: @max-lines * @line-height + 2 * @padding;
         max-height: @max-height;
-        margin-top: 6px;
-        margin-bottom: 8px;
-        font-size: 13px;
-        line-height: 15px;
+        min-height: 1.5 * @line-height;
+        display: block;
+        padding: @padding 4px;
+        margin: 1px 0;
+        font-size: @line-height - @padding;
+        line-height: @line-height;
         .clearfix();
 
         &.tt-is-under-cursor {
@@ -61,26 +61,28 @@
             margin: 0 0 0 5px;
             text-overflow: ellipsis;
             overflow: hidden;
-            max-height: @max-height;
+            max-height: @max-height - 2px;
         }
 
         @logo-width: 40px;
-        @logo-height: @max-height - 5px;
+        @logo-height: @max-height - 2 * @padding;
         div.logo {
             .pull-left();
             display: table-cell;
             width: @logo-width;
             height: @logo-height;
-            // border: 1px solid @gray-lighter;
-            margin: 3px;
-            vertical-align: middle;
+            line-height: @logo-height;
+            margin: 0 2 * @padding 0 0;
+            padding: 0;
+            border: none;
             text-align: center;
-
 
             img {
                 background-color: white;
                 max-width: @logo-width;
                 max-height: @logo-height;
+                vertical-align: middle;
+                margin-top: -1px;
             }
         }
 

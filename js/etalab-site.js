@@ -80,7 +80,21 @@
                 'datasets': 'Datensätze'
             }
         },
-        headerTmpl = swig.compile('<p class="search-header"><strong>{{title}}</strong></p>');
+        headerTmpl = swig.compile('<p class="search-header"><strong>{{title}}</strong></p>'),
+        LOGO_TPL = [
+            '<div class="logo">',
+            '<img src="{{image_url}}">',
+            '</div>',
+            '<p>{{title}}</p>'
+        ].join(''),
+        INFO_TPL = [
+            '<p>',
+            '<span class="glyphicon glyphicon-info-sign"></span>',
+            '&nbsp;',
+            '{{title}}',
+            '</p>'
+        ].join('');
+
 
     if (WIKI_API.indexOf(ORIGIN) < 0) {
         wikiParams.origin = ORIGIN;
@@ -205,14 +219,7 @@
                     limit: MAX_ORGANIZATIONS,
                     valueKey: 'title',
                     engine: SWIG_ENGINE,
-                    template: [
-                        '{% if image_url %}',
-                        '<div class="logo">',
-                        '<img src="{{image_url}}">',
-                        '</div>',
-                        '{% endif %}',
-                        '<p>{{title}}</p>'
-                    ].join(''),
+                    template: LOGO_TPL,
                     remote: {
                         url: ORGANIZATION_API_URL
                     }
@@ -223,14 +230,7 @@
                     limit: MAX_DATASETS,
                     valueKey: 'title',
                     engine: SWIG_ENGINE,
-                    template: [
-                        '{% if image_url %}',
-                        '<div class="logo">',
-                        '<img src="{{image_url}}">',
-                        '</div>',
-                        '{% endif %}',
-                        '<p>{{title}}</p>'
-                    ].join(''),
+                    template: LOGO_TPL,
                     remote: {
                         url: DATASET_API_URL
                     }
@@ -241,12 +241,7 @@
                     limit: MAX_TOPICS,
                     valueKey: 'title',
                     engine: SWIG_ENGINE,
-                    template: [
-                        '<p>',
-                        '<span class="glyphicon glyphicon-info-sign"></span>',
-                        '&nbsp;{{title}}',
-                        '</p>'
-                    ].join(''),
+                    template: INFO_TPL,
                     remote: {
                         url: WIKI_API_URL,
                         wildcard: '__QUERY',
