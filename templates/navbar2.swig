@@ -41,7 +41,7 @@
             <li class="dropdown  user">
                 <button class="dropdown-toggle btn-link" data-toggle="dropdown">
                     <img src="images/avatar-angelo.jpg" class="gravatar" width="30" height="30">
-                    {{ user }}
+                    <span class="username">{{ user }}</span>
                 </button>
                 <ul class="dropdown-menu">
                     <li>
