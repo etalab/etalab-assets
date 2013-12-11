@@ -90,7 +90,7 @@ module.exports = function(grunt) {
             },
             livereload: {
                 options: { livereload: true },
-                files: ['demo/**/*']
+                files: ['demo/**/*', 'js/*.js']
             }
         },
         connect: {
