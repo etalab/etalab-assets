@@ -189,7 +189,6 @@
 
         &.add {
             @add-base-color: darken(@base-color, 30%);
-            margin-top: 13px;
             background-color: transparent;
             border: 2px dashed @add-base-color;
             height: 56px;
@@ -210,6 +209,10 @@
 
             &:hover {
                 background-color: fadeout(@add-base-color, 90%);
+            }
+
+            &:not(:first-child) {
+                margin-top: 13px;
             }
         }
     }
