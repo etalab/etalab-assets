@@ -12,7 +12,7 @@ notes: |
 author: Moi
 author_email: coucou@cmoi.fr
 private: false
-is_fork: true
+is_fork: false
 
 supplier:
     display_name: Supplier
@@ -35,7 +35,7 @@ resources:
         format: un format bidon qui dépasse du cadre
 
 organization:
-    certified_public_service: true
+    certified_public_service: false
     name: ministère-de-l-interieur
     display_name: Ministère de l'Intérieur
     image_url: images/ministere-de-l-interieur.jpg

@@ -189,7 +189,7 @@
 
         &.add {
             @add-base-color: darken(@base-color, 30%);
-            background-color: transparent;
+            background-color: fadeout(@add-base-color, 92%);
             border: 2px dashed @add-base-color;
             height: 56px;
 
@@ -208,7 +208,7 @@
             }
 
             &:hover {
-                background-color: fadeout(@add-base-color, 90%);
+                background-color: fadeout(@add-base-color, 87%);
             }
 
             &:not(:first-child) {
@@ -630,9 +630,19 @@ aside {
         border-color: #cad0d4;
     }
 
-    .dataset-container .resources-list .list-group-item:not(.add) {
-        background-color: #e0e3e9;
-        border-color: #e8e8e8;
+    .dataset-container .resources-list .list-group-item {
+        &:not(.add) {
+            background-color: #e0e3e9;
+            border-color: #e8e8e8;
+        }
+
+        &.add {
+            background-color: fadeout(@gray-light, 95%);
+            &:hover {
+                background-color: fadeout(@gray-light, 90%);
+            }
+        }
+
     }
 
     .btn-default {

@@ -9,7 +9,7 @@
 {% include 'templates/subnav-s.swig' %}
 
 
-<section class="content noncertified">
+<section class="content {% if not dataset.organization.certified_public_service %}noncertified{% endif %}">
     <div class="container dataset-container">
         <div class="row">
 
