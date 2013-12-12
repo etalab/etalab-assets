@@ -3,6 +3,7 @@
 {% block "extra-head" %}
 <link rel="stylesheet" media="screen" href="bower/bootstrap-select/bootstrap-select.css">
 <link rel="stylesheet" media="screen" href="bower/bootstrap-markdown/css/bootstrap-markdown.min.css">
+<link rel="stylesheet" media="screen" href="bower/tagmanager/tagmanager.css">
 {% endblock %}
 
 {% block "content" %}
@@ -29,10 +30,12 @@
                 <label for="email" class="control-label">Email address</label>
                 <input id="email" type="email" class="form-control" placeholder="Enter email" required>
             </div>
+
             <div class="form-group">
                 <label for="password" class="control-label">Password</label>
                 <input id="password" type="password" class="form-control" placeholder="Password" required>
             </div>
+
             <div class="form-group">
                 <label for="select" class="control-label">Select</label>
                 <select id="select" class="selectpicker form-control">
@@ -41,11 +44,19 @@
                     <option>Barbecue</option>
                 </select>
             </div>
-            <div class="input-group">
+
+            <div class="form-group">
                 <label for="autocomplete" class="control-label">Autocomplete</label>
                 <input id="autocomplete" type="search" class="form-control"
                     autocomplete="off" placeholder="Autocomplete">
             </div>
+
+            <div class="form-group">
+                <label for="tags" class="control-label">Tags</label>
+                <input id="tags" class="form-control tm-input"
+                    autocomplete="off" placeholder="Tags">
+            </div>
+
             <div class="form-group">
                 <label for="markdown-editor">Markdown</label>
                 <textarea id="markdown-editor" class="form-control" data-provide="markdown" rows="8"></textarea>
@@ -99,6 +110,7 @@
 <script src="bower/bootstrap-select/bootstrap-select.js"></script>
 <script src="bower/markdown/lib/markdown.js"></script>
 <script src="bower/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+<script src="bower/tagmanager/tagmanager.js"></script>
 <script>
     $(function() {
         // Test form validation
@@ -108,11 +120,13 @@
         $('#select').selectpicker();
 
         // Autocomplete
-        // multiple datasets
         $('#autocomplete').typeahead({
             name: 'team',
             local: ['Alexandre', 'Angelo', 'Axel', 'Emmanuel', 'Henri', 'Laure', 'Pierre', 'Romain', 'Suzanne']
         });
+
+        // Tags
+        $('#tags').tagsManager();
 
         // Markdown editor
         $("#markdown-editor").markdown({
