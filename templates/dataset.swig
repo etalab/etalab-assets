@@ -434,7 +434,7 @@
                 </div>
             </div>
 
-            <h3 class="panel-title">Réutilisations</h3>
+            <h3>Réutilisations</h3>
             <div class="row">
                 <div class="col-sm-9 reuses-list">
                     <div class="row">
