@@ -84,12 +84,11 @@
                 <p>{{ dataset.notes }}</p>
 
 
-
                 <div class="list-group resources-list">
                     <h3>Ressources</h3>
                     {% for resource in dataset.resources %}
-                    <a class="list-group-item" href="{{ resource.url }}"
-                        {% if resource.format == 'html' %}target="_blank"{% endif %}
+                    <div class="list-group-item"
+                        data-url="{{ resource.url }}" data.format="{{ resource.format }}"
                         rel="popover" data-trigger="hover" data-placement="top"
                         title="{{ resource.name }} [{{ resource.format }}]"
                         data-content="{{ resource.description }}"
@@ -102,10 +101,19 @@
                         <h4 class="list-group-item-heading ellipsis {% if not resource.description %}dual{% endif %}">
                             {{ resource.name }}
                         </h4>
+                        {% if resource.description %}
                         <p class="list-group-item-text ellipsis">
                             {{ resource.description }}
                         </p>
-                    </a>
+                        {% endif %}
+                        {% if resource.editable %}
+                        <div class="btn-group btn-group-xs tools">
+                            <a class="btn btn-default" rel="tooltip" title="Edit">
+                                <span class="glyphicon glyphicon-edit"></span>
+                            </a>
+                        </div>
+                        {% endif %}
+                    </div>
                     {% endfor %}
                     <a class="list-group-item add" href>
                         <div class="format-label pull-left">+</div>
@@ -330,35 +338,6 @@
     </div>
 </section>
 
-
-{# Fork confirmation modal #}
-<div class="modal fade" id="fork-modal" tabindex="-1" role="dialog" aria-labelledby="fork-modal-title" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 id="fork-modal-title" class="modal-title">Fork</h4>
-            </div>
-            <div class="modal-body">
-                <p>You are about to make a copy of this dataset.
-                You'll become the owner and you will have the ability to edit it and improve it.
-                The original dataset will keep a reference of your work.</p>
-                <p>Continue?</p>
-            </div>
-            <div class="modal-footer">
-                <a class="btn btn-primary" href="">
-                    <span class="glyphicon glyphicon-random"></span>
-                    Fork
-                </a>
-                <button type="button" class="btn btn-warning" data-dismiss="modal">
-                    <span class="glyphicon glyphicon-remove"></span>
-                    Cancel
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
 <section class="community_container">
     <header>
         <div class="container">
@@ -393,9 +372,11 @@
                         <h4 class="list-group-item-heading ellipsis {% if not resource.description %}dual{% endif %}">
                             {{ resource.name }}
                         </h4>
+                        {% if resource.description %}
                         <p class="list-group-item-text ellipsis">
                             {{ resource.description }}
                         </p>
+                        {% endif %}
                         <div class="resource-owner">
                             <div class="frame">
                                 {% if not resource.publish_as %}
@@ -412,7 +393,7 @@
                                 {% endif %}
                             </div>
                         </div>
-                        {% if loop.first %}
+                        {% if resource.editable %}
                         <div class="btn-group btn-group-xs tools">
                             <a class="btn btn-default" rel="tooltip" title="Edit">
                                 <span class="glyphicon glyphicon-edit"></span>

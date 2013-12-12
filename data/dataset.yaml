@@ -25,9 +25,11 @@ resources:
         format: html
     -   name: Une resource sans description
         format: shp
+        editable: true
     -   name: Une resource avec un nom long
         description: une autre description de resource mais beaucoup trop longue de façon à ce qu'elle dépasse largement du cadre. C'est juste pour tester l'ellipse avec le tooltip.
         format: csv
+        editable: true
     -   name: Une resource au long format
         description: une resource avec un nom de format trop long
         format: un format bidon qui dépasse du cadre
@@ -76,12 +78,14 @@ community_resources:
             avatar: images/avatar-axel.jpg
     -   name: Une resource sans description
         format: shp
+        editable: true
         owner:
             name: Angelo Chiacchio
             avatar: images/avatar-angelo.jpg
     -   name: Une resource avec un nom long
         description: une autre description de resource mais beaucoup trop longue de façon à ce qu'elle dépasse largement du cadre. C'est juste pour tester l'ellipse avec le tooltip.
         format: csv
+        editable: true
         owner:
             name: Emmanuel Raviart
             avatar: images/avatar-emmanuel.jpg
