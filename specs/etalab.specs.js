@@ -6,5 +6,9 @@ describe('Loading', function() {
     it('should export ETALAB_VALIDATION_RULES', function() {
         expect(window.ETALAB_VALIDATION_RULES).toBeDefined();
     });
+
+    it('should export EtalabConfig', function() {
+        expect(window.EtalabConfig).toBeDefined();
+    });
 });
 

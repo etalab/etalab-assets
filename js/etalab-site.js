@@ -101,7 +101,7 @@
     }
     WIKI_API_URL = WIKI_API_URL + $.param(wikiParams);
 
-    // Exports commont form validation rules
+    // Exports common form validation rules
     window.ETALAB_VALIDATION_RULES = {
         errorClass: "help-block",
         highlight: function(element) {
@@ -118,6 +118,7 @@
         }
     };
 
+
     /**
      * Filter the Territory API to match Typeahead expected format.
      */
@@ -127,10 +128,6 @@
 
     var filter_mediawiki_api = function(response) {
         return response.query.search;
-    };
-
-    var filter_organization_api = function(response) {
-        return response;
     };
 
     /**
@@ -175,6 +172,62 @@
             .addClass('glyphicon-globe');
     };
 
+    // Export shared configuration
+    var Config = window.EtalabConfig = {
+        rules: window.ETALAB_VALIDATION_RULES,
+        urls: {
+            home: HOME_URL,
+            wiki: WIKI_URL,
+            wiki_api: WIKI_API_URL,
+            wikiPage: function(page) {
+                return WIKI_URL + '/' + page;
+            },
+            dataset: function(name) {
+                return HOME_URL + '/' + LANG + '/dataset/' + name;
+            },
+            organization: function(name) {
+                return HOME_URL + '/' + LANG + '/organization/' +name;
+            }
+        },
+        typeahead: {
+            // Typeahead
+            organizations: {
+                name: 'Organizations',
+                header: headerTmpl({title: HEADERS[LANG].organizations}),
+                limit: MAX_ORGANIZATIONS,
+                valueKey: 'title',
+                engine: SWIG_ENGINE,
+                template: LOGO_TPL,
+                remote: {
+                    url: ORGANIZATION_API_URL
+                }
+            },
+            datasets: {
+                name: 'Datasets',
+                header: headerTmpl({title: HEADERS[LANG].datasets}),
+                limit: MAX_DATASETS,
+                valueKey: 'title',
+                engine: SWIG_ENGINE,
+                template: LOGO_TPL,
+                remote: {
+                    url: DATASET_API_URL
+                }
+            },
+            wiki: {
+                name: 'Wiki',
+                header: headerTmpl({title: HEADERS[LANG].topics}),
+                limit: MAX_TOPICS,
+                valueKey: 'title',
+                engine: SWIG_ENGINE,
+                template: INFO_TPL,
+                remote: {
+                    url: WIKI_API_URL,
+                    wildcard: '__QUERY',
+                    filter: filter_mediawiki_api
+                }
+            }
+        },
+    };
 
     $(function() {
         // Force cookie common parameters
@@ -213,52 +266,20 @@
         // Search field behavior
         $('#search-input')
             .typeahead([
-                {
-                    name: 'Organizations',
-                    header: headerTmpl({title: HEADERS[LANG].organizations}),
-                    limit: MAX_ORGANIZATIONS,
-                    valueKey: 'title',
-                    engine: SWIG_ENGINE,
-                    template: LOGO_TPL,
-                    remote: {
-                        url: ORGANIZATION_API_URL
-                    }
-                },
-                {
-                    name: 'Datasets',
-                    header: headerTmpl({title: HEADERS[LANG].datasets}),
-                    limit: MAX_DATASETS,
-                    valueKey: 'title',
-                    engine: SWIG_ENGINE,
-                    template: LOGO_TPL,
-                    remote: {
-                        url: DATASET_API_URL
-                    }
-                },
-                {
-                    name: 'Wiki',
-                    header: headerTmpl({title: HEADERS[LANG].topics}),
-                    limit: MAX_TOPICS,
-                    valueKey: 'title',
-                    engine: SWIG_ENGINE,
-                    template: INFO_TPL,
-                    remote: {
-                        url: WIKI_API_URL,
-                        wildcard: '__QUERY',
-                        filter: filter_mediawiki_api
-                    }
-                }
+                Config.typeahead.organizations,
+                Config.typeahead.datasets,
+                Config.typeahead.wiki
             ])
             .on('typeahead:selected typeahead:autocompleted', function(e, data, dataset) {
                 switch (dataset) {
                     case 'Wiki':
-                        window.location = WIKI_URL + '/' + data.title;
+                        window.location = Config.urls.wikiPage(data.title);
                         break;
                     case 'Datasets':
-                        window.location = HOME_URL + '/' + LANG + '/dataset/' + data.name;
+                        window.location = Config.urls.dataset(data.name);
                         break;
                     case 'Organizations':
-                        window.location = HOME_URL + '/' + LANG + '/organization/' + data.name;
+                        window.location = Config.urls.organization(data.name);
                         break;
                 }
             });
@@ -296,5 +317,6 @@
         }
     });
 
+    return EtalabConfig;
 
 }(window.jQuery, window.swig));
