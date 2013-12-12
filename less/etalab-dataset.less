@@ -173,17 +173,44 @@
 .resources-list {
 
     .list-group-item {
+        @base-color: #eaeaea;
         height: 54px;
         cursor: pointer;
-        background-color: #eaeaea;
+        background-color: @base-color;
         margin: 0px 0px 10px;
-        border-color: #eaeaea;
+        border-color: @base-color;
         border-radius: 0px;
         padding: 0;
         position: relative;
 
         &:hover {
             background-color: #ddd;
+        }
+
+        &.add {
+            @add-base-color: darken(@base-color, 30%);
+            margin-top: 13px;
+            background-color: transparent;
+            border: 2px dashed @add-base-color;
+            height: 56px;
+
+            h4 {
+                color: @add-base-color;
+                line-height: 30px;
+            }
+
+            .format-label {
+                color: #7d8489;
+                background-color: fadeout(@add-base-color, 80%);
+                text-align: center;
+                font-size: 34px;
+                font-weight: bold;
+                line-height: 44px;
+            }
+
+            &:hover {
+                background-color: fadeout(@add-base-color, 90%);
+            }
         }
     }
 
@@ -353,23 +380,17 @@ aside {
         }
 
         .add {
-            margin-top: 13px;
-            background: none;
-            border: 2px dashed #7d8489;
-            height: 56px;
+            @base-color: #7d8489;
+            border: 2px dashed @base-color;
+            background-color: transparent;
 
             h4 {
-                color: #7d8489;
-                line-height: 30px;
+                color: @base-color;
             }
 
             .format-label {
-                color: #7d8489;
+                color: @base-color;
                 background-color: rgba(255,255,255,0.05);
-                text-align: center;
-                font-size: 34px;
-                font-weight: bold;
-                line-height: 44px;
             }
 
             &:hover {
@@ -598,7 +619,7 @@ aside {
         border-color: #cad0d4;
     }
 
-    .dataset-container .resources-list .list-group-item {
+    .dataset-container .resources-list .list-group-item:not(.add) {
         background-color: #e0e3e9;
         border-color: #e8e8e8;
     }

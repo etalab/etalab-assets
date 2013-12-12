@@ -88,25 +88,31 @@
                 <div class="list-group resources-list">
                     <h3>Ressources</h3>
                     {% for resource in dataset.resources %}
-                        <a class="list-group-item" href="{{ resource.url }}"
-                            {% if resource.format == 'html' %}target="_blank"{% endif %}
-                            rel="popover" data-trigger="hover" data-placement="top"
-                            title="{{ resource.name }} [{{ resource.format }}]"
-                            data-content="{{ resource.description }}"
-                            >
-                            <div class="format-label pull-left ellipsis-dot">
-                                <span property="dc:format"
-                                    data-format="{{ resource.format }}">{{ resource.format }}</span>
+                    <a class="list-group-item" href="{{ resource.url }}"
+                        {% if resource.format == 'html' %}target="_blank"{% endif %}
+                        rel="popover" data-trigger="hover" data-placement="top"
+                        title="{{ resource.name }} [{{ resource.format }}]"
+                        data-content="{{ resource.description }}"
+                        >
+                        <div class="format-label pull-left ellipsis-dot">
+                            <span property="dc:format"
+                                data-format="{{ resource.format }}">{{ resource.format }}</span>
 
-                            </div>
-                            <h4 class="list-group-item-heading ellipsis {% if not resource.description %}dual{% endif %}">
-                                {{ resource.name }}
-                            </h4>
-                            <p class="list-group-item-text ellipsis">
-                                {{ resource.description }}
-                            </p>
-                        </a>
+                        </div>
+                        <h4 class="list-group-item-heading ellipsis {% if not resource.description %}dual{% endif %}">
+                            {{ resource.name }}
+                        </h4>
+                        <p class="list-group-item-text ellipsis">
+                            {{ resource.description }}
+                        </p>
+                    </a>
                     {% endfor %}
+                    <a class="list-group-item add" href>
+                        <div class="format-label pull-left">+</div>
+                        <h4 class="list-group-item-heading">
+                            Ajouter une ressource
+                        </h4>
+                    </a>
                 </div>
 
                 <div class="row opinion">
@@ -420,7 +426,6 @@
                         <h4 class="list-group-item-heading">
                             Ajouter une ressource
                         </h4>
-
                     </a>
                 </div>
 
