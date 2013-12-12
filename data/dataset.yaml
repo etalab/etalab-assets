@@ -67,6 +67,38 @@ groups:
     -   title: Société
         image_url: images/societe.png
 
+community_resources:
+    -   name: Une resource
+        description: Descrption de la resource
+        format: html
+        owner:
+            name: Axel Haustant
+            avatar: images/avatar-axel.jpg
+    -   name: Une resource sans description
+        format: shp
+        owner:
+            name: Angelo Chiacchio
+            avatar: images/avatar-angelo.jpg
+    -   name: Une resource avec un nom long
+        description: une autre description de resource mais beaucoup trop longue de façon à ce qu'elle dépasse largement du cadre. C'est juste pour tester l'ellipse avec le tooltip.
+        format: csv
+        owner:
+            name: Emmanuel Raviart
+            avatar: images/avatar-emmanuel.jpg
+        publish_as:
+            name: wwf
+            title: WWF
+            display_name: WWF
+            description: Le WWF est la première organisation mondiale de protection de la nature. Une organisation indépendante. Le WWF compte plus de 5 millions de donateurs à travers le...
+            image_url: images/wwf.jpg
+            certified_public_service: false
+    -   name: Une resource au long format
+        description: une resource avec un nom de format trop long
+        format: un format bidon qui dépasse du cadre
+        owner:
+            name: Pierre Pezziardi
+            avatar: images/avatar-pierre.jpg
+
 related:
     -
         title: Fichier au format Tableur

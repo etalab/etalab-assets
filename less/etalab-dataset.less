@@ -324,11 +324,35 @@ aside {
             margin-top: -10px;
         }
 
+        @color-sides: #e9e9e9;
+        @color-body: #fafafa;
+
         .list-group-item {
-            background-color: #fafafa;
+            background-color: @color-body;
 
             .format-label {
-                background-color: #e9e9e9;
+                background-color: @color-sides;
+            }
+        }
+
+        .list-group-item-text, .list-group-item-heading {
+            margin-right: 60px;
+        }
+
+        .tools {
+            right: 65px;
+        }
+
+        .resource-owner {
+            .publisher-avatar(52px, 20px);
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            border: none;
+            background-color: @color-sides;
+
+            .frame {
+                background-color: @color-body;
             }
         }
 

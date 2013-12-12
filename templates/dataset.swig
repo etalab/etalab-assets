@@ -375,7 +375,7 @@
                 <div class="row">
                     <div class="col-sm-12 list-group resources-list">
                         <h3>Ressources</h3>
-                        {% for resource in dataset.resources %}
+                        {% for resource in dataset.community_resources %}
                             <div class="list-group-item" href="{{ resource.url }}"
                                 data-url="http://fake" data-format="{{ resource.format }}"
                                 rel="popover" data-trigger="hover" data-placement="top"
@@ -393,6 +393,22 @@
                                 <p class="list-group-item-text ellipsis">
                                     {{ resource.description }}
                                 </p>
+                                <div class="resource-owner">
+                                    <div class="frame">
+                                        {% if not resource.publish_as %}
+                                        <a href="" title="{{ resource.owner.name }}">
+                                            <img alt="{{ resource.owner.name }}" src="{{ resource.owner.avatar }}">
+                                        </a>
+                                        {% else %}
+                                        <a class="organization" href="" title="{{ resource.publish_as.title }}">
+                                            <img alt="{{ resource.publish_as.title }}" src="{{ resource.publish_as.image_url }}">
+                                        </a>
+                                        <a class="user" href="" title="{{ resource.owner.name }}">
+                                            <img alt="{{ resource.owner.name }}" src="{{ resource.owner.avatar }}">
+                                        </a>
+                                        {% endif %}
+                                    </div>
+                                </div>
                                 {% if loop.first %}
                                 <div class="btn-group btn-group-xs tools">
                                     <a class="btn btn-default" rel="tooltip" title="Edit">
@@ -511,7 +527,7 @@
 <script type="text/javascript">
     $(function() {
         $('.resources-list div.list-group-item').click(function(e) {
-            if (!$(e.target).is('.glyphicon')) {
+            if (!$(e.target).parents('.tools, .resource-owner').length) {
                 if ($(this).data('format') == 'html') {
                     window.open($(this).data('url'));
                 } else {
