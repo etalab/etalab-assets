@@ -31,7 +31,7 @@
             </form>
 
 
-            <div class="form-group col-sm-3 col-md-2 col-lg-3 col-xs-12">
+            <div class="form-group col-sm-3 col-md-2 col-lg-3 col-xs-12 ">
                 <button class="dropdown-toggle btn-block btn-light" data-toggle="dropdown">
                     Thematiques
                     <span class="glyphicon glyphicon-chevron-down pull-right hidden-sm"></span>
@@ -48,7 +48,7 @@
             </div>
 
             <div class="col-sm-2 col-md-4 col-lg-3 col-xs-12 collapse subnav-collapse">
-                <a class="btn btn-primary btn-dark btn-block hidden-sm"
+                <a class="btn btn-primary btn-dark btn-block btn-md hidden-sm icon-left"
                     title="Publish a dataset !"
                     href>
                     <span class="glyphicon glyphicon-plus"></span>
