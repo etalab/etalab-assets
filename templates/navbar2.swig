@@ -63,7 +63,7 @@
                 </ul>
             </li>
             {% if user %}
-            <li class="dropdown  user">
+            <li class="dropdown  user login">
                 <button class="dropdown-toggle btn-link" data-toggle="dropdown">
                     <span class="username">{{ user }}</span>
                     <img src="images/avatar-angelo.jpg" class="gravatar" width="30" height="30">
@@ -85,7 +85,7 @@
                 </ul>
             </li>
             {% else %}
-            <li>
+            <li class="login">
                 <a href="{{basename}}-logged.html">
                     Sign In / Register
                 </a>
