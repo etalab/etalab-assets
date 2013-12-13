@@ -356,7 +356,7 @@
 
         <h3>Ressources</h3>
         <div class="row">
-            <div class="col-sm-9 list-group resources-list">
+            <div class="col-sm-9 list-group resources-list smaller">
                 {% for resource in dataset.community_resources %}
                     <div class="list-group-item" href="{{ resource.url }}"
                         data-url="http://fake" data-format="{{ resource.format }}"
@@ -417,7 +417,7 @@
 
             <h3>Réutilisations</h3>
             <div class="row">
-                <div class="col-sm-9 reuses-list">
+                <div class="col-sm-9 reuses-list smaller">
                     <div class="row">
                         {% for related in dataset.related %}
                         <div class="col-sm-6 col-lg-4">
