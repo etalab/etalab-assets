@@ -319,6 +319,9 @@
 {% endblock %}
 
 {% block "extra-js" %}
+<script src="bower/jquery.easing/js/jquery.easing.js"></script>
+<script src="js/animations/edge.1.0.0.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/animations/Dataguv-dynamic-bg_edgePreload.js"></script>
 <script type="text/javascript">
     $('.carousel .title').on('slide.bs.carousel', function() {
         $(this).trigger('update');

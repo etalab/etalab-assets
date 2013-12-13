@@ -1,4 +1,6 @@
-<nav class="navbar navbar-static-top navbar-subnav topic-9 cover">
+<nav class="navbar navbar-static-top navbar-subnav topic-9">
+
+    <div class="animation"></div>
 
     <div class="container">
 

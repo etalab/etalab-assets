@@ -178,6 +178,7 @@
     background-color: @bg-dark;
     z-index: 800;
     min-height: 80px;
+    overflow: hidden;
 
     @media (max-width: @grid-float-breakpoint) {
         .container {
@@ -263,6 +264,10 @@
             color: #999;
             border: 1px solid white;
         }
+    }
+
+    .animation {
+        position: absolute !important;
     }
 }
 
@@ -429,7 +434,7 @@
     }
 
     @media (min-width: @screen-sm-min) {
-            
+
             .btn-dark {
                 position: relative;
                 right: -15px;
