@@ -37,34 +37,6 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-            {% if user %}
-            <li class="dropdown  user">
-                <button class="dropdown-toggle btn-link" data-toggle="dropdown">
-                    <img src="images/avatar-angelo.jpg" class="gravatar" width="30" height="30">
-                    <span class="username">{{ user }}</span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="" title="Profil">
-                            <span class="glyphicon glyphicon-wrench"></span>
-                            Profil
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{basename}}.html" title="Logout">
-                            <span class="glyphicon glyphicon-log-out"></span>
-                            Log out
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            {% else %}
-            <li>
-                <a href="{{basename}}-logged.html">
-                    Sign In / Register
-                </a>
-            </li>
-            {% endif %}
             <li class="dropdown language">
                 <button class="dropdown-toggle btn btn-link" data-toggle="dropdown">
                     <img src="img/flags/fr.png" />
@@ -90,6 +62,35 @@
                     </li>
                 </ul>
             </li>
+            {% if user %}
+            <li class="dropdown  user">
+                <button class="dropdown-toggle btn-link" data-toggle="dropdown">
+                    <span class="username">{{ user }}</span>
+                    <img src="images/avatar-angelo.jpg" class="gravatar" width="30" height="30">
+                    
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="" title="Profil">
+                            <span class="glyphicon glyphicon-wrench"></span>
+                            Profil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{basename}}.html" title="Logout">
+                            <span class="glyphicon glyphicon-log-out"></span>
+                            Log out
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            {% else %}
+            <li>
+                <a href="{{basename}}-logged.html">
+                    Sign In / Register
+                </a>
+            </li>
+            {% endif %}
         </ul>
     {# </div> #}
 

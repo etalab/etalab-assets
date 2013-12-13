@@ -507,29 +507,34 @@
 
     .user button {
         padding: 0 10px 0 0;
-        color: darken(white, 10%);
-        background: @gray;
+        // color: darken(white, 10%);
+        // background: @gray;
         vertical-align: middle;
         height: 30px;
 
         &:hover, &:active {
             text-decoration: none !important;
             color: darken(white, 15%);
-            background: darken(@gray, 10%);
+            background: @gray;
         }
 
         img {
-            margin-right: -5px;
+            margin-right: -10px;
+            // width: 22px;
+            // height: 22px;
         }
 
         .username {
-            margin-left: 10px;
+            padding: 0 6px 0 8px;
+            position: relative;
+            top: 1px;
         }
     }
 
     .language button {
+        padding: 5px 6px;
         vertical-align: middle;
-        background: lighten(@gray-light, 10%);
+        // background: lighten(@gray-light, 10%);
 
         &:hover, &:active {
             background: @gray-light;
