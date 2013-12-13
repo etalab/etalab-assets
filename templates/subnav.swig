@@ -62,7 +62,7 @@
 <div class="call-to-action col-sm-7 col-md-8 col-lg-7 col-xs-12">
     <h2>Partagez, améliorez et réutilisez la donnée publique</h2>
     <div class="collapse subnav-collapse">
-        <a class="btn btn-primary btn-big btn-dark"
+        <a class="btn btn-primary btn-big btn-dark icon-left"
                 title="Publish a dataset !"
                 href>
             <span class="glyphicon glyphicon-plus"></span>
