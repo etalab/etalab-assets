@@ -270,7 +270,7 @@
                 Config.typeahead.datasets,
                 Config.typeahead.wiki
             ])
-            .on('typeahead:selected typeahead:autocompleted', function(e, data, dataset) {
+            .on('typeahead:selected', function(e, data, dataset) {
                 switch (dataset) {
                     case 'Wiki':
                         window.location = Config.urls.wikiPage(data.title);
@@ -283,6 +283,7 @@
                         break;
                 }
             });
+
 
         $('#where-input')
             .typeahead({

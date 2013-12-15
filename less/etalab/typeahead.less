@@ -1,16 +1,52 @@
 // Typeahead.js fixes for BS3
 .twitter-typeahead {
     width: 100%;
+    height: 100%;
 
-    .tt-query {
-        color: @gray-light !important;
-    }
+    // .tt-hint
+    // {
+    //     width: 100%;
+    //     display: block;
+    //     // padding: 6px 10px;
+    //     height: @input-height-base;
+    //     padding: 6px 12px;
+    //     font-size: 14px;
+    //     line-height: 1.428571429;
+    //     border: 1px solid transparent;
+    //     border-radius:4px;
+    // }
 
     .tt-hint {
+        color: @gray-lighter;
         width: 100%;
-        height: @input-height-base;;
-        padding: 6px 10px;
-        color: @gray-lighter
+        height: 100%;
+        .input-size(
+            @input-height-base;
+            @padding-base-vertical;
+            @padding-base-horizontal;
+            @font-size-base; @line-height-base;
+            @border-radius-base
+        );
+    }
+
+    .hint-sm {
+        .input-size(
+            @input-height-small;
+            @padding-small-vertical;
+            @padding-small-horizontal;
+            @font-size-small; @line-height-small;
+            @border-radius-small
+        );
+    }
+
+    .hint-lg {
+        .input-size(
+            @input-height-large;
+            @padding-large-vertical;
+            @padding-large-horizontal;
+            @font-size-large; @line-height-large;
+            @border-radius-large
+        );
     }
 
     .tt-dropdown-menu {
@@ -87,4 +123,31 @@
         }
 
     }
+}
+
+.input-lg.tt-query,
+.hint-lg.tt-hint,
+.input-group.input-group-lg .tt-query,
+.input-group.input-group-lg .tt-hint {
+    .input-size(
+        @input-height-large;
+        @padding-large-vertical;
+        @padding-large-horizontal;
+        @font-size-large; @line-height-large;
+        @border-radius-large
+    );
+}
+
+
+.input-sm.tt-query,
+.hint-sm.tt-hint,
+.input-group.input-group-sm .tt-query,
+.input-group.input-group-sm .tt-hint {
+    .input-size(
+        @input-height-small;
+        @padding-small-vertical;
+        @padding-small-horizontal;
+        @font-size-small; @line-height-small;
+        @border-radius-small
+    );
 }

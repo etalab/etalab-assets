@@ -178,7 +178,6 @@
     background-color: @bg-dark;
     z-index: 800;
     min-height: 80px;
-    overflow: hidden;
 
     @media (max-width: @grid-float-breakpoint) {
         .container {
@@ -237,6 +236,16 @@
         border: none;
     }
 
+    .tt-hint {
+        color: @gray-lighter;
+        border-radius: 0;
+        border: none;
+    }
+
+    .tt-query {
+        color: @gray-light !important;
+    }
+
     .glyphicon {
         color: #bfbfbf;
     }
@@ -264,10 +273,6 @@
             color: #999;
             border: 1px solid white;
         }
-    }
-
-    .animation {
-        position: absolute !important;
     }
 }
 

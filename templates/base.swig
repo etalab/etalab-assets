@@ -33,7 +33,7 @@
 </head>
 <body>
 
-    {% include 'navbar2.swig' %}
+    {% include 'navbar.swig' %}
 
 
     {% block "content" %}{% endblock %}

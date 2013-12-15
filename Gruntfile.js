@@ -121,6 +121,9 @@ module.exports = function(grunt) {
                     'widgets.swig',
                     // 'wdigets-logged.swig',
                     'topic.swig',
+                    'error.swig',
+                    'message.swig',
+                    'form.swig',
                     // 'topic.swig',
                 ],
                 dest: 'demo'
