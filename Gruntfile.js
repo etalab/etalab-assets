@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         clean: [
@@ -20,7 +21,7 @@ module.exports = function(grunt) {
         },
         jasmine: {
             etalab: {
-                src: 'js/**/*.js',
+                src: 'js/*.js',
                 options: {
                     specs: 'specs/**/*.specs.js',
                     helpers: 'specs/helpers/*.js',
