@@ -555,8 +555,15 @@
         }
     }
 
-    .dropdown-menu {
-        margin-top: -1px;
+
+    .dropdown {
+        .dropdown-menu {
+            margin-top: -1px;
+        }
+
+        &.open .dropdown-menu {
+            display: inline;
+        }
     }
 }
 
