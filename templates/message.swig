@@ -14,11 +14,9 @@
     <div class="animation"></div>
     <div class="container">
         <div class="jumbotron">
-            <div class="container">
-                <h1>Yeah !</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, numquam, magnam, voluptates, molestiae ducimus facilis alias adipisci ab dolores natus dolorem velit blanditiis incidunt necessitatibus voluptatum id quos fugiat aliquid.</p>
-                <p><a class="btn btn-primary btn-lg">Learn more</a></p>
-            </div>
+            <h1>Yeah !</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, numquam, magnam, voluptates, molestiae ducimus facilis alias adipisci ab dolores natus dolorem velit blanditiis incidunt necessitatibus voluptatum id quos fugiat aliquid.</p>
+            <p><a class="btn btn-primary btn-lg">Learn more</a></p>
         </div>
     </div>
 </section>
