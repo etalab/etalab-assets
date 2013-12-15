@@ -10,7 +10,7 @@
                     <li><a href="/topic.html">Producteurs</a></li>
                     <li><a href="/dataset.html">Etalab</a></li>
                     <li><a href="/widgets.html">Crédits</a></li>
-                    <li><a href="http://wiki.etalab2.fr/wiki/Conditions_G%C3%A9n%C3%A9rales_d%27Utilisation">Conditions générales d'utilisation</a></li>
+                    <li><a href="http://wiki.data.gouv.fr/wiki/Conditions_G%C3%A9n%C3%A9rales_d%27Utilisation">Conditions générales d'utilisation</a></li>
                 </ul>
             </section>
 

@@ -17,10 +17,9 @@
 
     <meta name="domain" content="{{ local.domain|default('etalab2.fr') }}" />
     <link rel="home" href="{{ local.home|default('http://www.etalab2.fr') }}" />
-    <link rel="wiki" href="{{ local.wiki|default('http://wiki.etalab2.fr/wiki') }}" />
-    <link rel="wiki-api" href="{{ local.wiki_api|default('http://wiki.etalab2.fr/api.php') }}" />
-    <link rel="questions" href="{{ local.questions|default('http://ask.etalab2.fr') }}" />
-    <link rel="static-root" href="/" />
+    <link rel="wiki" href="{{ local.wiki|default('http://wiki.data.gouv.fr/wiki') }}" />
+    <link rel="wiki-api" href="{{ local.wiki_api|default('http://wiki.data.gouv.fr/api.php') }}" />
+    <link rel="animation-root" href="/js/animations" />
 
     {% set style = style|default('etalab') %}
     <link rel="stylesheet" media="screen" href="css/{{style}}.css">
