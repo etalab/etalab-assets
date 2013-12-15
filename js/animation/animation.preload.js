@@ -49,8 +49,8 @@ if(document.addEventListener ){
  var ROOT = $('link[rel="animation-root"]').attr('href');
 
    aLoader = [
-    { load: ROOT + "/Dataguv-dynamic-bg_edge.js"},
-    { load: ROOT + "/Dataguv-dynamic-bg_edgeActions.js"}
+    { load: ROOT + "/animation.js"},
+    { load: ROOT + "/animation.actions.js"}
    ];
 
 loadResources(aLoader, doDelayLoad);

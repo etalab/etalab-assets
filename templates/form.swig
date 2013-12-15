@@ -94,7 +94,7 @@
 {% block "extra-js" %}
 <script src="bower/jquery.easing/js/jquery.easing.js"></script>
 <script src="js/animation/edge.1.0.0.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/animation/Dataguv-dynamic-bg_edgePreload.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/animation/animation.preload.js"></script>
 
 <script src="bower/bootstrap-select/bootstrap-select.js"></script>
 <script src="bower/markdown/lib/markdown.js"></script>
