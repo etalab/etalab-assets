@@ -93,6 +93,13 @@
             '&nbsp;',
             '{{title}}',
             '</p>'
+        ].join(''),
+        TERRITORY_TPL = [
+            '<p>',
+            '{{display_name}}',
+            '&nbsp;',
+            '{% if postal %}<i>({{ postal }})</i>{% endif %}',
+            '</p>'
         ].join('');
 
 
@@ -119,11 +126,22 @@
     };
 
 
+    var format_territory = function(territory) {
+        var postal_distribution = territory.main_postal_distribution.split(' ', 2);
+        if (postal_distribution.length == 2) {
+            territory.display_name = postal_distribution[1];
+            territory.postal = postal_distribution[0];
+        } else {
+            territory.display_name = postal_distribution[0];
+        }
+        return territory;
+    };
+
     /**
      * Filter the Territory API to match Typeahead expected format.
      */
     var filter_territory_api = function(response) {
-        return response.data.items;
+        return response.data.items.map(format_territory);
     };
 
     var filter_mediawiki_api = function(response) {
@@ -225,8 +243,22 @@
                     wildcard: '__QUERY',
                     filter: filter_mediawiki_api
                 }
+            },
+            territories: {
+                // name: 'Territory'
+                name: 'territories',
+                valueKey: 'main_postal_distribution',
+                engine: SWIG_ENGINE,
+                template: TERRITORY_TPL,
+                remote: {
+                    url: TERRITORY_API_URL,
+                    wildcard: '_QUERY',
+                    dataType: 'jsonp',
+                    filter: filter_territory_api,
+                    beforeSend: fix_url
+                }
             }
-        },
+        }
     };
 
     $(function() {
@@ -286,17 +318,7 @@
 
 
         $('#where-input')
-            .typeahead({
-                name: 'territories',
-                valueKey: 'main_postal_distribution',
-                remote: {
-                    url: TERRITORY_API_URL,
-                    wildcard: '_QUERY',
-                    dataType: 'jsonp',
-                    filter: filter_territory_api,
-                    beforeSend: fix_url
-                }
-            })
+            .typeahead(Config.typeahead.territories)
             .on('typeahead:selected typeahead:autocompleted', function(e, territory) {
                 set_territory(territory.kind + '/' + territory.code);
                 $('#search-input').focus();
