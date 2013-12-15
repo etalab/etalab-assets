@@ -11,9 +11,19 @@
 {% include 'templates/subnav-s.swig' %}
 
 <div class="container">
+
     <div class="page-header">
         <h1>Widget <small>demo</small></h1>
     </div>
+
+    <div class="row">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">Tab  1</a></li>
+            <li><a href="#">Tab 2</a></li>
+            <li><a href="#">Tab 3</a></li>
+        </ul>
+    </div>
+    <br/>
 
     <form class="form-horizontal">
         <div class="form-group input-group input-group-lg">
