@@ -15,7 +15,7 @@
     <div class="container">
         <div class="jumbotron">
             <div class="container">
-                <h1>Error !</h1>
+                <h1>Yeah !</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, numquam, magnam, voluptates, molestiae ducimus facilis alias adipisci ab dolores natus dolorem velit blanditiis incidunt necessitatibus voluptatum id quos fugiat aliquid.</p>
                 <p><a class="btn btn-primary btn-lg">Learn more</a></p>
             </div>
@@ -26,6 +26,6 @@
 
 {% block "extra-js" %}
 <script src="bower/jquery.easing/js/jquery.easing.js"></script>
-<script src="js/animations/edge.1.0.0.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/animations/Dataguv-dynamic-bg_edgePreload.js"></script>
+<script src="js/animation/edge.1.0.0.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/animation/Dataguv-dynamic-bg_edgePreload.js"></script>
 {% endblock %}

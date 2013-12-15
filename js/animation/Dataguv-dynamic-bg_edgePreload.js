@@ -46,11 +46,11 @@ if(document.addEventListener ){
    htFallbacks={
     };
 
- var STATIC = $('link[rel="static-root"]').attr('href');
+ var ROOT = $('link[rel="animation-root"]').attr('href');
 
    aLoader = [
-    { load: STATIC + "js/animations/Dataguv-dynamic-bg_edge.js"},
-    { load: STATIC + "js/animations/Dataguv-dynamic-bg_edgeActions.js"}
+    { load: ROOT + "/Dataguv-dynamic-bg_edge.js"},
+    { load: ROOT + "/Dataguv-dynamic-bg_edgeActions.js"}
    ];
 
 loadResources(aLoader, doDelayLoad);

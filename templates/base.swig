@@ -19,7 +19,7 @@
     <link rel="home" href="{{ local.home|default('http://www.etalab2.fr') }}" />
     <link rel="wiki" href="{{ local.wiki|default('http://wiki.data.gouv.fr/wiki') }}" />
     <link rel="wiki-api" href="{{ local.wiki_api|default('http://wiki.data.gouv.fr/api.php') }}" />
-    <link rel="animation-root" href="/js/animations" />
+    <link rel="animation-root" href="/js/animation" />
 
     {% set style = style|default('etalab') %}
     <link rel="stylesheet" media="screen" href="css/{{style}}.css">
