@@ -5,7 +5,7 @@
 
     "use strict";
 
-    var TERRYTORIES_END_POINT = 'http://ou.comarquage.fr/api/v1/autocomplete-territory',
+    var TERRYTORIES_END_POINT = '//ou.comarquage.fr/api/v1/autocomplete-territory',
         TERRITORIES_KIND = [
             'ArrondissementOfCommuneOfFrance',
             'CommuneOfFrance',

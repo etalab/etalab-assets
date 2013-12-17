@@ -21,7 +21,7 @@
                 </ul> #}
 
                 <div class="page-header">
-                    <h1>Un formulaire <small>demo</small></h1>
+                    <a href><h1>Un formulaire <small>demo</small></h1></a>
                 </div>
 
                 <form id="demo-form" role="form" class="form-horizontal" novalidate>
