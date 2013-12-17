@@ -1,11 +1,11 @@
 [
-    { "title": "Agriculture & Alimentation", "url": "{group}/agriculture-et-alimentation" },
-    { "title": "Culture", "url": "{group}/culture" },
-    { "title": "Économie & Emploi", "url": "{group}/economie-et-emploi" },
-    { "title": "Éducation & Recherche", "url": "{group}/education-et-recherche" },
-    { "title": "International & Europe", "url": "{group}/international-et-europe" },
-    { "title": "Logement, Développement Durable & Énergie", "url": "{group}/logement-developpement-durable-et-energie" },
-    { "title": "Santé & Social", "url": "{group}/sante-et-social" },
-    { "title": "Société", "url": "{group}/societe" },
-    { "title": "Territoires & Transports", "url": "{group}/territoires-et-transports" }
+    { "title": "Agriculture & Alimentation", "name": "agriculture-et-alimentation" },
+    { "title": "Culture", "name": "culture" },
+    { "title": "Économie & Emploi", "name": "economie-et-emploi" },
+    { "title": "Éducation & Recherche", "name": "education-et-recherche" },
+    { "title": "International & Europe", "name": "international-et-europe" },
+    { "title": "Logement, Développement Durable & Énergie", "name": "logement-developpement-durable-et-energie" },
+    { "title": "Santé & Social", "name": "sante-et-social" },
+    { "title": "Société", "name": "societe" },
+    { "title": "Territoires & Transports", "name": "territoires-et-transports" }
 ]
