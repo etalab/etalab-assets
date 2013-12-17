@@ -127,12 +127,12 @@
 
 
     var format_territory = function(territory) {
-        var postal_distribution = territory.main_postal_distribution.split(' ', 2);
-        if (postal_distribution.length == 2) {
-            territory.display_name = postal_distribution[1];
-            territory.postal = postal_distribution[0];
+        var postal = territory.main_postal_distribution.split(' ');
+        if (postal.length > 1 && !isNaN(postal[0])) {
+            territory.display_name = postal.slice(1, postal.length).join(' ');
+            territory.postal = postal[0];
         } else {
-            territory.display_name = postal_distribution[0];
+            territory.display_name = territory.main_postal_distribution;
         }
         return territory;
     };
