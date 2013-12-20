@@ -129,14 +129,6 @@
         $('#autocomplete, [data-provide="typeahead"]').typeahead({
             name: 'team',
             local: ['Alexandre', 'Angelo', 'Axel', 'Emmanuel', 'Henri', 'Laure', 'Pierre', 'Romain', 'Suzanne']
-        }).each(function() {
-            if ($(this).hasClass('input-lg')) {
-                $(this).prev('.tt-hint').addClass('hint-lg');
-            }
-
-            if ($(this).hasClass('input-sm')) {
-                $(this).prev('.tt-hint').addClass('hint-sm');
-            }
         });
 
         // Tags

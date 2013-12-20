@@ -25,6 +25,14 @@
         </div>
 
         <form class="form-horizontal">
+            <div class="form-group">
+                <input type="text" data-provide="typeahead" class="form-control" autocomplete="off" />
+            </div>
+            <div class="form-group input-group">
+                <span class="input-group-addon">Hey, typeahead!</span>
+                <input type="text" data-provide="typeahead" class="form-control" autocomplete="off" />
+            </div>
+
             <div class="form-group input-group input-group-lg">
                 <span class="input-group-addon">Hey, typeahead!</span>
                 <input type="text" data-provide="typeahead" class="form-control" autocomplete="off" />
@@ -32,6 +40,16 @@
 
             <div class="form-group input-group input-group-sm"> <span class="input-group-addon">Hey, small typeahead!</span>
                 <input type="text" data-provide="typeahead" class="form-control" autocomplete="off" />
+            </div>
+
+            <div class="form-group input-group input-group-lg">
+                <span class="input-group-btn">
+                    <button class="btn" type="submit">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+                <input name="q" type="search" class="form-control" autocomplete="off"
+                    placeholder="Search" data-provide="typeahead">
             </div>
         </form>
 
@@ -84,14 +102,6 @@
         $('#autocomplete, [data-provide="typeahead"]').typeahead({
             name: 'team',
             local: ['Alexandre', 'Angelo', 'Axel', 'Emmanuel', 'Henri', 'Laure', 'Pierre', 'Romain', 'Suzanne']
-        }).each(function() {
-            if ($(this).hasClass('input-lg')) {
-                $(this).prev('.tt-hint').addClass('hint-lg');
-            }
-
-            if ($(this).hasClass('input-sm')) {
-                $(this).prev('.tt-hint').addClass('hint-sm');
-            }
         });
     });
 </script>

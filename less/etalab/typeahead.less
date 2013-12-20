@@ -3,18 +3,6 @@
     width: 100%;
     height: 100%;
 
-    // .tt-hint
-    // {
-    //     width: 100%;
-    //     display: block;
-    //     // padding: 6px 10px;
-    //     height: @input-height-base;
-    //     padding: 6px 12px;
-    //     font-size: 14px;
-    //     line-height: 1.428571429;
-    //     border: 1px solid transparent;
-    //     border-radius:4px;
-    // }
 
     .tt-hint {
         color: @gray-lighter;
@@ -26,26 +14,6 @@
             @padding-base-horizontal;
             @font-size-base; @line-height-base;
             @border-radius-base
-        );
-    }
-
-    .hint-sm {
-        .input-size(
-            @input-height-small;
-            @padding-small-vertical;
-            @padding-small-horizontal;
-            @font-size-small; @line-height-small;
-            @border-radius-small
-        );
-    }
-
-    .hint-lg {
-        .input-size(
-            @input-height-large;
-            @padding-large-vertical;
-            @padding-large-horizontal;
-            @font-size-large; @line-height-large;
-            @border-radius-large
         );
     }
 
@@ -125,29 +93,43 @@
     }
 }
 
-.input-lg.tt-query,
-.hint-lg.tt-hint,
-.input-group.input-group-lg .tt-query,
-.input-group.input-group-lg .tt-hint {
-    .input-size(
-        @input-height-large;
-        @padding-large-vertical;
-        @padding-large-horizontal;
-        @font-size-large; @line-height-large;
-        @border-radius-large
-    );
+
+.tt-hint, .tt-query {
+    //border
+    .input-group .twitter-typeahead:first-child &{
+        .border-left-radius(@border-radius-base);
+    }
+    .input-group .twitter-typeahead:last-child &{
+        .border-right-radius(@border-radius-base);
+    }
+
+    //sizing - small:size and border
+    .input-group.input-group-sm .twitter-typeahead &{
+        .input-size(@input-height-small; @padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+    }
+    .input-group.input-group-sm .twitter-typeahead:first-child &{
+        border-radius:@border-radius-small 0 0 @border-radius-small;
+    }
+    .input-group.input-group-sm .twitter-typeahead:last-child &{
+        border-radius:0 @border-radius-small @border-radius-small 0;
+    }
+
+    //sizing - large:size and border
+    .input-group.input-group-lg .twitter-typeahead &{
+        .input-size(@input-height-large; @padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+    }
+    .input-group.input-group-lg .twitter-typeahead:first-child &{
+        border-radius:@border-radius-large 0 0 @border-radius-large;
+    }
+    .input-group.input-group-lg .twitter-typeahead:last-child &{
+        border-radius:0 @border-radius-large @border-radius-large 0;
+    }
 }
 
 
-.input-sm.tt-query,
-.hint-sm.tt-hint,
-.input-group.input-group-sm .tt-query,
-.input-group.input-group-sm .tt-hint {
-    .input-size(
-        @input-height-small;
-        @padding-small-vertical;
-        @padding-small-horizontal;
-        @font-size-small; @line-height-small;
-        @border-radius-small
-    );
+.jumbotron {
+    .input-group {
+        font-size: @font-size-base;
+        line-height: @line-height-base;
+    }
 }
