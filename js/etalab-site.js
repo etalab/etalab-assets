@@ -11,6 +11,7 @@
             'CommuneOfFrance',
             'Country',
             'DepartmentOfFrance',
+            'MetropoleOfCountry',
             'OverseasCollectivityOfFrance',
             'RegionOfFrance'
         ],
