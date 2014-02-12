@@ -22,7 +22,7 @@
     "respond": "~1.4.1",
     "typeahead.js": "~0.9.3",
     "jquery.cookie": "~1.4.0",
-    "swig": "http://paularmstrong.github.io/swig/js/swig.js",
+    "swig": "https://github.com/paularmstrong/swig/releases/download/v1.3.2/swig.js",
     "jquery.validation": "~1.11.1",
     "jquery.dotdotdot": "~1.6.9",
     "bootstrap-select": "~1.4.1",
